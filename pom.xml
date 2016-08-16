@@ -1,10 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   
   <modelVersion>4.0.0</modelVersion>
   <groupId>fi.otavanopisto.ptv.rest-client</groupId>
   <artifactId>ptv-rest-client</artifactId>
   <packaging>jar</packaging>
   <name>ptv-rest-client</name>
+  <description>REST client library for Palvelutietoväylä (PTV)</description>
   <version>0.0.4-SNAPSHOT</version>
   <url>https://github.com/otavanopisto/ptv-rest-client</url>
 
@@ -15,6 +17,19 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  
+  <developers>
+    <developer>
+      <id>otavanopisto</id>
+      <email>ratkaisutiimi@otavanopisto.fi</email>
+      <name>Otavan Opisto</name>
+      <organization>Otavan Opisto</organization>
+      <organizationUrl>http://www.otavanopisto.fi/</organizationUrl>
+      <roles>
+        <role>Owner</role>
+      </roles>
+    </developer>
+  </developers>
 
   <issueManagement>
     <system>GitHub</system>
