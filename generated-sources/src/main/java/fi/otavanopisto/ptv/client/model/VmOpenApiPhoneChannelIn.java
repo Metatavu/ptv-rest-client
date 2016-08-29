@@ -40,7 +40,7 @@ import java.util.List;
 /**
  * VmOpenApiPhoneChannelIn
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-29T13:56:39.065+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-29T14:14:11.100+03:00")
 public class VmOpenApiPhoneChannelIn   {
   @JsonProperty("organizationId")
   private String organizationId = null;
