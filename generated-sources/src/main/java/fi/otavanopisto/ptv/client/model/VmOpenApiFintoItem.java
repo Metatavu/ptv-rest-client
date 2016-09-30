@@ -35,7 +35,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * VmOpenApiFintoItem
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:19:41.117+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
 public class VmOpenApiFintoItem   {
   @JsonProperty("id")
   private String id = null;
