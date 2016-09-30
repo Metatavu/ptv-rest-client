@@ -24,7 +24,8 @@ module.exports = function(grunt) {
         'generated-sources/src/main/java/io',
         'generated-sources/src/main/java/fi/otavanopisto/ptv/auth',
         'generated-sources/src/main/java/fi/otavanopisto/ptv/*.java'
-      ]
+      ],
+      'sources': ['generated-sources/src']
     },
     'copy': {
       'copy-ptv-rest-client-extras': {
@@ -76,6 +77,6 @@ module.exports = function(grunt) {
   });
   
   grunt.registerTask('download-dependencies', 'if-missing:curl:swagger-codegen');
-  grunt.registerTask('default', ['download-dependencies', 'shell:generate-ptv-java-client', 'clean:clean-ptv-java-client-cruft', 'copy:copy-ptv-rest-client-extras', 'shell:install-ptv-java-client', 'shell:release-ptv-java-client' ]);
+  grunt.registerTask('default', ['download-dependencies', 'clean:sources', 'shell:generate-ptv-java-client', 'clean:clean-ptv-java-client-cruft', 'copy:copy-ptv-rest-client-extras', 'shell:install-ptv-java-client', 'shell:release-ptv-java-client' ]);
   
 };
