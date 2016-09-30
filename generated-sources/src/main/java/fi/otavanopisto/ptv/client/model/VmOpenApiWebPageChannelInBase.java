@@ -28,12 +28,9 @@ package fi.otavanopisto.ptv.client.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import fi.otavanopisto.ptv.client.model.VmOpenApiAttachment;
 import fi.otavanopisto.ptv.client.model.VmOpenApiLanguageItem;
 import fi.otavanopisto.ptv.client.model.VmOpenApiLocalizedListItem;
-import fi.otavanopisto.ptv.client.model.VmOpenApiServiceHour;
 import fi.otavanopisto.ptv.client.model.VmOpenApiSupport;
-import fi.otavanopisto.ptv.client.model.VmOpenApiWebPage;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -41,21 +38,18 @@ import java.util.List;
 
 
 /**
- * VmOpenApiWebPageChannel
+ * VmOpenApiWebPageChannelInBase
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
-public class VmOpenApiWebPageChannel   {
-  @JsonProperty("id")
-  private String id = null;
-
-  @JsonProperty("serviceChannelType")
-  private String serviceChannelType = null;
+public class VmOpenApiWebPageChannelInBase   {
+  @JsonProperty("sourceId")
+  private String sourceId = null;
 
   @JsonProperty("organizationId")
   private String organizationId = null;
 
   @JsonProperty("serviceChannelNames")
-  private List<VmOpenApiLocalizedListItem> serviceChannelNames = new ArrayList<VmOpenApiLocalizedListItem>();
+  private List<VmOpenApiLanguageItem> serviceChannelNames = new ArrayList<VmOpenApiLanguageItem>();
 
   @JsonProperty("serviceChannelDescriptions")
   private List<VmOpenApiLocalizedListItem> serviceChannelDescriptions = new ArrayList<VmOpenApiLocalizedListItem>();
@@ -63,61 +57,43 @@ public class VmOpenApiWebPageChannel   {
   @JsonProperty("urls")
   private List<VmOpenApiLanguageItem> urls = new ArrayList<VmOpenApiLanguageItem>();
 
-  @JsonProperty("attachments")
-  private List<VmOpenApiAttachment> attachments = new ArrayList<VmOpenApiAttachment>();
-
   @JsonProperty("supportContacts")
   private List<VmOpenApiSupport> supportContacts = new ArrayList<VmOpenApiSupport>();
 
   @JsonProperty("languages")
   private List<String> languages = new ArrayList<String>();
 
-  @JsonProperty("webPages")
-  private List<VmOpenApiWebPage> webPages = new ArrayList<VmOpenApiWebPage>();
-
-  @JsonProperty("serviceHours")
-  private List<VmOpenApiServiceHour> serviceHours = new ArrayList<VmOpenApiServiceHour>();
-
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
 
-  public VmOpenApiWebPageChannel id(String id) {
-    this.id = id;
+  @JsonProperty("deleteAllLanguages")
+  private Boolean deleteAllLanguages = null;
+
+  @JsonProperty("deleteAllWebPages")
+  private Boolean deleteAllWebPages = null;
+
+  @JsonProperty("deleteAllSupportContacts")
+  private Boolean deleteAllSupportContacts = null;
+
+  public VmOpenApiWebPageChannelInBase sourceId(String sourceId) {
+    this.sourceId = sourceId;
     return this;
   }
 
    /**
-   * Get id
-   * @return id
+   * Get sourceId
+   * @return sourceId
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getId() {
-    return id;
+  public String getSourceId() {
+    return sourceId;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setSourceId(String sourceId) {
+    this.sourceId = sourceId;
   }
 
-  public VmOpenApiWebPageChannel serviceChannelType(String serviceChannelType) {
-    this.serviceChannelType = serviceChannelType;
-    return this;
-  }
-
-   /**
-   * Get serviceChannelType
-   * @return serviceChannelType
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getServiceChannelType() {
-    return serviceChannelType;
-  }
-
-  public void setServiceChannelType(String serviceChannelType) {
-    this.serviceChannelType = serviceChannelType;
-  }
-
-  public VmOpenApiWebPageChannel organizationId(String organizationId) {
+  public VmOpenApiWebPageChannelInBase organizationId(String organizationId) {
     this.organizationId = organizationId;
     return this;
   }
@@ -135,12 +111,12 @@ public class VmOpenApiWebPageChannel   {
     this.organizationId = organizationId;
   }
 
-  public VmOpenApiWebPageChannel serviceChannelNames(List<VmOpenApiLocalizedListItem> serviceChannelNames) {
+  public VmOpenApiWebPageChannelInBase serviceChannelNames(List<VmOpenApiLanguageItem> serviceChannelNames) {
     this.serviceChannelNames = serviceChannelNames;
     return this;
   }
 
-  public VmOpenApiWebPageChannel addServiceChannelNamesItem(VmOpenApiLocalizedListItem serviceChannelNamesItem) {
+  public VmOpenApiWebPageChannelInBase addServiceChannelNamesItem(VmOpenApiLanguageItem serviceChannelNamesItem) {
     this.serviceChannelNames.add(serviceChannelNamesItem);
     return this;
   }
@@ -150,20 +126,20 @@ public class VmOpenApiWebPageChannel   {
    * @return serviceChannelNames
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiLocalizedListItem> getServiceChannelNames() {
+  public List<VmOpenApiLanguageItem> getServiceChannelNames() {
     return serviceChannelNames;
   }
 
-  public void setServiceChannelNames(List<VmOpenApiLocalizedListItem> serviceChannelNames) {
+  public void setServiceChannelNames(List<VmOpenApiLanguageItem> serviceChannelNames) {
     this.serviceChannelNames = serviceChannelNames;
   }
 
-  public VmOpenApiWebPageChannel serviceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
+  public VmOpenApiWebPageChannelInBase serviceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
     return this;
   }
 
-  public VmOpenApiWebPageChannel addServiceChannelDescriptionsItem(VmOpenApiLocalizedListItem serviceChannelDescriptionsItem) {
+  public VmOpenApiWebPageChannelInBase addServiceChannelDescriptionsItem(VmOpenApiLocalizedListItem serviceChannelDescriptionsItem) {
     this.serviceChannelDescriptions.add(serviceChannelDescriptionsItem);
     return this;
   }
@@ -181,12 +157,12 @@ public class VmOpenApiWebPageChannel   {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
   }
 
-  public VmOpenApiWebPageChannel urls(List<VmOpenApiLanguageItem> urls) {
+  public VmOpenApiWebPageChannelInBase urls(List<VmOpenApiLanguageItem> urls) {
     this.urls = urls;
     return this;
   }
 
-  public VmOpenApiWebPageChannel addUrlsItem(VmOpenApiLanguageItem urlsItem) {
+  public VmOpenApiWebPageChannelInBase addUrlsItem(VmOpenApiLanguageItem urlsItem) {
     this.urls.add(urlsItem);
     return this;
   }
@@ -204,35 +180,12 @@ public class VmOpenApiWebPageChannel   {
     this.urls = urls;
   }
 
-  public VmOpenApiWebPageChannel attachments(List<VmOpenApiAttachment> attachments) {
-    this.attachments = attachments;
-    return this;
-  }
-
-  public VmOpenApiWebPageChannel addAttachmentsItem(VmOpenApiAttachment attachmentsItem) {
-    this.attachments.add(attachmentsItem);
-    return this;
-  }
-
-   /**
-   * Get attachments
-   * @return attachments
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiAttachment> getAttachments() {
-    return attachments;
-  }
-
-  public void setAttachments(List<VmOpenApiAttachment> attachments) {
-    this.attachments = attachments;
-  }
-
-  public VmOpenApiWebPageChannel supportContacts(List<VmOpenApiSupport> supportContacts) {
+  public VmOpenApiWebPageChannelInBase supportContacts(List<VmOpenApiSupport> supportContacts) {
     this.supportContacts = supportContacts;
     return this;
   }
 
-  public VmOpenApiWebPageChannel addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
+  public VmOpenApiWebPageChannelInBase addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
     this.supportContacts.add(supportContactsItem);
     return this;
   }
@@ -250,12 +203,12 @@ public class VmOpenApiWebPageChannel   {
     this.supportContacts = supportContacts;
   }
 
-  public VmOpenApiWebPageChannel languages(List<String> languages) {
+  public VmOpenApiWebPageChannelInBase languages(List<String> languages) {
     this.languages = languages;
     return this;
   }
 
-  public VmOpenApiWebPageChannel addLanguagesItem(String languagesItem) {
+  public VmOpenApiWebPageChannelInBase addLanguagesItem(String languagesItem) {
     this.languages.add(languagesItem);
     return this;
   }
@@ -273,53 +226,7 @@ public class VmOpenApiWebPageChannel   {
     this.languages = languages;
   }
 
-  public VmOpenApiWebPageChannel webPages(List<VmOpenApiWebPage> webPages) {
-    this.webPages = webPages;
-    return this;
-  }
-
-  public VmOpenApiWebPageChannel addWebPagesItem(VmOpenApiWebPage webPagesItem) {
-    this.webPages.add(webPagesItem);
-    return this;
-  }
-
-   /**
-   * Get webPages
-   * @return webPages
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiWebPage> getWebPages() {
-    return webPages;
-  }
-
-  public void setWebPages(List<VmOpenApiWebPage> webPages) {
-    this.webPages = webPages;
-  }
-
-  public VmOpenApiWebPageChannel serviceHours(List<VmOpenApiServiceHour> serviceHours) {
-    this.serviceHours = serviceHours;
-    return this;
-  }
-
-  public VmOpenApiWebPageChannel addServiceHoursItem(VmOpenApiServiceHour serviceHoursItem) {
-    this.serviceHours.add(serviceHoursItem);
-    return this;
-  }
-
-   /**
-   * Get serviceHours
-   * @return serviceHours
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiServiceHour> getServiceHours() {
-    return serviceHours;
-  }
-
-  public void setServiceHours(List<VmOpenApiServiceHour> serviceHours) {
-    this.serviceHours = serviceHours;
-  }
-
-  public VmOpenApiWebPageChannel publishingStatus(String publishingStatus) {
+  public VmOpenApiWebPageChannelInBase publishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
     return this;
   }
@@ -337,6 +244,60 @@ public class VmOpenApiWebPageChannel   {
     this.publishingStatus = publishingStatus;
   }
 
+  public VmOpenApiWebPageChannelInBase deleteAllLanguages(Boolean deleteAllLanguages) {
+    this.deleteAllLanguages = deleteAllLanguages;
+    return this;
+  }
+
+   /**
+   * Get deleteAllLanguages
+   * @return deleteAllLanguages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllLanguages() {
+    return deleteAllLanguages;
+  }
+
+  public void setDeleteAllLanguages(Boolean deleteAllLanguages) {
+    this.deleteAllLanguages = deleteAllLanguages;
+  }
+
+  public VmOpenApiWebPageChannelInBase deleteAllWebPages(Boolean deleteAllWebPages) {
+    this.deleteAllWebPages = deleteAllWebPages;
+    return this;
+  }
+
+   /**
+   * Get deleteAllWebPages
+   * @return deleteAllWebPages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllWebPages() {
+    return deleteAllWebPages;
+  }
+
+  public void setDeleteAllWebPages(Boolean deleteAllWebPages) {
+    this.deleteAllWebPages = deleteAllWebPages;
+  }
+
+  public VmOpenApiWebPageChannelInBase deleteAllSupportContacts(Boolean deleteAllSupportContacts) {
+    this.deleteAllSupportContacts = deleteAllSupportContacts;
+    return this;
+  }
+
+   /**
+   * Get deleteAllSupportContacts
+   * @return deleteAllSupportContacts
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllSupportContacts() {
+    return deleteAllSupportContacts;
+  }
+
+  public void setDeleteAllSupportContacts(Boolean deleteAllSupportContacts) {
+    this.deleteAllSupportContacts = deleteAllSupportContacts;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -346,43 +307,41 @@ public class VmOpenApiWebPageChannel   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiWebPageChannel vmOpenApiWebPageChannel = (VmOpenApiWebPageChannel) o;
-    return Objects.equals(this.id, vmOpenApiWebPageChannel.id) &&
-        Objects.equals(this.serviceChannelType, vmOpenApiWebPageChannel.serviceChannelType) &&
-        Objects.equals(this.organizationId, vmOpenApiWebPageChannel.organizationId) &&
-        Objects.equals(this.serviceChannelNames, vmOpenApiWebPageChannel.serviceChannelNames) &&
-        Objects.equals(this.serviceChannelDescriptions, vmOpenApiWebPageChannel.serviceChannelDescriptions) &&
-        Objects.equals(this.urls, vmOpenApiWebPageChannel.urls) &&
-        Objects.equals(this.attachments, vmOpenApiWebPageChannel.attachments) &&
-        Objects.equals(this.supportContacts, vmOpenApiWebPageChannel.supportContacts) &&
-        Objects.equals(this.languages, vmOpenApiWebPageChannel.languages) &&
-        Objects.equals(this.webPages, vmOpenApiWebPageChannel.webPages) &&
-        Objects.equals(this.serviceHours, vmOpenApiWebPageChannel.serviceHours) &&
-        Objects.equals(this.publishingStatus, vmOpenApiWebPageChannel.publishingStatus);
+    VmOpenApiWebPageChannelInBase vmOpenApiWebPageChannelInBase = (VmOpenApiWebPageChannelInBase) o;
+    return Objects.equals(this.sourceId, vmOpenApiWebPageChannelInBase.sourceId) &&
+        Objects.equals(this.organizationId, vmOpenApiWebPageChannelInBase.organizationId) &&
+        Objects.equals(this.serviceChannelNames, vmOpenApiWebPageChannelInBase.serviceChannelNames) &&
+        Objects.equals(this.serviceChannelDescriptions, vmOpenApiWebPageChannelInBase.serviceChannelDescriptions) &&
+        Objects.equals(this.urls, vmOpenApiWebPageChannelInBase.urls) &&
+        Objects.equals(this.supportContacts, vmOpenApiWebPageChannelInBase.supportContacts) &&
+        Objects.equals(this.languages, vmOpenApiWebPageChannelInBase.languages) &&
+        Objects.equals(this.publishingStatus, vmOpenApiWebPageChannelInBase.publishingStatus) &&
+        Objects.equals(this.deleteAllLanguages, vmOpenApiWebPageChannelInBase.deleteAllLanguages) &&
+        Objects.equals(this.deleteAllWebPages, vmOpenApiWebPageChannelInBase.deleteAllWebPages) &&
+        Objects.equals(this.deleteAllSupportContacts, vmOpenApiWebPageChannelInBase.deleteAllSupportContacts);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, serviceChannelType, organizationId, serviceChannelNames, serviceChannelDescriptions, urls, attachments, supportContacts, languages, webPages, serviceHours, publishingStatus);
+    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, urls, supportContacts, languages, publishingStatus, deleteAllLanguages, deleteAllWebPages, deleteAllSupportContacts);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiWebPageChannel {\n");
+    sb.append("class VmOpenApiWebPageChannelInBase {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    serviceChannelType: ").append(toIndentedString(serviceChannelType)).append("\n");
+    sb.append("    sourceId: ").append(toIndentedString(sourceId)).append("\n");
     sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
     sb.append("    serviceChannelNames: ").append(toIndentedString(serviceChannelNames)).append("\n");
     sb.append("    serviceChannelDescriptions: ").append(toIndentedString(serviceChannelDescriptions)).append("\n");
     sb.append("    urls: ").append(toIndentedString(urls)).append("\n");
-    sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
     sb.append("    supportContacts: ").append(toIndentedString(supportContacts)).append("\n");
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
-    sb.append("    webPages: ").append(toIndentedString(webPages)).append("\n");
-    sb.append("    serviceHours: ").append(toIndentedString(serviceHours)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
+    sb.append("    deleteAllLanguages: ").append(toIndentedString(deleteAllLanguages)).append("\n");
+    sb.append("    deleteAllWebPages: ").append(toIndentedString(deleteAllWebPages)).append("\n");
+    sb.append("    deleteAllSupportContacts: ").append(toIndentedString(deleteAllSupportContacts)).append("\n");
     sb.append("}");
     return sb.toString();
   }

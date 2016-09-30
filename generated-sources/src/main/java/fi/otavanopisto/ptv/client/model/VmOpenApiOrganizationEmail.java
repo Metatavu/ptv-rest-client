@@ -28,6 +28,7 @@ package fi.otavanopisto.ptv.client.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import fi.otavanopisto.ptv.client.model.VmOpenApiLanguageItem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -35,70 +36,55 @@ import java.util.List;
 
 
 /**
- * VmOpenApiGuidPage
+ * VmOpenApiOrganizationEmail
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
-public class VmOpenApiGuidPage   {
-  @JsonProperty("pageNumber")
-  private Integer pageNumber = null;
+public class VmOpenApiOrganizationEmail   {
+  @JsonProperty("email")
+  private String email = null;
 
-  @JsonProperty("pageSize")
-  private Integer pageSize = null;
+  @JsonProperty("descriptions")
+  private List<VmOpenApiLanguageItem> descriptions = new ArrayList<VmOpenApiLanguageItem>();
 
-  @JsonProperty("pageCount")
-  private Integer pageCount = null;
-
-  @JsonProperty("guidList")
-  private List<String> guidList = new ArrayList<String>();
-
-   /**
-   * Get pageNumber
-   * @return pageNumber
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Integer getPageNumber() {
-    return pageNumber;
-  }
-
-   /**
-   * Get pageSize
-   * @return pageSize
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Integer getPageSize() {
-    return pageSize;
-  }
-
-   /**
-   * Get pageCount
-   * @return pageCount
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Integer getPageCount() {
-    return pageCount;
-  }
-
-  public VmOpenApiGuidPage guidList(List<String> guidList) {
-    this.guidList = guidList;
-    return this;
-  }
-
-  public VmOpenApiGuidPage addGuidListItem(String guidListItem) {
-    this.guidList.add(guidListItem);
+  public VmOpenApiOrganizationEmail email(String email) {
+    this.email = email;
     return this;
   }
 
    /**
-   * Get guidList
-   * @return guidList
+   * Get email
+   * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<String> getGuidList() {
-    return guidList;
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public String getEmail() {
+    return email;
   }
 
-  public void setGuidList(List<String> guidList) {
-    this.guidList = guidList;
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public VmOpenApiOrganizationEmail descriptions(List<VmOpenApiLanguageItem> descriptions) {
+    this.descriptions = descriptions;
+    return this;
+  }
+
+  public VmOpenApiOrganizationEmail addDescriptionsItem(VmOpenApiLanguageItem descriptionsItem) {
+    this.descriptions.add(descriptionsItem);
+    return this;
+  }
+
+   /**
+   * Get descriptions
+   * @return descriptions
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiLanguageItem> getDescriptions() {
+    return descriptions;
+  }
+
+  public void setDescriptions(List<VmOpenApiLanguageItem> descriptions) {
+    this.descriptions = descriptions;
   }
 
 
@@ -110,27 +96,23 @@ public class VmOpenApiGuidPage   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiGuidPage vmOpenApiGuidPage = (VmOpenApiGuidPage) o;
-    return Objects.equals(this.pageNumber, vmOpenApiGuidPage.pageNumber) &&
-        Objects.equals(this.pageSize, vmOpenApiGuidPage.pageSize) &&
-        Objects.equals(this.pageCount, vmOpenApiGuidPage.pageCount) &&
-        Objects.equals(this.guidList, vmOpenApiGuidPage.guidList);
+    VmOpenApiOrganizationEmail vmOpenApiOrganizationEmail = (VmOpenApiOrganizationEmail) o;
+    return Objects.equals(this.email, vmOpenApiOrganizationEmail.email) &&
+        Objects.equals(this.descriptions, vmOpenApiOrganizationEmail.descriptions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageNumber, pageSize, pageCount, guidList);
+    return Objects.hash(email, descriptions);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiGuidPage {\n");
+    sb.append("class VmOpenApiOrganizationEmail {\n");
     
-    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
-    sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
-    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
-    sb.append("    guidList: ").append(toIndentedString(guidList)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    descriptions: ").append(toIndentedString(descriptions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

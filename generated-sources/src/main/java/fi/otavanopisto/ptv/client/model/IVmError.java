@@ -33,9 +33,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * IVmError
+ * Interface for view model error message.
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@ApiModel(description = "Interface for view model error message.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class IVmError   {
   @JsonProperty("errorMessage")
   private String errorMessage = null;
@@ -46,10 +47,10 @@ public class IVmError   {
   }
 
    /**
-   * Get errorMessage
+   * View model error message.
    * @return errorMessage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "View model error message.")
   public String getErrorMessage() {
     return errorMessage;
   }

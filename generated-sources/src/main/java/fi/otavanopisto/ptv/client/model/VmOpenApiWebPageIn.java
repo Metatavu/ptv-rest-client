@@ -33,16 +33,11 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * VmOpenApiAttachmentWithType
+ * Model for adding or editing web page.
  */
+@ApiModel(description = "Model for adding or editing web page.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
-public class VmOpenApiAttachmentWithType   {
-  @JsonProperty("type")
-  private String type = null;
-
-  @JsonProperty("name")
-  private String name = null;
-
+public class VmOpenApiWebPageIn   {
   @JsonProperty("description")
   private String description = null;
 
@@ -52,52 +47,22 @@ public class VmOpenApiAttachmentWithType   {
   @JsonProperty("language")
   private String language = null;
 
-  public VmOpenApiAttachmentWithType type(String type) {
-    this.type = type;
-    return this;
-  }
+  @JsonProperty("value")
+  private String value = null;
 
-   /**
-   * Get type
-   * @return type
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getType() {
-    return type;
-  }
+  @JsonProperty("type")
+  private String type = null;
 
-  public void setType(String type) {
-    this.type = type;
-  }
-
-  public VmOpenApiAttachmentWithType name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public VmOpenApiAttachmentWithType description(String description) {
+  public VmOpenApiWebPageIn description(String description) {
     this.description = description;
     return this;
   }
 
    /**
-   * Get description
+   * Web page description.
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "Web page description.")
   public String getDescription() {
     return description;
   }
@@ -106,16 +71,16 @@ public class VmOpenApiAttachmentWithType   {
     this.description = description;
   }
 
-  public VmOpenApiAttachmentWithType url(String url) {
+  public VmOpenApiWebPageIn url(String url) {
     this.url = url;
     return this;
   }
 
    /**
-   * Get url
+   * Web page url.
    * @return url
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "Web page url.")
   public String getUrl() {
     return url;
   }
@@ -124,22 +89,58 @@ public class VmOpenApiAttachmentWithType   {
     this.url = url;
   }
 
-  public VmOpenApiAttachmentWithType language(String language) {
+  public VmOpenApiWebPageIn language(String language) {
     this.language = language;
     return this;
   }
 
    /**
-   * Get language
+   * Language code.
    * @return language
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "Language code.")
   public String getLanguage() {
     return language;
   }
 
   public void setLanguage(String language) {
     this.language = language;
+  }
+
+  public VmOpenApiWebPageIn value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * Get value
+   * @return value
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  public VmOpenApiWebPageIn type(String type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Get type
+   * @return type
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
   }
 
 
@@ -151,29 +152,29 @@ public class VmOpenApiAttachmentWithType   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiAttachmentWithType vmOpenApiAttachmentWithType = (VmOpenApiAttachmentWithType) o;
-    return Objects.equals(this.type, vmOpenApiAttachmentWithType.type) &&
-        Objects.equals(this.name, vmOpenApiAttachmentWithType.name) &&
-        Objects.equals(this.description, vmOpenApiAttachmentWithType.description) &&
-        Objects.equals(this.url, vmOpenApiAttachmentWithType.url) &&
-        Objects.equals(this.language, vmOpenApiAttachmentWithType.language);
+    VmOpenApiWebPageIn vmOpenApiWebPageIn = (VmOpenApiWebPageIn) o;
+    return Objects.equals(this.description, vmOpenApiWebPageIn.description) &&
+        Objects.equals(this.url, vmOpenApiWebPageIn.url) &&
+        Objects.equals(this.language, vmOpenApiWebPageIn.language) &&
+        Objects.equals(this.value, vmOpenApiWebPageIn.value) &&
+        Objects.equals(this.type, vmOpenApiWebPageIn.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, name, description, url, language);
+    return Objects.hash(description, url, language, value, type);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiAttachmentWithType {\n");
+    sb.append("class VmOpenApiWebPageIn {\n");
     
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -38,7 +38,7 @@ import java.util.List;
 /**
  * VmOpenApiAddress
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class VmOpenApiAddress   {
   @JsonProperty("postOfficeBox")
   private String postOfficeBox = null;
@@ -60,6 +60,9 @@ public class VmOpenApiAddress   {
 
   @JsonProperty("qualifier")
   private String qualifier = null;
+
+  @JsonProperty("additionalInformations")
+  private List<VmOpenApiLanguageItem> additionalInformations = new ArrayList<VmOpenApiLanguageItem>();
 
   public VmOpenApiAddress postOfficeBox(String postOfficeBox) {
     this.postOfficeBox = postOfficeBox;
@@ -192,6 +195,29 @@ public class VmOpenApiAddress   {
     this.qualifier = qualifier;
   }
 
+  public VmOpenApiAddress additionalInformations(List<VmOpenApiLanguageItem> additionalInformations) {
+    this.additionalInformations = additionalInformations;
+    return this;
+  }
+
+  public VmOpenApiAddress addAdditionalInformationsItem(VmOpenApiLanguageItem additionalInformationsItem) {
+    this.additionalInformations.add(additionalInformationsItem);
+    return this;
+  }
+
+   /**
+   * Get additionalInformations
+   * @return additionalInformations
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiLanguageItem> getAdditionalInformations() {
+    return additionalInformations;
+  }
+
+  public void setAdditionalInformations(List<VmOpenApiLanguageItem> additionalInformations) {
+    this.additionalInformations = additionalInformations;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -208,12 +234,13 @@ public class VmOpenApiAddress   {
         Objects.equals(this.streetAddress, vmOpenApiAddress.streetAddress) &&
         Objects.equals(this.municipality, vmOpenApiAddress.municipality) &&
         Objects.equals(this.country, vmOpenApiAddress.country) &&
-        Objects.equals(this.qualifier, vmOpenApiAddress.qualifier);
+        Objects.equals(this.qualifier, vmOpenApiAddress.qualifier) &&
+        Objects.equals(this.additionalInformations, vmOpenApiAddress.additionalInformations);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(postOfficeBox, postalCode, postOffice, streetAddress, municipality, country, qualifier);
+    return Objects.hash(postOfficeBox, postalCode, postOffice, streetAddress, municipality, country, qualifier, additionalInformations);
   }
 
   @Override
@@ -228,6 +255,7 @@ public class VmOpenApiAddress   {
     sb.append("    municipality: ").append(toIndentedString(municipality)).append("\n");
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("    qualifier: ").append(toIndentedString(qualifier)).append("\n");
+    sb.append("    additionalInformations: ").append(toIndentedString(additionalInformations)).append("\n");
     sb.append("}");
     return sb.toString();
   }

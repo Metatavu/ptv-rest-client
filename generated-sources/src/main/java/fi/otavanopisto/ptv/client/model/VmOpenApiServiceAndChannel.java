@@ -35,70 +35,60 @@ import java.util.List;
 
 
 /**
- * VmOpenApiGuidPage
+ * VmOpenApiServiceAndChannel
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
-public class VmOpenApiGuidPage   {
-  @JsonProperty("pageNumber")
-  private Integer pageNumber = null;
+public class VmOpenApiServiceAndChannel   {
+  @JsonProperty("serviceIds")
+  private List<String> serviceIds = new ArrayList<String>();
 
-  @JsonProperty("pageSize")
-  private Integer pageSize = null;
+  @JsonProperty("serviceChannelIds")
+  private List<String> serviceChannelIds = new ArrayList<String>();
 
-  @JsonProperty("pageCount")
-  private Integer pageCount = null;
-
-  @JsonProperty("guidList")
-  private List<String> guidList = new ArrayList<String>();
-
-   /**
-   * Get pageNumber
-   * @return pageNumber
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Integer getPageNumber() {
-    return pageNumber;
-  }
-
-   /**
-   * Get pageSize
-   * @return pageSize
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Integer getPageSize() {
-    return pageSize;
-  }
-
-   /**
-   * Get pageCount
-   * @return pageCount
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Integer getPageCount() {
-    return pageCount;
-  }
-
-  public VmOpenApiGuidPage guidList(List<String> guidList) {
-    this.guidList = guidList;
+  public VmOpenApiServiceAndChannel serviceIds(List<String> serviceIds) {
+    this.serviceIds = serviceIds;
     return this;
   }
 
-  public VmOpenApiGuidPage addGuidListItem(String guidListItem) {
-    this.guidList.add(guidListItem);
+  public VmOpenApiServiceAndChannel addServiceIdsItem(String serviceIdsItem) {
+    this.serviceIds.add(serviceIdsItem);
     return this;
   }
 
    /**
-   * Get guidList
-   * @return guidList
+   * Get serviceIds
+   * @return serviceIds
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<String> getGuidList() {
-    return guidList;
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public List<String> getServiceIds() {
+    return serviceIds;
   }
 
-  public void setGuidList(List<String> guidList) {
-    this.guidList = guidList;
+  public void setServiceIds(List<String> serviceIds) {
+    this.serviceIds = serviceIds;
+  }
+
+  public VmOpenApiServiceAndChannel serviceChannelIds(List<String> serviceChannelIds) {
+    this.serviceChannelIds = serviceChannelIds;
+    return this;
+  }
+
+  public VmOpenApiServiceAndChannel addServiceChannelIdsItem(String serviceChannelIdsItem) {
+    this.serviceChannelIds.add(serviceChannelIdsItem);
+    return this;
+  }
+
+   /**
+   * Get serviceChannelIds
+   * @return serviceChannelIds
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public List<String> getServiceChannelIds() {
+    return serviceChannelIds;
+  }
+
+  public void setServiceChannelIds(List<String> serviceChannelIds) {
+    this.serviceChannelIds = serviceChannelIds;
   }
 
 
@@ -110,27 +100,23 @@ public class VmOpenApiGuidPage   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiGuidPage vmOpenApiGuidPage = (VmOpenApiGuidPage) o;
-    return Objects.equals(this.pageNumber, vmOpenApiGuidPage.pageNumber) &&
-        Objects.equals(this.pageSize, vmOpenApiGuidPage.pageSize) &&
-        Objects.equals(this.pageCount, vmOpenApiGuidPage.pageCount) &&
-        Objects.equals(this.guidList, vmOpenApiGuidPage.guidList);
+    VmOpenApiServiceAndChannel vmOpenApiServiceAndChannel = (VmOpenApiServiceAndChannel) o;
+    return Objects.equals(this.serviceIds, vmOpenApiServiceAndChannel.serviceIds) &&
+        Objects.equals(this.serviceChannelIds, vmOpenApiServiceAndChannel.serviceChannelIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageNumber, pageSize, pageCount, guidList);
+    return Objects.hash(serviceIds, serviceChannelIds);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiGuidPage {\n");
+    sb.append("class VmOpenApiServiceAndChannel {\n");
     
-    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
-    sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
-    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
-    sb.append("    guidList: ").append(toIndentedString(guidList)).append("\n");
+    sb.append("    serviceIds: ").append(toIndentedString(serviceIds)).append("\n");
+    sb.append("    serviceChannelIds: ").append(toIndentedString(serviceChannelIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -44,7 +44,7 @@ import java.util.List;
 /**
  * VmOpenApiPrintableFormChannel
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class VmOpenApiPrintableFormChannel   {
   @JsonProperty("id")
   private String id = null;
@@ -61,20 +61,14 @@ public class VmOpenApiPrintableFormChannel   {
   @JsonProperty("serviceChannelDescriptions")
   private List<VmOpenApiLocalizedListItem> serviceChannelDescriptions = new ArrayList<VmOpenApiLocalizedListItem>();
 
-  @JsonProperty("webPages")
-  private List<VmOpenApiWebPage> webPages = new ArrayList<VmOpenApiWebPage>();
-
-  @JsonProperty("serviceHours")
-  private List<VmOpenApiServiceHour> serviceHours = new ArrayList<VmOpenApiServiceHour>();
-
-  @JsonProperty("supportContacts")
-  private List<VmOpenApiSupport> supportContacts = new ArrayList<VmOpenApiSupport>();
-
   @JsonProperty("formIdentifier")
   private String formIdentifier = null;
 
   @JsonProperty("formReceiver")
   private String formReceiver = null;
+
+  @JsonProperty("supportContacts")
+  private List<VmOpenApiSupport> supportContacts = new ArrayList<VmOpenApiSupport>();
 
   @JsonProperty("deliveryAddress")
   private VmOpenApiAddress deliveryAddress = null;
@@ -82,11 +76,20 @@ public class VmOpenApiPrintableFormChannel   {
   @JsonProperty("channelUrls")
   private List<VmOpenApiLocalizedListItem> channelUrls = new ArrayList<VmOpenApiLocalizedListItem>();
 
+  @JsonProperty("languages")
+  private List<String> languages = new ArrayList<String>();
+
   @JsonProperty("deliveryAddressDescriptions")
   private List<VmOpenApiLanguageItem> deliveryAddressDescriptions = new ArrayList<VmOpenApiLanguageItem>();
 
   @JsonProperty("attachments")
   private List<VmOpenApiAttachmentWithType> attachments = new ArrayList<VmOpenApiAttachmentWithType>();
+
+  @JsonProperty("webPages")
+  private List<VmOpenApiWebPage> webPages = new ArrayList<VmOpenApiWebPage>();
+
+  @JsonProperty("serviceHours")
+  private List<VmOpenApiServiceHour> serviceHours = new ArrayList<VmOpenApiServiceHour>();
 
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
@@ -182,82 +185,13 @@ public class VmOpenApiPrintableFormChannel   {
    * Get serviceChannelDescriptions
    * @return serviceChannelDescriptions
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLocalizedListItem> getServiceChannelDescriptions() {
     return serviceChannelDescriptions;
   }
 
   public void setServiceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
-  }
-
-  public VmOpenApiPrintableFormChannel webPages(List<VmOpenApiWebPage> webPages) {
-    this.webPages = webPages;
-    return this;
-  }
-
-  public VmOpenApiPrintableFormChannel addWebPagesItem(VmOpenApiWebPage webPagesItem) {
-    this.webPages.add(webPagesItem);
-    return this;
-  }
-
-   /**
-   * Get webPages
-   * @return webPages
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiWebPage> getWebPages() {
-    return webPages;
-  }
-
-  public void setWebPages(List<VmOpenApiWebPage> webPages) {
-    this.webPages = webPages;
-  }
-
-  public VmOpenApiPrintableFormChannel serviceHours(List<VmOpenApiServiceHour> serviceHours) {
-    this.serviceHours = serviceHours;
-    return this;
-  }
-
-  public VmOpenApiPrintableFormChannel addServiceHoursItem(VmOpenApiServiceHour serviceHoursItem) {
-    this.serviceHours.add(serviceHoursItem);
-    return this;
-  }
-
-   /**
-   * Get serviceHours
-   * @return serviceHours
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiServiceHour> getServiceHours() {
-    return serviceHours;
-  }
-
-  public void setServiceHours(List<VmOpenApiServiceHour> serviceHours) {
-    this.serviceHours = serviceHours;
-  }
-
-  public VmOpenApiPrintableFormChannel supportContacts(List<VmOpenApiSupport> supportContacts) {
-    this.supportContacts = supportContacts;
-    return this;
-  }
-
-  public VmOpenApiPrintableFormChannel addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
-    this.supportContacts.add(supportContactsItem);
-    return this;
-  }
-
-   /**
-   * Get supportContacts
-   * @return supportContacts
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiSupport> getSupportContacts() {
-    return supportContacts;
-  }
-
-  public void setSupportContacts(List<VmOpenApiSupport> supportContacts) {
-    this.supportContacts = supportContacts;
   }
 
   public VmOpenApiPrintableFormChannel formIdentifier(String formIdentifier) {
@@ -294,6 +228,29 @@ public class VmOpenApiPrintableFormChannel   {
 
   public void setFormReceiver(String formReceiver) {
     this.formReceiver = formReceiver;
+  }
+
+  public VmOpenApiPrintableFormChannel supportContacts(List<VmOpenApiSupport> supportContacts) {
+    this.supportContacts = supportContacts;
+    return this;
+  }
+
+  public VmOpenApiPrintableFormChannel addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
+    this.supportContacts.add(supportContactsItem);
+    return this;
+  }
+
+   /**
+   * Get supportContacts
+   * @return supportContacts
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiSupport> getSupportContacts() {
+    return supportContacts;
+  }
+
+  public void setSupportContacts(List<VmOpenApiSupport> supportContacts) {
+    this.supportContacts = supportContacts;
   }
 
   public VmOpenApiPrintableFormChannel deliveryAddress(VmOpenApiAddress deliveryAddress) {
@@ -335,6 +292,29 @@ public class VmOpenApiPrintableFormChannel   {
 
   public void setChannelUrls(List<VmOpenApiLocalizedListItem> channelUrls) {
     this.channelUrls = channelUrls;
+  }
+
+  public VmOpenApiPrintableFormChannel languages(List<String> languages) {
+    this.languages = languages;
+    return this;
+  }
+
+  public VmOpenApiPrintableFormChannel addLanguagesItem(String languagesItem) {
+    this.languages.add(languagesItem);
+    return this;
+  }
+
+   /**
+   * Get languages
+   * @return languages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<String> getLanguages() {
+    return languages;
+  }
+
+  public void setLanguages(List<String> languages) {
+    this.languages = languages;
   }
 
   public VmOpenApiPrintableFormChannel deliveryAddressDescriptions(List<VmOpenApiLanguageItem> deliveryAddressDescriptions) {
@@ -383,6 +363,52 @@ public class VmOpenApiPrintableFormChannel   {
     this.attachments = attachments;
   }
 
+  public VmOpenApiPrintableFormChannel webPages(List<VmOpenApiWebPage> webPages) {
+    this.webPages = webPages;
+    return this;
+  }
+
+  public VmOpenApiPrintableFormChannel addWebPagesItem(VmOpenApiWebPage webPagesItem) {
+    this.webPages.add(webPagesItem);
+    return this;
+  }
+
+   /**
+   * Get webPages
+   * @return webPages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiWebPage> getWebPages() {
+    return webPages;
+  }
+
+  public void setWebPages(List<VmOpenApiWebPage> webPages) {
+    this.webPages = webPages;
+  }
+
+  public VmOpenApiPrintableFormChannel serviceHours(List<VmOpenApiServiceHour> serviceHours) {
+    this.serviceHours = serviceHours;
+    return this;
+  }
+
+  public VmOpenApiPrintableFormChannel addServiceHoursItem(VmOpenApiServiceHour serviceHoursItem) {
+    this.serviceHours.add(serviceHoursItem);
+    return this;
+  }
+
+   /**
+   * Get serviceHours
+   * @return serviceHours
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiServiceHour> getServiceHours() {
+    return serviceHours;
+  }
+
+  public void setServiceHours(List<VmOpenApiServiceHour> serviceHours) {
+    this.serviceHours = serviceHours;
+  }
+
   public VmOpenApiPrintableFormChannel publishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
     return this;
@@ -392,7 +418,7 @@ public class VmOpenApiPrintableFormChannel   {
    * Get publishingStatus
    * @return publishingStatus
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPublishingStatus() {
     return publishingStatus;
   }
@@ -416,21 +442,22 @@ public class VmOpenApiPrintableFormChannel   {
         Objects.equals(this.organizationId, vmOpenApiPrintableFormChannel.organizationId) &&
         Objects.equals(this.serviceChannelNames, vmOpenApiPrintableFormChannel.serviceChannelNames) &&
         Objects.equals(this.serviceChannelDescriptions, vmOpenApiPrintableFormChannel.serviceChannelDescriptions) &&
-        Objects.equals(this.webPages, vmOpenApiPrintableFormChannel.webPages) &&
-        Objects.equals(this.serviceHours, vmOpenApiPrintableFormChannel.serviceHours) &&
-        Objects.equals(this.supportContacts, vmOpenApiPrintableFormChannel.supportContacts) &&
         Objects.equals(this.formIdentifier, vmOpenApiPrintableFormChannel.formIdentifier) &&
         Objects.equals(this.formReceiver, vmOpenApiPrintableFormChannel.formReceiver) &&
+        Objects.equals(this.supportContacts, vmOpenApiPrintableFormChannel.supportContacts) &&
         Objects.equals(this.deliveryAddress, vmOpenApiPrintableFormChannel.deliveryAddress) &&
         Objects.equals(this.channelUrls, vmOpenApiPrintableFormChannel.channelUrls) &&
+        Objects.equals(this.languages, vmOpenApiPrintableFormChannel.languages) &&
         Objects.equals(this.deliveryAddressDescriptions, vmOpenApiPrintableFormChannel.deliveryAddressDescriptions) &&
         Objects.equals(this.attachments, vmOpenApiPrintableFormChannel.attachments) &&
+        Objects.equals(this.webPages, vmOpenApiPrintableFormChannel.webPages) &&
+        Objects.equals(this.serviceHours, vmOpenApiPrintableFormChannel.serviceHours) &&
         Objects.equals(this.publishingStatus, vmOpenApiPrintableFormChannel.publishingStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, serviceChannelType, organizationId, serviceChannelNames, serviceChannelDescriptions, webPages, serviceHours, supportContacts, formIdentifier, formReceiver, deliveryAddress, channelUrls, deliveryAddressDescriptions, attachments, publishingStatus);
+    return Objects.hash(id, serviceChannelType, organizationId, serviceChannelNames, serviceChannelDescriptions, formIdentifier, formReceiver, supportContacts, deliveryAddress, channelUrls, languages, deliveryAddressDescriptions, attachments, webPages, serviceHours, publishingStatus);
   }
 
   @Override
@@ -443,15 +470,16 @@ public class VmOpenApiPrintableFormChannel   {
     sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
     sb.append("    serviceChannelNames: ").append(toIndentedString(serviceChannelNames)).append("\n");
     sb.append("    serviceChannelDescriptions: ").append(toIndentedString(serviceChannelDescriptions)).append("\n");
-    sb.append("    webPages: ").append(toIndentedString(webPages)).append("\n");
-    sb.append("    serviceHours: ").append(toIndentedString(serviceHours)).append("\n");
-    sb.append("    supportContacts: ").append(toIndentedString(supportContacts)).append("\n");
     sb.append("    formIdentifier: ").append(toIndentedString(formIdentifier)).append("\n");
     sb.append("    formReceiver: ").append(toIndentedString(formReceiver)).append("\n");
+    sb.append("    supportContacts: ").append(toIndentedString(supportContacts)).append("\n");
     sb.append("    deliveryAddress: ").append(toIndentedString(deliveryAddress)).append("\n");
     sb.append("    channelUrls: ").append(toIndentedString(channelUrls)).append("\n");
+    sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
     sb.append("    deliveryAddressDescriptions: ").append(toIndentedString(deliveryAddressDescriptions)).append("\n");
     sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
+    sb.append("    webPages: ").append(toIndentedString(webPages)).append("\n");
+    sb.append("    serviceHours: ").append(toIndentedString(serviceHours)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
     sb.append("}");
     return sb.toString();

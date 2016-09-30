@@ -35,7 +35,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * IVmOpenApiLocalizedListItem
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class IVmOpenApiLocalizedListItem   {
   @JsonProperty("language")
   private String language = null;
@@ -45,6 +45,9 @@ public class IVmOpenApiLocalizedListItem   {
 
   @JsonProperty("type")
   private String type = null;
+
+  @JsonProperty("ownerReferenceId")
+  private String ownerReferenceId = null;
 
   public IVmOpenApiLocalizedListItem language(String language) {
     this.language = language;
@@ -100,6 +103,24 @@ public class IVmOpenApiLocalizedListItem   {
     this.type = type;
   }
 
+  public IVmOpenApiLocalizedListItem ownerReferenceId(String ownerReferenceId) {
+    this.ownerReferenceId = ownerReferenceId;
+    return this;
+  }
+
+   /**
+   * Get ownerReferenceId
+   * @return ownerReferenceId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getOwnerReferenceId() {
+    return ownerReferenceId;
+  }
+
+  public void setOwnerReferenceId(String ownerReferenceId) {
+    this.ownerReferenceId = ownerReferenceId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -112,12 +133,13 @@ public class IVmOpenApiLocalizedListItem   {
     IVmOpenApiLocalizedListItem iVmOpenApiLocalizedListItem = (IVmOpenApiLocalizedListItem) o;
     return Objects.equals(this.language, iVmOpenApiLocalizedListItem.language) &&
         Objects.equals(this.value, iVmOpenApiLocalizedListItem.value) &&
-        Objects.equals(this.type, iVmOpenApiLocalizedListItem.type);
+        Objects.equals(this.type, iVmOpenApiLocalizedListItem.type) &&
+        Objects.equals(this.ownerReferenceId, iVmOpenApiLocalizedListItem.ownerReferenceId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(language, value, type);
+    return Objects.hash(language, value, type, ownerReferenceId);
   }
 
   @Override
@@ -128,6 +150,7 @@ public class IVmOpenApiLocalizedListItem   {
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    ownerReferenceId: ").append(toIndentedString(ownerReferenceId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

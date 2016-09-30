@@ -33,10 +33,14 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * VmOpenApiWebPage
+ * Open API web page model.
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@ApiModel(description = "Open API web page model.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class VmOpenApiWebPage   {
+  @JsonProperty("description")
+  private String description = null;
+
   @JsonProperty("url")
   private String url = null;
 
@@ -49,16 +53,34 @@ public class VmOpenApiWebPage   {
   @JsonProperty("type")
   private String type = null;
 
+  public VmOpenApiWebPage description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Web page description.
+   * @return description
+  **/
+  @ApiModelProperty(example = "null", value = "Web page description.")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
   public VmOpenApiWebPage url(String url) {
     this.url = url;
     return this;
   }
 
    /**
-   * Get url
+   * Web page url.
    * @return url
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "Web page url.")
   public String getUrl() {
     return url;
   }
@@ -73,10 +95,10 @@ public class VmOpenApiWebPage   {
   }
 
    /**
-   * Get language
+   * Language code.
    * @return language
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "Language code.")
   public String getLanguage() {
     return language;
   }
@@ -131,7 +153,8 @@ public class VmOpenApiWebPage   {
       return false;
     }
     VmOpenApiWebPage vmOpenApiWebPage = (VmOpenApiWebPage) o;
-    return Objects.equals(this.url, vmOpenApiWebPage.url) &&
+    return Objects.equals(this.description, vmOpenApiWebPage.description) &&
+        Objects.equals(this.url, vmOpenApiWebPage.url) &&
         Objects.equals(this.language, vmOpenApiWebPage.language) &&
         Objects.equals(this.value, vmOpenApiWebPage.value) &&
         Objects.equals(this.type, vmOpenApiWebPage.type);
@@ -139,7 +162,7 @@ public class VmOpenApiWebPage   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(url, language, value, type);
+    return Objects.hash(description, url, language, value, type);
   }
 
   @Override
@@ -147,6 +170,7 @@ public class VmOpenApiWebPage   {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmOpenApiWebPage {\n");
     
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");

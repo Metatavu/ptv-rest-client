@@ -28,11 +28,12 @@ package fi.otavanopisto.ptv.client.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import fi.otavanopisto.ptv.client.model.VmOpenApiAddressWithType;
+import fi.otavanopisto.ptv.client.model.VmOpenApiAddressWithTypeIn;
 import fi.otavanopisto.ptv.client.model.VmOpenApiLanguageItem;
-import fi.otavanopisto.ptv.client.model.VmOpenApiListItem;
 import fi.otavanopisto.ptv.client.model.VmOpenApiLocalizedListItem;
-import fi.otavanopisto.ptv.client.model.VmOpenApiWebPage;
+import fi.otavanopisto.ptv.client.model.VmOpenApiOrganizationEmailIn;
+import fi.otavanopisto.ptv.client.model.VmOpenApiOrganizationPhoneIn;
+import fi.otavanopisto.ptv.client.model.VmOpenApiWebPageIn;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -42,10 +43,10 @@ import java.util.List;
 /**
  * VmOpenApiOrganizationIn
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class VmOpenApiOrganizationIn   {
-  @JsonProperty("entityId")
-  private String entityId = null;
+  @JsonProperty("sourceId")
+  private String sourceId = null;
 
   @JsonProperty("oid")
   private String oid = null;
@@ -68,20 +69,23 @@ public class VmOpenApiOrganizationIn   {
   @JsonProperty("organizationNames")
   private List<VmOpenApiLocalizedListItem> organizationNames = new ArrayList<VmOpenApiLocalizedListItem>();
 
+  @JsonProperty("displayNameType")
+  private String displayNameType = null;
+
   @JsonProperty("organizationDescriptions")
   private List<VmOpenApiLanguageItem> organizationDescriptions = new ArrayList<VmOpenApiLanguageItem>();
 
   @JsonProperty("emailAddresses")
-  private List<String> emailAddresses = new ArrayList<String>();
+  private List<VmOpenApiOrganizationEmailIn> emailAddresses = new ArrayList<VmOpenApiOrganizationEmailIn>();
 
   @JsonProperty("phoneNumbers")
-  private List<VmOpenApiListItem> phoneNumbers = new ArrayList<VmOpenApiListItem>();
+  private List<VmOpenApiOrganizationPhoneIn> phoneNumbers = new ArrayList<VmOpenApiOrganizationPhoneIn>();
 
   @JsonProperty("webPages")
-  private List<VmOpenApiWebPage> webPages = new ArrayList<VmOpenApiWebPage>();
+  private List<VmOpenApiWebPageIn> webPages = new ArrayList<VmOpenApiWebPageIn>();
 
   @JsonProperty("addresses")
-  private List<VmOpenApiAddressWithType> addresses = new ArrayList<VmOpenApiAddressWithType>();
+  private List<VmOpenApiAddressWithTypeIn> addresses = new ArrayList<VmOpenApiAddressWithTypeIn>();
 
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
@@ -89,22 +93,22 @@ public class VmOpenApiOrganizationIn   {
   @JsonProperty("parentOrganizationId")
   private String parentOrganizationId = null;
 
-  public VmOpenApiOrganizationIn entityId(String entityId) {
-    this.entityId = entityId;
+  public VmOpenApiOrganizationIn sourceId(String sourceId) {
+    this.sourceId = sourceId;
     return this;
   }
 
    /**
-   * Get entityId
-   * @return entityId
+   * Get sourceId
+   * @return sourceId
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getEntityId() {
-    return entityId;
+  public String getSourceId() {
+    return sourceId;
   }
 
-  public void setEntityId(String entityId) {
-    this.entityId = entityId;
+  public void setSourceId(String sourceId) {
+    this.sourceId = sourceId;
   }
 
   public VmOpenApiOrganizationIn oid(String oid) {
@@ -238,6 +242,24 @@ public class VmOpenApiOrganizationIn   {
     this.organizationNames = organizationNames;
   }
 
+  public VmOpenApiOrganizationIn displayNameType(String displayNameType) {
+    this.displayNameType = displayNameType;
+    return this;
+  }
+
+   /**
+   * Get displayNameType
+   * @return displayNameType
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public String getDisplayNameType() {
+    return displayNameType;
+  }
+
+  public void setDisplayNameType(String displayNameType) {
+    this.displayNameType = displayNameType;
+  }
+
   public VmOpenApiOrganizationIn organizationDescriptions(List<VmOpenApiLanguageItem> organizationDescriptions) {
     this.organizationDescriptions = organizationDescriptions;
     return this;
@@ -261,12 +283,12 @@ public class VmOpenApiOrganizationIn   {
     this.organizationDescriptions = organizationDescriptions;
   }
 
-  public VmOpenApiOrganizationIn emailAddresses(List<String> emailAddresses) {
+  public VmOpenApiOrganizationIn emailAddresses(List<VmOpenApiOrganizationEmailIn> emailAddresses) {
     this.emailAddresses = emailAddresses;
     return this;
   }
 
-  public VmOpenApiOrganizationIn addEmailAddressesItem(String emailAddressesItem) {
+  public VmOpenApiOrganizationIn addEmailAddressesItem(VmOpenApiOrganizationEmailIn emailAddressesItem) {
     this.emailAddresses.add(emailAddressesItem);
     return this;
   }
@@ -276,20 +298,20 @@ public class VmOpenApiOrganizationIn   {
    * @return emailAddresses
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<String> getEmailAddresses() {
+  public List<VmOpenApiOrganizationEmailIn> getEmailAddresses() {
     return emailAddresses;
   }
 
-  public void setEmailAddresses(List<String> emailAddresses) {
+  public void setEmailAddresses(List<VmOpenApiOrganizationEmailIn> emailAddresses) {
     this.emailAddresses = emailAddresses;
   }
 
-  public VmOpenApiOrganizationIn phoneNumbers(List<VmOpenApiListItem> phoneNumbers) {
+  public VmOpenApiOrganizationIn phoneNumbers(List<VmOpenApiOrganizationPhoneIn> phoneNumbers) {
     this.phoneNumbers = phoneNumbers;
     return this;
   }
 
-  public VmOpenApiOrganizationIn addPhoneNumbersItem(VmOpenApiListItem phoneNumbersItem) {
+  public VmOpenApiOrganizationIn addPhoneNumbersItem(VmOpenApiOrganizationPhoneIn phoneNumbersItem) {
     this.phoneNumbers.add(phoneNumbersItem);
     return this;
   }
@@ -299,20 +321,20 @@ public class VmOpenApiOrganizationIn   {
    * @return phoneNumbers
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiListItem> getPhoneNumbers() {
+  public List<VmOpenApiOrganizationPhoneIn> getPhoneNumbers() {
     return phoneNumbers;
   }
 
-  public void setPhoneNumbers(List<VmOpenApiListItem> phoneNumbers) {
+  public void setPhoneNumbers(List<VmOpenApiOrganizationPhoneIn> phoneNumbers) {
     this.phoneNumbers = phoneNumbers;
   }
 
-  public VmOpenApiOrganizationIn webPages(List<VmOpenApiWebPage> webPages) {
+  public VmOpenApiOrganizationIn webPages(List<VmOpenApiWebPageIn> webPages) {
     this.webPages = webPages;
     return this;
   }
 
-  public VmOpenApiOrganizationIn addWebPagesItem(VmOpenApiWebPage webPagesItem) {
+  public VmOpenApiOrganizationIn addWebPagesItem(VmOpenApiWebPageIn webPagesItem) {
     this.webPages.add(webPagesItem);
     return this;
   }
@@ -322,20 +344,20 @@ public class VmOpenApiOrganizationIn   {
    * @return webPages
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiWebPage> getWebPages() {
+  public List<VmOpenApiWebPageIn> getWebPages() {
     return webPages;
   }
 
-  public void setWebPages(List<VmOpenApiWebPage> webPages) {
+  public void setWebPages(List<VmOpenApiWebPageIn> webPages) {
     this.webPages = webPages;
   }
 
-  public VmOpenApiOrganizationIn addresses(List<VmOpenApiAddressWithType> addresses) {
+  public VmOpenApiOrganizationIn addresses(List<VmOpenApiAddressWithTypeIn> addresses) {
     this.addresses = addresses;
     return this;
   }
 
-  public VmOpenApiOrganizationIn addAddressesItem(VmOpenApiAddressWithType addressesItem) {
+  public VmOpenApiOrganizationIn addAddressesItem(VmOpenApiAddressWithTypeIn addressesItem) {
     this.addresses.add(addressesItem);
     return this;
   }
@@ -345,11 +367,11 @@ public class VmOpenApiOrganizationIn   {
    * @return addresses
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiAddressWithType> getAddresses() {
+  public List<VmOpenApiAddressWithTypeIn> getAddresses() {
     return addresses;
   }
 
-  public void setAddresses(List<VmOpenApiAddressWithType> addresses) {
+  public void setAddresses(List<VmOpenApiAddressWithTypeIn> addresses) {
     this.addresses = addresses;
   }
 
@@ -399,7 +421,7 @@ public class VmOpenApiOrganizationIn   {
       return false;
     }
     VmOpenApiOrganizationIn vmOpenApiOrganizationIn = (VmOpenApiOrganizationIn) o;
-    return Objects.equals(this.entityId, vmOpenApiOrganizationIn.entityId) &&
+    return Objects.equals(this.sourceId, vmOpenApiOrganizationIn.sourceId) &&
         Objects.equals(this.oid, vmOpenApiOrganizationIn.oid) &&
         Objects.equals(this.municipality, vmOpenApiOrganizationIn.municipality) &&
         Objects.equals(this.streetAddressAsPostalAddress, vmOpenApiOrganizationIn.streetAddressAsPostalAddress) &&
@@ -407,6 +429,7 @@ public class VmOpenApiOrganizationIn   {
         Objects.equals(this.businessCode, vmOpenApiOrganizationIn.businessCode) &&
         Objects.equals(this.businessName, vmOpenApiOrganizationIn.businessName) &&
         Objects.equals(this.organizationNames, vmOpenApiOrganizationIn.organizationNames) &&
+        Objects.equals(this.displayNameType, vmOpenApiOrganizationIn.displayNameType) &&
         Objects.equals(this.organizationDescriptions, vmOpenApiOrganizationIn.organizationDescriptions) &&
         Objects.equals(this.emailAddresses, vmOpenApiOrganizationIn.emailAddresses) &&
         Objects.equals(this.phoneNumbers, vmOpenApiOrganizationIn.phoneNumbers) &&
@@ -418,7 +441,7 @@ public class VmOpenApiOrganizationIn   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(entityId, oid, municipality, streetAddressAsPostalAddress, organizationType, businessCode, businessName, organizationNames, organizationDescriptions, emailAddresses, phoneNumbers, webPages, addresses, publishingStatus, parentOrganizationId);
+    return Objects.hash(sourceId, oid, municipality, streetAddressAsPostalAddress, organizationType, businessCode, businessName, organizationNames, displayNameType, organizationDescriptions, emailAddresses, phoneNumbers, webPages, addresses, publishingStatus, parentOrganizationId);
   }
 
   @Override
@@ -426,7 +449,7 @@ public class VmOpenApiOrganizationIn   {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmOpenApiOrganizationIn {\n");
     
-    sb.append("    entityId: ").append(toIndentedString(entityId)).append("\n");
+    sb.append("    sourceId: ").append(toIndentedString(sourceId)).append("\n");
     sb.append("    oid: ").append(toIndentedString(oid)).append("\n");
     sb.append("    municipality: ").append(toIndentedString(municipality)).append("\n");
     sb.append("    streetAddressAsPostalAddress: ").append(toIndentedString(streetAddressAsPostalAddress)).append("\n");
@@ -434,6 +457,7 @@ public class VmOpenApiOrganizationIn   {
     sb.append("    businessCode: ").append(toIndentedString(businessCode)).append("\n");
     sb.append("    businessName: ").append(toIndentedString(businessName)).append("\n");
     sb.append("    organizationNames: ").append(toIndentedString(organizationNames)).append("\n");
+    sb.append("    displayNameType: ").append(toIndentedString(displayNameType)).append("\n");
     sb.append("    organizationDescriptions: ").append(toIndentedString(organizationDescriptions)).append("\n");
     sb.append("    emailAddresses: ").append(toIndentedString(emailAddresses)).append("\n");
     sb.append("    phoneNumbers: ").append(toIndentedString(phoneNumbers)).append("\n");

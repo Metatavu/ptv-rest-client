@@ -28,55 +28,63 @@ package fi.otavanopisto.ptv.client.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import fi.otavanopisto.ptv.client.model.VmOpenApiLanguageItem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * VmOpenApiListItem
+ * VmOpenApiOrganizationEmailIn
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
-public class VmOpenApiListItem   {
-  @JsonProperty("value")
-  private String value = null;
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
+public class VmOpenApiOrganizationEmailIn   {
+  @JsonProperty("email")
+  private String email = null;
 
-  @JsonProperty("type")
-  private String type = null;
+  @JsonProperty("descriptions")
+  private List<VmOpenApiLanguageItem> descriptions = new ArrayList<VmOpenApiLanguageItem>();
 
-  public VmOpenApiListItem value(String value) {
-    this.value = value;
+  public VmOpenApiOrganizationEmailIn email(String email) {
+    this.email = email;
     return this;
   }
 
    /**
-   * Get value
-   * @return value
+   * Get email
+   * @return email
   **/
   @ApiModelProperty(example = "null", required = true, value = "")
-  public String getValue() {
-    return value;
+  public String getEmail() {
+    return email;
   }
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setEmail(String email) {
+    this.email = email;
   }
 
-  public VmOpenApiListItem type(String type) {
-    this.type = type;
+  public VmOpenApiOrganizationEmailIn descriptions(List<VmOpenApiLanguageItem> descriptions) {
+    this.descriptions = descriptions;
+    return this;
+  }
+
+  public VmOpenApiOrganizationEmailIn addDescriptionsItem(VmOpenApiLanguageItem descriptionsItem) {
+    this.descriptions.add(descriptionsItem);
     return this;
   }
 
    /**
-   * Get type
-   * @return type
+   * Get descriptions
+   * @return descriptions
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
-  public String getType() {
-    return type;
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiLanguageItem> getDescriptions() {
+    return descriptions;
   }
 
-  public void setType(String type) {
-    this.type = type;
+  public void setDescriptions(List<VmOpenApiLanguageItem> descriptions) {
+    this.descriptions = descriptions;
   }
 
 
@@ -88,23 +96,23 @@ public class VmOpenApiListItem   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiListItem vmOpenApiListItem = (VmOpenApiListItem) o;
-    return Objects.equals(this.value, vmOpenApiListItem.value) &&
-        Objects.equals(this.type, vmOpenApiListItem.type);
+    VmOpenApiOrganizationEmailIn vmOpenApiOrganizationEmailIn = (VmOpenApiOrganizationEmailIn) o;
+    return Objects.equals(this.email, vmOpenApiOrganizationEmailIn.email) &&
+        Objects.equals(this.descriptions, vmOpenApiOrganizationEmailIn.descriptions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, type);
+    return Objects.hash(email, descriptions);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiListItem {\n");
+    sb.append("class VmOpenApiOrganizationEmailIn {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    descriptions: ").append(toIndentedString(descriptions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -28,12 +28,22 @@ import fi.otavanopisto.ptv.client.model.*;
 
 import fi.otavanopisto.ptv.client.model.IVmError;
 import fi.otavanopisto.ptv.client.model.VmOpenApiServiceChannels;
+import fi.otavanopisto.ptv.client.model.VmOpenApiElectronicChannelInBase;
+import fi.otavanopisto.ptv.client.model.VmOpenApiElectronicChannel;
 import fi.otavanopisto.ptv.client.model.VmOpenApiElectronicChannelIn;
 import fi.otavanopisto.ptv.client.model.VmOpenApiGuidPage;
 import java.time.OffsetDateTime;
+import fi.otavanopisto.ptv.client.model.VmOpenApiPhoneChannelInBase;
+import fi.otavanopisto.ptv.client.model.VmOpenApiPhoneChannel;
 import fi.otavanopisto.ptv.client.model.VmOpenApiPhoneChannelIn;
+import fi.otavanopisto.ptv.client.model.VmOpenApiPrintableFormChannel;
+import fi.otavanopisto.ptv.client.model.VmOpenApiPrintableFormChannelInBase;
 import fi.otavanopisto.ptv.client.model.VmOpenApiPrintableFormChannelIn;
+import fi.otavanopisto.ptv.client.model.VmOpenApiServiceLocationChannel;
+import fi.otavanopisto.ptv.client.model.VmOpenApiServiceLocationChannelInBase;
 import fi.otavanopisto.ptv.client.model.VmOpenApiServiceLocationChannelIn;
+import fi.otavanopisto.ptv.client.model.VmOpenApiWebPageChannelInBase;
+import fi.otavanopisto.ptv.client.model.VmOpenApiWebPageChannel;
 import fi.otavanopisto.ptv.client.model.VmOpenApiWebPageChannelIn;
 
 import java.util.ArrayList;
@@ -41,7 +51,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class ServiceChannelApi {
 
   public ServiceChannelApi(ApiClient client) {
@@ -65,19 +75,53 @@ public class ServiceChannelApi {
     return client.doGETRequest(path, resultType, queryParams, formParams);
   }
   /**
+   * Updates a new electronic channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param id electronic channel id (required)
+   * @param request electronic channel data (optional)
+   */
+  public ApiResponse<VmOpenApiElectronicChannel> apiServiceChannelEChannelByIdPut(String id, VmOpenApiElectronicChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/EChannel/{id}"
+      .replaceAll("\\{" + "id" + "\\}", id);
+      
+    ResultType<VmOpenApiElectronicChannel> resultType = new ResultType<VmOpenApiElectronicChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
    * Creates a new electronic channel with the data provided as input.
-   * 
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
    * @param request The electronic channel data. (optional)
    */
-  public ApiResponse<VmOpenApiElectronicChannelIn> apiServiceChannelEChannelPost(VmOpenApiElectronicChannelIn request) {
+  public ApiResponse<VmOpenApiElectronicChannel> apiServiceChannelEChannelPost(VmOpenApiElectronicChannelIn request) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
         
         
     String path = "/api/ServiceChannel/EChannel";
       
-    ResultType<VmOpenApiElectronicChannelIn> resultType = new ResultType<VmOpenApiElectronicChannelIn>() {};
+    ResultType<VmOpenApiElectronicChannel> resultType = new ResultType<VmOpenApiElectronicChannel>() {};
     return client.doPOSTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Updates a new electronic channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param sourceId electronic channel external source id (required)
+   * @param request electronic channel data (optional)
+   */
+  public ApiResponse<VmOpenApiElectronicChannel> apiServiceChannelEChannelSourceIdBySourceIdPut(String sourceId, VmOpenApiElectronicChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/EChannel/sourceId/{sourceId}"
+      .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
+      
+    ResultType<VmOpenApiElectronicChannel> resultType = new ResultType<VmOpenApiElectronicChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
   }
   /**
    * Gets all published service channels within PTV as a list of service channel ids.              Service channels created/modified after certain date can be fetched by adding date as query string parameter.
@@ -122,7 +166,7 @@ if (page != null)
    * Gets a list of certain type of published service channels for defined organization.              Service channels created/modified after certain date can be fetched by adding date as query string parameter.
    * 
    * @param organizationId Guid (required)
-   * @param type  (required)
+   * @param type Service channel type (required)
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    */
   public ApiResponse<List<VmOpenApiServiceChannels>> apiServiceChannelOrganizationByOrganizationIdTypeByTypeGet(String organizationId, String type, OffsetDateTime date) {
@@ -140,49 +184,151 @@ if (page != null)
     return client.doGETRequest(path, resultType, queryParams, formParams);
   }
   /**
+   * Updates phone channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param id phone channel id (required)
+   * @param request phone channel data (optional)
+   */
+  public ApiResponse<VmOpenApiPhoneChannel> apiServiceChannelPhoneByIdPut(String id, VmOpenApiPhoneChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/Phone/{id}"
+      .replaceAll("\\{" + "id" + "\\}", id);
+      
+    ResultType<VmOpenApiPhoneChannel> resultType = new ResultType<VmOpenApiPhoneChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
    * Creates a new phone channel with the data provided as input.
-   * 
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
    * @param request The phone channel data. (optional)
    */
-  public ApiResponse<VmOpenApiPhoneChannelIn> apiServiceChannelPhonePost(VmOpenApiPhoneChannelIn request) {
+  public ApiResponse<VmOpenApiPhoneChannel> apiServiceChannelPhonePost(VmOpenApiPhoneChannelIn request) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
         
         
     String path = "/api/ServiceChannel/Phone";
       
-    ResultType<VmOpenApiPhoneChannelIn> resultType = new ResultType<VmOpenApiPhoneChannelIn>() {};
+    ResultType<VmOpenApiPhoneChannel> resultType = new ResultType<VmOpenApiPhoneChannel>() {};
     return client.doPOSTRequest(path, resultType, queryParams, formParams);
   }
   /**
+   * Updates phone channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param sourceId phone channel external id (required)
+   * @param request phone channel data (optional)
+   */
+  public ApiResponse<VmOpenApiPhoneChannel> apiServiceChannelPhoneSourceIdBySourceIdPut(String sourceId, VmOpenApiPhoneChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/Phone/sourceId/{sourceId}"
+      .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
+      
+    ResultType<VmOpenApiPhoneChannel> resultType = new ResultType<VmOpenApiPhoneChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Updates printable form channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param id printable form channel id (required)
+   * @param request printable form channel data (optional)
+   */
+  public ApiResponse<VmOpenApiPrintableFormChannel> apiServiceChannelPrintableFormByIdPut(String id, VmOpenApiPrintableFormChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/PrintableForm/{id}"
+      .replaceAll("\\{" + "id" + "\\}", id);
+      
+    ResultType<VmOpenApiPrintableFormChannel> resultType = new ResultType<VmOpenApiPrintableFormChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
    * Creates a new printable form channel with the data provided as input.
-   * 
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
    * @param request The printable form channel data. (optional)
    */
-  public ApiResponse<VmOpenApiPrintableFormChannelIn> apiServiceChannelPrintableFormPost(VmOpenApiPrintableFormChannelIn request) {
+  public ApiResponse<VmOpenApiPrintableFormChannel> apiServiceChannelPrintableFormPost(VmOpenApiPrintableFormChannelIn request) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
         
         
     String path = "/api/ServiceChannel/PrintableForm";
       
-    ResultType<VmOpenApiPrintableFormChannelIn> resultType = new ResultType<VmOpenApiPrintableFormChannelIn>() {};
+    ResultType<VmOpenApiPrintableFormChannel> resultType = new ResultType<VmOpenApiPrintableFormChannel>() {};
     return client.doPOSTRequest(path, resultType, queryParams, formParams);
   }
   /**
+   * Updates printable form channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param sourceId printable form channel external source id (required)
+   * @param request printable form channel data (optional)
+   */
+  public ApiResponse<VmOpenApiPrintableFormChannel> apiServiceChannelPrintableFormSourceIdBySourceIdPut(String sourceId, VmOpenApiPrintableFormChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/PrintableForm/sourceId/{sourceId}"
+      .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
+      
+    ResultType<VmOpenApiPrintableFormChannel> resultType = new ResultType<VmOpenApiPrintableFormChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Updates a new service location channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param id service location channel id (required)
+   * @param request service location channel data. (optional)
+   */
+  public ApiResponse<VmOpenApiServiceLocationChannel> apiServiceChannelServiceLocationByIdPut(String id, VmOpenApiServiceLocationChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/ServiceLocation/{id}"
+      .replaceAll("\\{" + "id" + "\\}", id);
+      
+    ResultType<VmOpenApiServiceLocationChannel> resultType = new ResultType<VmOpenApiServiceLocationChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
    * Creates a new service location channel with the data provided as input.
-   * 
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
    * @param request The service location channel data. (optional)
    */
-  public ApiResponse<VmOpenApiServiceLocationChannelIn> apiServiceChannelServiceLocationPost(VmOpenApiServiceLocationChannelIn request) {
+  public ApiResponse<VmOpenApiServiceLocationChannel> apiServiceChannelServiceLocationPost(VmOpenApiServiceLocationChannelIn request) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
         
         
     String path = "/api/ServiceChannel/ServiceLocation";
       
-    ResultType<VmOpenApiServiceLocationChannelIn> resultType = new ResultType<VmOpenApiServiceLocationChannelIn>() {};
+    ResultType<VmOpenApiServiceLocationChannel> resultType = new ResultType<VmOpenApiServiceLocationChannel>() {};
     return client.doPOSTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Updates a new service location channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param sourceId service location channel external source id (required)
+   * @param request service location channel data (optional)
+   */
+  public ApiResponse<VmOpenApiServiceLocationChannel> apiServiceChannelServiceLocationSourceIdBySourceIdPut(String sourceId, VmOpenApiServiceLocationChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/ServiceLocation/sourceId/{sourceId}"
+      .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
+      
+    ResultType<VmOpenApiServiceLocationChannel> resultType = new ResultType<VmOpenApiServiceLocationChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
   }
   /**
    * Gets a list of certain type of published service channels.              Service channels created/modified after certain date can be fetched by adding date as query string parameter.
@@ -204,19 +350,53 @@ if (page != null)
     return client.doGETRequest(path, resultType, queryParams, formParams);
   }
   /**
+   * Updates webpage channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param id web page channel id (required)
+   * @param request web page channel data (optional)
+   */
+  public ApiResponse<VmOpenApiWebPageChannel> apiServiceChannelWebPageByIdPut(String id, VmOpenApiWebPageChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/WebPage/{id}"
+      .replaceAll("\\{" + "id" + "\\}", id);
+      
+    ResultType<VmOpenApiWebPageChannel> resultType = new ResultType<VmOpenApiWebPageChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
    * Creates a new web page channel with the data provided as input.
-   * 
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
    * @param request The web page channel data. (optional)
    */
-  public ApiResponse<VmOpenApiWebPageChannelIn> apiServiceChannelWebPagePost(VmOpenApiWebPageChannelIn request) {
+  public ApiResponse<VmOpenApiWebPageChannel> apiServiceChannelWebPagePost(VmOpenApiWebPageChannelIn request) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
         
         
     String path = "/api/ServiceChannel/WebPage";
       
-    ResultType<VmOpenApiWebPageChannelIn> resultType = new ResultType<VmOpenApiWebPageChannelIn>() {};
+    ResultType<VmOpenApiWebPageChannel> resultType = new ResultType<VmOpenApiWebPageChannel>() {};
     return client.doPOSTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Updates webpage channel with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceChannelNames\&quot;:[                      \&quot;The ServiceChannelNames field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param sourceId web page channel external source id (required)
+   * @param request web page channel data (optional)
+   */
+  public ApiResponse<VmOpenApiWebPageChannel> apiServiceChannelWebPageSourceIdBySourceIdPut(String sourceId, VmOpenApiWebPageChannelInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceChannel/WebPage/sourceId/{sourceId}"
+      .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
+      
+    ResultType<VmOpenApiWebPageChannel> resultType = new ResultType<VmOpenApiWebPageChannel>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
   }
   
   private ApiClient client;

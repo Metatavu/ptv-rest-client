@@ -42,11 +42,8 @@ import java.util.List;
 /**
  * IVmOpenApiService
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class IVmOpenApiService   {
-  @JsonProperty("id")
-  private String id = null;
-
   @JsonProperty("statutoryServiceGeneralDescriptionId")
   private String statutoryServiceGeneralDescriptionId = null;
 
@@ -62,11 +59,20 @@ public class IVmOpenApiService   {
   @JsonProperty("lifeEvents")
   private List<VmOpenApiFintoItem> lifeEvents = new ArrayList<VmOpenApiFintoItem>();
 
+  @JsonProperty("industrialClasses")
+  private List<VmOpenApiFintoItem> industrialClasses = new ArrayList<VmOpenApiFintoItem>();
+
   @JsonProperty("serviceChannels")
   private List<String> serviceChannels = new ArrayList<String>();
 
   @JsonProperty("organizations")
   private List<VmOpenApiServiceOrganization> organizations = new ArrayList<VmOpenApiServiceOrganization>();
+
+  @JsonProperty("id")
+  private String id = null;
+
+  @JsonProperty("type")
+  private String type = null;
 
   @JsonProperty("serviceNames")
   private List<VmOpenApiLocalizedListItem> serviceNames = new ArrayList<VmOpenApiLocalizedListItem>();
@@ -95,23 +101,11 @@ public class IVmOpenApiService   {
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
 
-  public IVmOpenApiService id(String id) {
-    this.id = id;
-    return this;
-  }
+  @JsonProperty("serviceChargeType")
+  private String serviceChargeType = null;
 
-   /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
-  }
+  @JsonProperty("serviceAdditionalInformations")
+  private List<VmOpenApiLocalizedListItem> serviceAdditionalInformations = new ArrayList<VmOpenApiLocalizedListItem>();
 
   public IVmOpenApiService statutoryServiceGeneralDescriptionId(String statutoryServiceGeneralDescriptionId) {
     this.statutoryServiceGeneralDescriptionId = statutoryServiceGeneralDescriptionId;
@@ -223,6 +217,29 @@ public class IVmOpenApiService   {
     this.lifeEvents = lifeEvents;
   }
 
+  public IVmOpenApiService industrialClasses(List<VmOpenApiFintoItem> industrialClasses) {
+    this.industrialClasses = industrialClasses;
+    return this;
+  }
+
+  public IVmOpenApiService addIndustrialClassesItem(VmOpenApiFintoItem industrialClassesItem) {
+    this.industrialClasses.add(industrialClassesItem);
+    return this;
+  }
+
+   /**
+   * Get industrialClasses
+   * @return industrialClasses
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiFintoItem> getIndustrialClasses() {
+    return industrialClasses;
+  }
+
+  public void setIndustrialClasses(List<VmOpenApiFintoItem> industrialClasses) {
+    this.industrialClasses = industrialClasses;
+  }
+
   public IVmOpenApiService serviceChannels(List<String> serviceChannels) {
     this.serviceChannels = serviceChannels;
     return this;
@@ -267,6 +284,42 @@ public class IVmOpenApiService   {
 
   public void setOrganizations(List<VmOpenApiServiceOrganization> organizations) {
     this.organizations = organizations;
+  }
+
+  public IVmOpenApiService id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public IVmOpenApiService type(String type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Get type
+   * @return type
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
   }
 
   public IVmOpenApiService serviceNames(List<VmOpenApiLocalizedListItem> serviceNames) {
@@ -466,6 +519,47 @@ public class IVmOpenApiService   {
     this.publishingStatus = publishingStatus;
   }
 
+  public IVmOpenApiService serviceChargeType(String serviceChargeType) {
+    this.serviceChargeType = serviceChargeType;
+    return this;
+  }
+
+   /**
+   * Get serviceChargeType
+   * @return serviceChargeType
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getServiceChargeType() {
+    return serviceChargeType;
+  }
+
+  public void setServiceChargeType(String serviceChargeType) {
+    this.serviceChargeType = serviceChargeType;
+  }
+
+  public IVmOpenApiService serviceAdditionalInformations(List<VmOpenApiLocalizedListItem> serviceAdditionalInformations) {
+    this.serviceAdditionalInformations = serviceAdditionalInformations;
+    return this;
+  }
+
+  public IVmOpenApiService addServiceAdditionalInformationsItem(VmOpenApiLocalizedListItem serviceAdditionalInformationsItem) {
+    this.serviceAdditionalInformations.add(serviceAdditionalInformationsItem);
+    return this;
+  }
+
+   /**
+   * Get serviceAdditionalInformations
+   * @return serviceAdditionalInformations
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiLocalizedListItem> getServiceAdditionalInformations() {
+    return serviceAdditionalInformations;
+  }
+
+  public void setServiceAdditionalInformations(List<VmOpenApiLocalizedListItem> serviceAdditionalInformations) {
+    this.serviceAdditionalInformations = serviceAdditionalInformations;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -476,14 +570,16 @@ public class IVmOpenApiService   {
       return false;
     }
     IVmOpenApiService iVmOpenApiService = (IVmOpenApiService) o;
-    return Objects.equals(this.id, iVmOpenApiService.id) &&
-        Objects.equals(this.statutoryServiceGeneralDescriptionId, iVmOpenApiService.statutoryServiceGeneralDescriptionId) &&
+    return Objects.equals(this.statutoryServiceGeneralDescriptionId, iVmOpenApiService.statutoryServiceGeneralDescriptionId) &&
         Objects.equals(this.serviceClasses, iVmOpenApiService.serviceClasses) &&
         Objects.equals(this.ontologyTerms, iVmOpenApiService.ontologyTerms) &&
         Objects.equals(this.targetGroups, iVmOpenApiService.targetGroups) &&
         Objects.equals(this.lifeEvents, iVmOpenApiService.lifeEvents) &&
+        Objects.equals(this.industrialClasses, iVmOpenApiService.industrialClasses) &&
         Objects.equals(this.serviceChannels, iVmOpenApiService.serviceChannels) &&
         Objects.equals(this.organizations, iVmOpenApiService.organizations) &&
+        Objects.equals(this.id, iVmOpenApiService.id) &&
+        Objects.equals(this.type, iVmOpenApiService.type) &&
         Objects.equals(this.serviceNames, iVmOpenApiService.serviceNames) &&
         Objects.equals(this.serviceDescriptions, iVmOpenApiService.serviceDescriptions) &&
         Objects.equals(this.languages, iVmOpenApiService.languages) &&
@@ -492,12 +588,14 @@ public class IVmOpenApiService   {
         Objects.equals(this.municipalities, iVmOpenApiService.municipalities) &&
         Objects.equals(this.webPages, iVmOpenApiService.webPages) &&
         Objects.equals(this.requirements, iVmOpenApiService.requirements) &&
-        Objects.equals(this.publishingStatus, iVmOpenApiService.publishingStatus);
+        Objects.equals(this.publishingStatus, iVmOpenApiService.publishingStatus) &&
+        Objects.equals(this.serviceChargeType, iVmOpenApiService.serviceChargeType) &&
+        Objects.equals(this.serviceAdditionalInformations, iVmOpenApiService.serviceAdditionalInformations);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, statutoryServiceGeneralDescriptionId, serviceClasses, ontologyTerms, targetGroups, lifeEvents, serviceChannels, organizations, serviceNames, serviceDescriptions, languages, keywords, serviceCoverageType, municipalities, webPages, requirements, publishingStatus);
+    return Objects.hash(statutoryServiceGeneralDescriptionId, serviceClasses, ontologyTerms, targetGroups, lifeEvents, industrialClasses, serviceChannels, organizations, id, type, serviceNames, serviceDescriptions, languages, keywords, serviceCoverageType, municipalities, webPages, requirements, publishingStatus, serviceChargeType, serviceAdditionalInformations);
   }
 
   @Override
@@ -505,14 +603,16 @@ public class IVmOpenApiService   {
     StringBuilder sb = new StringBuilder();
     sb.append("class IVmOpenApiService {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    statutoryServiceGeneralDescriptionId: ").append(toIndentedString(statutoryServiceGeneralDescriptionId)).append("\n");
     sb.append("    serviceClasses: ").append(toIndentedString(serviceClasses)).append("\n");
     sb.append("    ontologyTerms: ").append(toIndentedString(ontologyTerms)).append("\n");
     sb.append("    targetGroups: ").append(toIndentedString(targetGroups)).append("\n");
     sb.append("    lifeEvents: ").append(toIndentedString(lifeEvents)).append("\n");
+    sb.append("    industrialClasses: ").append(toIndentedString(industrialClasses)).append("\n");
     sb.append("    serviceChannels: ").append(toIndentedString(serviceChannels)).append("\n");
     sb.append("    organizations: ").append(toIndentedString(organizations)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    serviceNames: ").append(toIndentedString(serviceNames)).append("\n");
     sb.append("    serviceDescriptions: ").append(toIndentedString(serviceDescriptions)).append("\n");
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
@@ -522,6 +622,8 @@ public class IVmOpenApiService   {
     sb.append("    webPages: ").append(toIndentedString(webPages)).append("\n");
     sb.append("    requirements: ").append(toIndentedString(requirements)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
+    sb.append("    serviceChargeType: ").append(toIndentedString(serviceChargeType)).append("\n");
+    sb.append("    serviceAdditionalInformations: ").append(toIndentedString(serviceAdditionalInformations)).append("\n");
     sb.append("}");
     return sb.toString();
   }

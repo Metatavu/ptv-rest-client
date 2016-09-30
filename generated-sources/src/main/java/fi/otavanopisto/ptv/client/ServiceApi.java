@@ -27,9 +27,12 @@ package fi.otavanopisto.ptv.client;
 import fi.otavanopisto.ptv.client.model.*;
 
 import fi.otavanopisto.ptv.client.model.IVmError;
+import fi.otavanopisto.ptv.client.model.VmOpenApiServiceAndChannel;
 import fi.otavanopisto.ptv.client.model.IVmOpenApiService;
+import fi.otavanopisto.ptv.client.model.VmOpenApiServiceInBase;
 import fi.otavanopisto.ptv.client.model.VmOpenApiGuidPage;
 import java.time.OffsetDateTime;
+import fi.otavanopisto.ptv.client.model.VmOpenApiService;
 import fi.otavanopisto.ptv.client.model.VmOpenApiServiceIn;
 
 import java.util.ArrayList;
@@ -37,13 +40,28 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class ServiceApi {
 
   public ServiceApi(ApiClient client) {
     this.client = client;
   }
   
+  /**
+   * Creates a relationships between services and service channels.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;Service with id &#39;00000000-0000-0000-0000-00000000&#39; not found!\&quot;              }              &lt;/code&gt;
+   * @param request A list of services and service channels. (optional)
+   */
+  public ApiResponse<List<String>> apiServiceAndChannelPost(VmOpenApiServiceAndChannel request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/ServiceAndChannel";
+      
+    ResultType<List<String>> resultType = new ResultType<List<String>>() {};
+    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+  }
   /**
    * Fetches all the information related to a single service.
    * 
@@ -59,6 +77,23 @@ public class ServiceApi {
       
     ResultType<IVmOpenApiService> resultType = new ResultType<IVmOpenApiService>() {};
     return client.doGETRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Updates the defined service with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceNames[0].Type\&quot;: [                      \&quot;The Type field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param id Service identifier (required)
+   * @param request The service data (optional)
+   */
+  public ApiResponse<IVmOpenApiService> apiServiceByIdPut(String id, VmOpenApiServiceInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/Service/{id}"
+      .replaceAll("\\{" + "id" + "\\}", id);
+      
+    ResultType<IVmOpenApiService> resultType = new ResultType<IVmOpenApiService>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
   }
   /**
    * Gets all the published services within PTV as a list of service ids.              Services created after certain date can be fetched by adding date as query string parameter.
@@ -82,17 +117,17 @@ if (page != null)
   }
   /**
    * Creates a new service with the data provided as input.
-   * 
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceNames\&quot;: [                      \&quot;Type - Required value &#39;Name&#39; was not found!\&quot;                  ]              }              &lt;/code&gt;
    * @param request The service data. (optional)
    */
-  public ApiResponse<VmOpenApiServiceIn> apiServicePost(VmOpenApiServiceIn request) {
+  public ApiResponse<VmOpenApiService> apiServicePost(VmOpenApiServiceIn request) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
         
         
     String path = "/api/Service";
       
-    ResultType<VmOpenApiServiceIn> resultType = new ResultType<VmOpenApiServiceIn>() {};
+    ResultType<VmOpenApiService> resultType = new ResultType<VmOpenApiService>() {};
     return client.doPOSTRequest(path, resultType, queryParams, formParams);
   }
   /**
@@ -113,6 +148,23 @@ if (page != null)
       
     ResultType<List<IVmOpenApiService>> resultType = new ResultType<List<IVmOpenApiService>>() {};
     return client.doGETRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Updates the defined service with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;ServiceNames[0].Type\&quot;: [                      \&quot;The Type field is required.\&quot;                  ]              }              &lt;/code&gt;
+   * @param sourceId External source identifier (required)
+   * @param request The service data (optional)
+   */
+  public ApiResponse<IVmOpenApiService> apiServiceSourceIdBySourceIdPut(String sourceId, VmOpenApiServiceInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/Service/sourceId/{sourceId}"
+      .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
+      
+    ResultType<IVmOpenApiService> resultType = new ResultType<IVmOpenApiService>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
   }
   
   private ApiClient client;

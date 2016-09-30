@@ -40,8 +40,11 @@ import java.util.List;
 /**
  * VmOpenApiWebPageChannelIn
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class VmOpenApiWebPageChannelIn   {
+  @JsonProperty("sourceId")
+  private String sourceId = null;
+
   @JsonProperty("organizationId")
   private String organizationId = null;
 
@@ -62,6 +65,24 @@ public class VmOpenApiWebPageChannelIn   {
 
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
+
+  public VmOpenApiWebPageChannelIn sourceId(String sourceId) {
+    this.sourceId = sourceId;
+    return this;
+  }
+
+   /**
+   * Get sourceId
+   * @return sourceId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSourceId() {
+    return sourceId;
+  }
+
+  public void setSourceId(String sourceId) {
+    this.sourceId = sourceId;
+  }
 
   public VmOpenApiWebPageChannelIn organizationId(String organizationId) {
     this.organizationId = organizationId;
@@ -224,7 +245,8 @@ public class VmOpenApiWebPageChannelIn   {
       return false;
     }
     VmOpenApiWebPageChannelIn vmOpenApiWebPageChannelIn = (VmOpenApiWebPageChannelIn) o;
-    return Objects.equals(this.organizationId, vmOpenApiWebPageChannelIn.organizationId) &&
+    return Objects.equals(this.sourceId, vmOpenApiWebPageChannelIn.sourceId) &&
+        Objects.equals(this.organizationId, vmOpenApiWebPageChannelIn.organizationId) &&
         Objects.equals(this.serviceChannelNames, vmOpenApiWebPageChannelIn.serviceChannelNames) &&
         Objects.equals(this.serviceChannelDescriptions, vmOpenApiWebPageChannelIn.serviceChannelDescriptions) &&
         Objects.equals(this.urls, vmOpenApiWebPageChannelIn.urls) &&
@@ -235,7 +257,7 @@ public class VmOpenApiWebPageChannelIn   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(organizationId, serviceChannelNames, serviceChannelDescriptions, urls, supportContacts, languages, publishingStatus);
+    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, urls, supportContacts, languages, publishingStatus);
   }
 
   @Override
@@ -243,6 +265,7 @@ public class VmOpenApiWebPageChannelIn   {
     StringBuilder sb = new StringBuilder();
     sb.append("class VmOpenApiWebPageChannelIn {\n");
     
+    sb.append("    sourceId: ").append(toIndentedString(sourceId)).append("\n");
     sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
     sb.append("    serviceChannelNames: ").append(toIndentedString(serviceChannelNames)).append("\n");
     sb.append("    serviceChannelDescriptions: ").append(toIndentedString(serviceChannelDescriptions)).append("\n");

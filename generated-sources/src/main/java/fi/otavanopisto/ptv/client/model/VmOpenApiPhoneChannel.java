@@ -42,7 +42,7 @@ import java.util.List;
 /**
  * VmOpenApiPhoneChannel
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class VmOpenApiPhoneChannel   {
   @JsonProperty("id")
   private String id = null;
@@ -59,20 +59,14 @@ public class VmOpenApiPhoneChannel   {
   @JsonProperty("serviceChannelDescriptions")
   private List<VmOpenApiLocalizedListItem> serviceChannelDescriptions = new ArrayList<VmOpenApiLocalizedListItem>();
 
-  @JsonProperty("webPages")
-  private List<VmOpenApiWebPage> webPages = new ArrayList<VmOpenApiWebPage>();
-
-  @JsonProperty("serviceHours")
-  private List<VmOpenApiServiceHour> serviceHours = new ArrayList<VmOpenApiServiceHour>();
-
-  @JsonProperty("supportContacts")
-  private List<VmOpenApiSupport> supportContacts = new ArrayList<VmOpenApiSupport>();
-
   @JsonProperty("phoneType")
   private String phoneType = null;
 
   @JsonProperty("serviceChargeTypes")
   private List<String> serviceChargeTypes = new ArrayList<String>();
+
+  @JsonProperty("supportContacts")
+  private List<VmOpenApiSupport> supportContacts = new ArrayList<VmOpenApiSupport>();
 
   @JsonProperty("phoneNumbers")
   private List<VmOpenApiLanguageItem> phoneNumbers = new ArrayList<VmOpenApiLanguageItem>();
@@ -82,6 +76,12 @@ public class VmOpenApiPhoneChannel   {
 
   @JsonProperty("phoneChargeDescriptions")
   private List<VmOpenApiLanguageItem> phoneChargeDescriptions = new ArrayList<VmOpenApiLanguageItem>();
+
+  @JsonProperty("webPages")
+  private List<VmOpenApiWebPage> webPages = new ArrayList<VmOpenApiWebPage>();
+
+  @JsonProperty("serviceHours")
+  private List<VmOpenApiServiceHour> serviceHours = new ArrayList<VmOpenApiServiceHour>();
 
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
@@ -177,82 +177,13 @@ public class VmOpenApiPhoneChannel   {
    * Get serviceChannelDescriptions
    * @return serviceChannelDescriptions
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLocalizedListItem> getServiceChannelDescriptions() {
     return serviceChannelDescriptions;
   }
 
   public void setServiceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
-  }
-
-  public VmOpenApiPhoneChannel webPages(List<VmOpenApiWebPage> webPages) {
-    this.webPages = webPages;
-    return this;
-  }
-
-  public VmOpenApiPhoneChannel addWebPagesItem(VmOpenApiWebPage webPagesItem) {
-    this.webPages.add(webPagesItem);
-    return this;
-  }
-
-   /**
-   * Get webPages
-   * @return webPages
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiWebPage> getWebPages() {
-    return webPages;
-  }
-
-  public void setWebPages(List<VmOpenApiWebPage> webPages) {
-    this.webPages = webPages;
-  }
-
-  public VmOpenApiPhoneChannel serviceHours(List<VmOpenApiServiceHour> serviceHours) {
-    this.serviceHours = serviceHours;
-    return this;
-  }
-
-  public VmOpenApiPhoneChannel addServiceHoursItem(VmOpenApiServiceHour serviceHoursItem) {
-    this.serviceHours.add(serviceHoursItem);
-    return this;
-  }
-
-   /**
-   * Get serviceHours
-   * @return serviceHours
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiServiceHour> getServiceHours() {
-    return serviceHours;
-  }
-
-  public void setServiceHours(List<VmOpenApiServiceHour> serviceHours) {
-    this.serviceHours = serviceHours;
-  }
-
-  public VmOpenApiPhoneChannel supportContacts(List<VmOpenApiSupport> supportContacts) {
-    this.supportContacts = supportContacts;
-    return this;
-  }
-
-  public VmOpenApiPhoneChannel addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
-    this.supportContacts.add(supportContactsItem);
-    return this;
-  }
-
-   /**
-   * Get supportContacts
-   * @return supportContacts
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<VmOpenApiSupport> getSupportContacts() {
-    return supportContacts;
-  }
-
-  public void setSupportContacts(List<VmOpenApiSupport> supportContacts) {
-    this.supportContacts = supportContacts;
   }
 
   public VmOpenApiPhoneChannel phoneType(String phoneType) {
@@ -294,6 +225,29 @@ public class VmOpenApiPhoneChannel   {
 
   public void setServiceChargeTypes(List<String> serviceChargeTypes) {
     this.serviceChargeTypes = serviceChargeTypes;
+  }
+
+  public VmOpenApiPhoneChannel supportContacts(List<VmOpenApiSupport> supportContacts) {
+    this.supportContacts = supportContacts;
+    return this;
+  }
+
+  public VmOpenApiPhoneChannel addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
+    this.supportContacts.add(supportContactsItem);
+    return this;
+  }
+
+   /**
+   * Get supportContacts
+   * @return supportContacts
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiSupport> getSupportContacts() {
+    return supportContacts;
+  }
+
+  public void setSupportContacts(List<VmOpenApiSupport> supportContacts) {
+    this.supportContacts = supportContacts;
   }
 
   public VmOpenApiPhoneChannel phoneNumbers(List<VmOpenApiLanguageItem> phoneNumbers) {
@@ -365,6 +319,52 @@ public class VmOpenApiPhoneChannel   {
     this.phoneChargeDescriptions = phoneChargeDescriptions;
   }
 
+  public VmOpenApiPhoneChannel webPages(List<VmOpenApiWebPage> webPages) {
+    this.webPages = webPages;
+    return this;
+  }
+
+  public VmOpenApiPhoneChannel addWebPagesItem(VmOpenApiWebPage webPagesItem) {
+    this.webPages.add(webPagesItem);
+    return this;
+  }
+
+   /**
+   * Get webPages
+   * @return webPages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiWebPage> getWebPages() {
+    return webPages;
+  }
+
+  public void setWebPages(List<VmOpenApiWebPage> webPages) {
+    this.webPages = webPages;
+  }
+
+  public VmOpenApiPhoneChannel serviceHours(List<VmOpenApiServiceHour> serviceHours) {
+    this.serviceHours = serviceHours;
+    return this;
+  }
+
+  public VmOpenApiPhoneChannel addServiceHoursItem(VmOpenApiServiceHour serviceHoursItem) {
+    this.serviceHours.add(serviceHoursItem);
+    return this;
+  }
+
+   /**
+   * Get serviceHours
+   * @return serviceHours
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiServiceHour> getServiceHours() {
+    return serviceHours;
+  }
+
+  public void setServiceHours(List<VmOpenApiServiceHour> serviceHours) {
+    this.serviceHours = serviceHours;
+  }
+
   public VmOpenApiPhoneChannel publishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
     return this;
@@ -374,7 +374,7 @@ public class VmOpenApiPhoneChannel   {
    * Get publishingStatus
    * @return publishingStatus
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPublishingStatus() {
     return publishingStatus;
   }
@@ -398,20 +398,20 @@ public class VmOpenApiPhoneChannel   {
         Objects.equals(this.organizationId, vmOpenApiPhoneChannel.organizationId) &&
         Objects.equals(this.serviceChannelNames, vmOpenApiPhoneChannel.serviceChannelNames) &&
         Objects.equals(this.serviceChannelDescriptions, vmOpenApiPhoneChannel.serviceChannelDescriptions) &&
-        Objects.equals(this.webPages, vmOpenApiPhoneChannel.webPages) &&
-        Objects.equals(this.serviceHours, vmOpenApiPhoneChannel.serviceHours) &&
-        Objects.equals(this.supportContacts, vmOpenApiPhoneChannel.supportContacts) &&
         Objects.equals(this.phoneType, vmOpenApiPhoneChannel.phoneType) &&
         Objects.equals(this.serviceChargeTypes, vmOpenApiPhoneChannel.serviceChargeTypes) &&
+        Objects.equals(this.supportContacts, vmOpenApiPhoneChannel.supportContacts) &&
         Objects.equals(this.phoneNumbers, vmOpenApiPhoneChannel.phoneNumbers) &&
         Objects.equals(this.languages, vmOpenApiPhoneChannel.languages) &&
         Objects.equals(this.phoneChargeDescriptions, vmOpenApiPhoneChannel.phoneChargeDescriptions) &&
+        Objects.equals(this.webPages, vmOpenApiPhoneChannel.webPages) &&
+        Objects.equals(this.serviceHours, vmOpenApiPhoneChannel.serviceHours) &&
         Objects.equals(this.publishingStatus, vmOpenApiPhoneChannel.publishingStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, serviceChannelType, organizationId, serviceChannelNames, serviceChannelDescriptions, webPages, serviceHours, supportContacts, phoneType, serviceChargeTypes, phoneNumbers, languages, phoneChargeDescriptions, publishingStatus);
+    return Objects.hash(id, serviceChannelType, organizationId, serviceChannelNames, serviceChannelDescriptions, phoneType, serviceChargeTypes, supportContacts, phoneNumbers, languages, phoneChargeDescriptions, webPages, serviceHours, publishingStatus);
   }
 
   @Override
@@ -424,14 +424,14 @@ public class VmOpenApiPhoneChannel   {
     sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
     sb.append("    serviceChannelNames: ").append(toIndentedString(serviceChannelNames)).append("\n");
     sb.append("    serviceChannelDescriptions: ").append(toIndentedString(serviceChannelDescriptions)).append("\n");
-    sb.append("    webPages: ").append(toIndentedString(webPages)).append("\n");
-    sb.append("    serviceHours: ").append(toIndentedString(serviceHours)).append("\n");
-    sb.append("    supportContacts: ").append(toIndentedString(supportContacts)).append("\n");
     sb.append("    phoneType: ").append(toIndentedString(phoneType)).append("\n");
     sb.append("    serviceChargeTypes: ").append(toIndentedString(serviceChargeTypes)).append("\n");
+    sb.append("    supportContacts: ").append(toIndentedString(supportContacts)).append("\n");
     sb.append("    phoneNumbers: ").append(toIndentedString(phoneNumbers)).append("\n");
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
     sb.append("    phoneChargeDescriptions: ").append(toIndentedString(phoneChargeDescriptions)).append("\n");
+    sb.append("    webPages: ").append(toIndentedString(webPages)).append("\n");
+    sb.append("    serviceHours: ").append(toIndentedString(serviceHours)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
     sb.append("}");
     return sb.toString();

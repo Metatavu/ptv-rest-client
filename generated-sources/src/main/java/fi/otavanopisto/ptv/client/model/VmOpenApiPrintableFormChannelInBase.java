@@ -40,10 +40,10 @@ import java.util.List;
 
 
 /**
- * VmOpenApiPrintableFormChannelIn
+ * VmOpenApiPrintableFormChannelInBase
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
-public class VmOpenApiPrintableFormChannelIn   {
+public class VmOpenApiPrintableFormChannelInBase   {
   @JsonProperty("sourceId")
   private String sourceId = null;
 
@@ -92,7 +92,10 @@ public class VmOpenApiPrintableFormChannelIn   {
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
 
-  public VmOpenApiPrintableFormChannelIn sourceId(String sourceId) {
+  @JsonProperty("deleteAllSupportContacts")
+  private Boolean deleteAllSupportContacts = null;
+
+  public VmOpenApiPrintableFormChannelInBase sourceId(String sourceId) {
     this.sourceId = sourceId;
     return this;
   }
@@ -110,7 +113,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.sourceId = sourceId;
   }
 
-  public VmOpenApiPrintableFormChannelIn organizationId(String organizationId) {
+  public VmOpenApiPrintableFormChannelInBase organizationId(String organizationId) {
     this.organizationId = organizationId;
     return this;
   }
@@ -119,7 +122,7 @@ public class VmOpenApiPrintableFormChannelIn   {
    * Get organizationId
    * @return organizationId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getOrganizationId() {
     return organizationId;
   }
@@ -128,12 +131,12 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.organizationId = organizationId;
   }
 
-  public VmOpenApiPrintableFormChannelIn serviceChannelNames(List<VmOpenApiLanguageItem> serviceChannelNames) {
+  public VmOpenApiPrintableFormChannelInBase serviceChannelNames(List<VmOpenApiLanguageItem> serviceChannelNames) {
     this.serviceChannelNames = serviceChannelNames;
     return this;
   }
 
-  public VmOpenApiPrintableFormChannelIn addServiceChannelNamesItem(VmOpenApiLanguageItem serviceChannelNamesItem) {
+  public VmOpenApiPrintableFormChannelInBase addServiceChannelNamesItem(VmOpenApiLanguageItem serviceChannelNamesItem) {
     this.serviceChannelNames.add(serviceChannelNamesItem);
     return this;
   }
@@ -142,7 +145,7 @@ public class VmOpenApiPrintableFormChannelIn   {
    * Get serviceChannelNames
    * @return serviceChannelNames
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLanguageItem> getServiceChannelNames() {
     return serviceChannelNames;
   }
@@ -151,12 +154,12 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.serviceChannelNames = serviceChannelNames;
   }
 
-  public VmOpenApiPrintableFormChannelIn serviceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
+  public VmOpenApiPrintableFormChannelInBase serviceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
     return this;
   }
 
-  public VmOpenApiPrintableFormChannelIn addServiceChannelDescriptionsItem(VmOpenApiLocalizedListItem serviceChannelDescriptionsItem) {
+  public VmOpenApiPrintableFormChannelInBase addServiceChannelDescriptionsItem(VmOpenApiLocalizedListItem serviceChannelDescriptionsItem) {
     this.serviceChannelDescriptions.add(serviceChannelDescriptionsItem);
     return this;
   }
@@ -165,7 +168,7 @@ public class VmOpenApiPrintableFormChannelIn   {
    * Get serviceChannelDescriptions
    * @return serviceChannelDescriptions
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLocalizedListItem> getServiceChannelDescriptions() {
     return serviceChannelDescriptions;
   }
@@ -174,7 +177,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
   }
 
-  public VmOpenApiPrintableFormChannelIn formIdentifier(String formIdentifier) {
+  public VmOpenApiPrintableFormChannelInBase formIdentifier(String formIdentifier) {
     this.formIdentifier = formIdentifier;
     return this;
   }
@@ -192,7 +195,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.formIdentifier = formIdentifier;
   }
 
-  public VmOpenApiPrintableFormChannelIn formReceiver(String formReceiver) {
+  public VmOpenApiPrintableFormChannelInBase formReceiver(String formReceiver) {
     this.formReceiver = formReceiver;
     return this;
   }
@@ -210,12 +213,12 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.formReceiver = formReceiver;
   }
 
-  public VmOpenApiPrintableFormChannelIn supportContacts(List<VmOpenApiSupport> supportContacts) {
+  public VmOpenApiPrintableFormChannelInBase supportContacts(List<VmOpenApiSupport> supportContacts) {
     this.supportContacts = supportContacts;
     return this;
   }
 
-  public VmOpenApiPrintableFormChannelIn addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
+  public VmOpenApiPrintableFormChannelInBase addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
     this.supportContacts.add(supportContactsItem);
     return this;
   }
@@ -233,7 +236,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.supportContacts = supportContacts;
   }
 
-  public VmOpenApiPrintableFormChannelIn deliveryAddress(VmOpenApiAddress deliveryAddress) {
+  public VmOpenApiPrintableFormChannelInBase deliveryAddress(VmOpenApiAddress deliveryAddress) {
     this.deliveryAddress = deliveryAddress;
     return this;
   }
@@ -251,12 +254,12 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.deliveryAddress = deliveryAddress;
   }
 
-  public VmOpenApiPrintableFormChannelIn channelUrls(List<VmOpenApiLocalizedListItem> channelUrls) {
+  public VmOpenApiPrintableFormChannelInBase channelUrls(List<VmOpenApiLocalizedListItem> channelUrls) {
     this.channelUrls = channelUrls;
     return this;
   }
 
-  public VmOpenApiPrintableFormChannelIn addChannelUrlsItem(VmOpenApiLocalizedListItem channelUrlsItem) {
+  public VmOpenApiPrintableFormChannelInBase addChannelUrlsItem(VmOpenApiLocalizedListItem channelUrlsItem) {
     this.channelUrls.add(channelUrlsItem);
     return this;
   }
@@ -265,7 +268,7 @@ public class VmOpenApiPrintableFormChannelIn   {
    * Get channelUrls
    * @return channelUrls
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLocalizedListItem> getChannelUrls() {
     return channelUrls;
   }
@@ -274,12 +277,12 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.channelUrls = channelUrls;
   }
 
-  public VmOpenApiPrintableFormChannelIn deliveryAddressDescriptions(List<VmOpenApiLanguageItem> deliveryAddressDescriptions) {
+  public VmOpenApiPrintableFormChannelInBase deliveryAddressDescriptions(List<VmOpenApiLanguageItem> deliveryAddressDescriptions) {
     this.deliveryAddressDescriptions = deliveryAddressDescriptions;
     return this;
   }
 
-  public VmOpenApiPrintableFormChannelIn addDeliveryAddressDescriptionsItem(VmOpenApiLanguageItem deliveryAddressDescriptionsItem) {
+  public VmOpenApiPrintableFormChannelInBase addDeliveryAddressDescriptionsItem(VmOpenApiLanguageItem deliveryAddressDescriptionsItem) {
     this.deliveryAddressDescriptions.add(deliveryAddressDescriptionsItem);
     return this;
   }
@@ -297,12 +300,12 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.deliveryAddressDescriptions = deliveryAddressDescriptions;
   }
 
-  public VmOpenApiPrintableFormChannelIn attachments(List<VmOpenApiAttachment> attachments) {
+  public VmOpenApiPrintableFormChannelInBase attachments(List<VmOpenApiAttachment> attachments) {
     this.attachments = attachments;
     return this;
   }
 
-  public VmOpenApiPrintableFormChannelIn addAttachmentsItem(VmOpenApiAttachment attachmentsItem) {
+  public VmOpenApiPrintableFormChannelInBase addAttachmentsItem(VmOpenApiAttachment attachmentsItem) {
     this.attachments.add(attachmentsItem);
     return this;
   }
@@ -320,7 +323,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.attachments = attachments;
   }
 
-  public VmOpenApiPrintableFormChannelIn deleteDeliveryAddress(Boolean deleteDeliveryAddress) {
+  public VmOpenApiPrintableFormChannelInBase deleteDeliveryAddress(Boolean deleteDeliveryAddress) {
     this.deleteDeliveryAddress = deleteDeliveryAddress;
     return this;
   }
@@ -338,7 +341,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.deleteDeliveryAddress = deleteDeliveryAddress;
   }
 
-  public VmOpenApiPrintableFormChannelIn deleteAllChannelUrls(Boolean deleteAllChannelUrls) {
+  public VmOpenApiPrintableFormChannelInBase deleteAllChannelUrls(Boolean deleteAllChannelUrls) {
     this.deleteAllChannelUrls = deleteAllChannelUrls;
     return this;
   }
@@ -356,7 +359,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.deleteAllChannelUrls = deleteAllChannelUrls;
   }
 
-  public VmOpenApiPrintableFormChannelIn deleteAllDeliveryAddressDescriptions(Boolean deleteAllDeliveryAddressDescriptions) {
+  public VmOpenApiPrintableFormChannelInBase deleteAllDeliveryAddressDescriptions(Boolean deleteAllDeliveryAddressDescriptions) {
     this.deleteAllDeliveryAddressDescriptions = deleteAllDeliveryAddressDescriptions;
     return this;
   }
@@ -374,7 +377,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.deleteAllDeliveryAddressDescriptions = deleteAllDeliveryAddressDescriptions;
   }
 
-  public VmOpenApiPrintableFormChannelIn deleteAllAttachments(Boolean deleteAllAttachments) {
+  public VmOpenApiPrintableFormChannelInBase deleteAllAttachments(Boolean deleteAllAttachments) {
     this.deleteAllAttachments = deleteAllAttachments;
     return this;
   }
@@ -392,7 +395,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     this.deleteAllAttachments = deleteAllAttachments;
   }
 
-  public VmOpenApiPrintableFormChannelIn publishingStatus(String publishingStatus) {
+  public VmOpenApiPrintableFormChannelInBase publishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
     return this;
   }
@@ -401,13 +404,31 @@ public class VmOpenApiPrintableFormChannelIn   {
    * Get publishingStatus
    * @return publishingStatus
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPublishingStatus() {
     return publishingStatus;
   }
 
   public void setPublishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
+  }
+
+  public VmOpenApiPrintableFormChannelInBase deleteAllSupportContacts(Boolean deleteAllSupportContacts) {
+    this.deleteAllSupportContacts = deleteAllSupportContacts;
+    return this;
+  }
+
+   /**
+   * Get deleteAllSupportContacts
+   * @return deleteAllSupportContacts
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllSupportContacts() {
+    return deleteAllSupportContacts;
+  }
+
+  public void setDeleteAllSupportContacts(Boolean deleteAllSupportContacts) {
+    this.deleteAllSupportContacts = deleteAllSupportContacts;
   }
 
 
@@ -419,34 +440,35 @@ public class VmOpenApiPrintableFormChannelIn   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiPrintableFormChannelIn vmOpenApiPrintableFormChannelIn = (VmOpenApiPrintableFormChannelIn) o;
-    return Objects.equals(this.sourceId, vmOpenApiPrintableFormChannelIn.sourceId) &&
-        Objects.equals(this.organizationId, vmOpenApiPrintableFormChannelIn.organizationId) &&
-        Objects.equals(this.serviceChannelNames, vmOpenApiPrintableFormChannelIn.serviceChannelNames) &&
-        Objects.equals(this.serviceChannelDescriptions, vmOpenApiPrintableFormChannelIn.serviceChannelDescriptions) &&
-        Objects.equals(this.formIdentifier, vmOpenApiPrintableFormChannelIn.formIdentifier) &&
-        Objects.equals(this.formReceiver, vmOpenApiPrintableFormChannelIn.formReceiver) &&
-        Objects.equals(this.supportContacts, vmOpenApiPrintableFormChannelIn.supportContacts) &&
-        Objects.equals(this.deliveryAddress, vmOpenApiPrintableFormChannelIn.deliveryAddress) &&
-        Objects.equals(this.channelUrls, vmOpenApiPrintableFormChannelIn.channelUrls) &&
-        Objects.equals(this.deliveryAddressDescriptions, vmOpenApiPrintableFormChannelIn.deliveryAddressDescriptions) &&
-        Objects.equals(this.attachments, vmOpenApiPrintableFormChannelIn.attachments) &&
-        Objects.equals(this.deleteDeliveryAddress, vmOpenApiPrintableFormChannelIn.deleteDeliveryAddress) &&
-        Objects.equals(this.deleteAllChannelUrls, vmOpenApiPrintableFormChannelIn.deleteAllChannelUrls) &&
-        Objects.equals(this.deleteAllDeliveryAddressDescriptions, vmOpenApiPrintableFormChannelIn.deleteAllDeliveryAddressDescriptions) &&
-        Objects.equals(this.deleteAllAttachments, vmOpenApiPrintableFormChannelIn.deleteAllAttachments) &&
-        Objects.equals(this.publishingStatus, vmOpenApiPrintableFormChannelIn.publishingStatus);
+    VmOpenApiPrintableFormChannelInBase vmOpenApiPrintableFormChannelInBase = (VmOpenApiPrintableFormChannelInBase) o;
+    return Objects.equals(this.sourceId, vmOpenApiPrintableFormChannelInBase.sourceId) &&
+        Objects.equals(this.organizationId, vmOpenApiPrintableFormChannelInBase.organizationId) &&
+        Objects.equals(this.serviceChannelNames, vmOpenApiPrintableFormChannelInBase.serviceChannelNames) &&
+        Objects.equals(this.serviceChannelDescriptions, vmOpenApiPrintableFormChannelInBase.serviceChannelDescriptions) &&
+        Objects.equals(this.formIdentifier, vmOpenApiPrintableFormChannelInBase.formIdentifier) &&
+        Objects.equals(this.formReceiver, vmOpenApiPrintableFormChannelInBase.formReceiver) &&
+        Objects.equals(this.supportContacts, vmOpenApiPrintableFormChannelInBase.supportContacts) &&
+        Objects.equals(this.deliveryAddress, vmOpenApiPrintableFormChannelInBase.deliveryAddress) &&
+        Objects.equals(this.channelUrls, vmOpenApiPrintableFormChannelInBase.channelUrls) &&
+        Objects.equals(this.deliveryAddressDescriptions, vmOpenApiPrintableFormChannelInBase.deliveryAddressDescriptions) &&
+        Objects.equals(this.attachments, vmOpenApiPrintableFormChannelInBase.attachments) &&
+        Objects.equals(this.deleteDeliveryAddress, vmOpenApiPrintableFormChannelInBase.deleteDeliveryAddress) &&
+        Objects.equals(this.deleteAllChannelUrls, vmOpenApiPrintableFormChannelInBase.deleteAllChannelUrls) &&
+        Objects.equals(this.deleteAllDeliveryAddressDescriptions, vmOpenApiPrintableFormChannelInBase.deleteAllDeliveryAddressDescriptions) &&
+        Objects.equals(this.deleteAllAttachments, vmOpenApiPrintableFormChannelInBase.deleteAllAttachments) &&
+        Objects.equals(this.publishingStatus, vmOpenApiPrintableFormChannelInBase.publishingStatus) &&
+        Objects.equals(this.deleteAllSupportContacts, vmOpenApiPrintableFormChannelInBase.deleteAllSupportContacts);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, formIdentifier, formReceiver, supportContacts, deliveryAddress, channelUrls, deliveryAddressDescriptions, attachments, deleteDeliveryAddress, deleteAllChannelUrls, deleteAllDeliveryAddressDescriptions, deleteAllAttachments, publishingStatus);
+    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, formIdentifier, formReceiver, supportContacts, deliveryAddress, channelUrls, deliveryAddressDescriptions, attachments, deleteDeliveryAddress, deleteAllChannelUrls, deleteAllDeliveryAddressDescriptions, deleteAllAttachments, publishingStatus, deleteAllSupportContacts);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiPrintableFormChannelIn {\n");
+    sb.append("class VmOpenApiPrintableFormChannelInBase {\n");
     
     sb.append("    sourceId: ").append(toIndentedString(sourceId)).append("\n");
     sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
@@ -464,6 +486,7 @@ public class VmOpenApiPrintableFormChannelIn   {
     sb.append("    deleteAllDeliveryAddressDescriptions: ").append(toIndentedString(deleteAllDeliveryAddressDescriptions)).append("\n");
     sb.append("    deleteAllAttachments: ").append(toIndentedString(deleteAllAttachments)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
+    sb.append("    deleteAllSupportContacts: ").append(toIndentedString(deleteAllSupportContacts)).append("\n");
     sb.append("}");
     return sb.toString();
   }

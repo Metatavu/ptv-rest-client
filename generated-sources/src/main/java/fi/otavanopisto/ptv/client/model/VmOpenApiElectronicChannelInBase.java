@@ -40,10 +40,10 @@ import java.util.List;
 
 
 /**
- * VmOpenApiElectronicChannelIn
+ * VmOpenApiElectronicChannelInBase
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
-public class VmOpenApiElectronicChannelIn   {
+public class VmOpenApiElectronicChannelInBase   {
   @JsonProperty("sourceId")
   private String sourceId = null;
 
@@ -80,10 +80,19 @@ public class VmOpenApiElectronicChannelIn   {
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
 
+  @JsonProperty("deleteAllWebPages")
+  private Boolean deleteAllWebPages = null;
+
+  @JsonProperty("deleteAllSupportContacts")
+  private Boolean deleteAllSupportContacts = null;
+
+  @JsonProperty("deleteAllServiceHours")
+  private Boolean deleteAllServiceHours = null;
+
   @JsonProperty("deleteAllAttachments")
   private Boolean deleteAllAttachments = null;
 
-  public VmOpenApiElectronicChannelIn sourceId(String sourceId) {
+  public VmOpenApiElectronicChannelInBase sourceId(String sourceId) {
     this.sourceId = sourceId;
     return this;
   }
@@ -101,7 +110,7 @@ public class VmOpenApiElectronicChannelIn   {
     this.sourceId = sourceId;
   }
 
-  public VmOpenApiElectronicChannelIn organizationId(String organizationId) {
+  public VmOpenApiElectronicChannelInBase organizationId(String organizationId) {
     this.organizationId = organizationId;
     return this;
   }
@@ -110,7 +119,7 @@ public class VmOpenApiElectronicChannelIn   {
    * Get organizationId
    * @return organizationId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getOrganizationId() {
     return organizationId;
   }
@@ -119,12 +128,12 @@ public class VmOpenApiElectronicChannelIn   {
     this.organizationId = organizationId;
   }
 
-  public VmOpenApiElectronicChannelIn serviceChannelNames(List<VmOpenApiLanguageItem> serviceChannelNames) {
+  public VmOpenApiElectronicChannelInBase serviceChannelNames(List<VmOpenApiLanguageItem> serviceChannelNames) {
     this.serviceChannelNames = serviceChannelNames;
     return this;
   }
 
-  public VmOpenApiElectronicChannelIn addServiceChannelNamesItem(VmOpenApiLanguageItem serviceChannelNamesItem) {
+  public VmOpenApiElectronicChannelInBase addServiceChannelNamesItem(VmOpenApiLanguageItem serviceChannelNamesItem) {
     this.serviceChannelNames.add(serviceChannelNamesItem);
     return this;
   }
@@ -133,7 +142,7 @@ public class VmOpenApiElectronicChannelIn   {
    * Get serviceChannelNames
    * @return serviceChannelNames
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLanguageItem> getServiceChannelNames() {
     return serviceChannelNames;
   }
@@ -142,12 +151,12 @@ public class VmOpenApiElectronicChannelIn   {
     this.serviceChannelNames = serviceChannelNames;
   }
 
-  public VmOpenApiElectronicChannelIn serviceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
+  public VmOpenApiElectronicChannelInBase serviceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
     return this;
   }
 
-  public VmOpenApiElectronicChannelIn addServiceChannelDescriptionsItem(VmOpenApiLocalizedListItem serviceChannelDescriptionsItem) {
+  public VmOpenApiElectronicChannelInBase addServiceChannelDescriptionsItem(VmOpenApiLocalizedListItem serviceChannelDescriptionsItem) {
     this.serviceChannelDescriptions.add(serviceChannelDescriptionsItem);
     return this;
   }
@@ -156,7 +165,7 @@ public class VmOpenApiElectronicChannelIn   {
    * Get serviceChannelDescriptions
    * @return serviceChannelDescriptions
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLocalizedListItem> getServiceChannelDescriptions() {
     return serviceChannelDescriptions;
   }
@@ -165,7 +174,7 @@ public class VmOpenApiElectronicChannelIn   {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
   }
 
-  public VmOpenApiElectronicChannelIn signatureQuantity(String signatureQuantity) {
+  public VmOpenApiElectronicChannelInBase signatureQuantity(String signatureQuantity) {
     this.signatureQuantity = signatureQuantity;
     return this;
   }
@@ -183,7 +192,7 @@ public class VmOpenApiElectronicChannelIn   {
     this.signatureQuantity = signatureQuantity;
   }
 
-  public VmOpenApiElectronicChannelIn requiresSignature(Boolean requiresSignature) {
+  public VmOpenApiElectronicChannelInBase requiresSignature(Boolean requiresSignature) {
     this.requiresSignature = requiresSignature;
     return this;
   }
@@ -201,12 +210,12 @@ public class VmOpenApiElectronicChannelIn   {
     this.requiresSignature = requiresSignature;
   }
 
-  public VmOpenApiElectronicChannelIn supportContacts(List<VmOpenApiSupport> supportContacts) {
+  public VmOpenApiElectronicChannelInBase supportContacts(List<VmOpenApiSupport> supportContacts) {
     this.supportContacts = supportContacts;
     return this;
   }
 
-  public VmOpenApiElectronicChannelIn addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
+  public VmOpenApiElectronicChannelInBase addSupportContactsItem(VmOpenApiSupport supportContactsItem) {
     this.supportContacts.add(supportContactsItem);
     return this;
   }
@@ -224,7 +233,7 @@ public class VmOpenApiElectronicChannelIn   {
     this.supportContacts = supportContacts;
   }
 
-  public VmOpenApiElectronicChannelIn requiresAuthentication(Boolean requiresAuthentication) {
+  public VmOpenApiElectronicChannelInBase requiresAuthentication(Boolean requiresAuthentication) {
     this.requiresAuthentication = requiresAuthentication;
     return this;
   }
@@ -242,12 +251,12 @@ public class VmOpenApiElectronicChannelIn   {
     this.requiresAuthentication = requiresAuthentication;
   }
 
-  public VmOpenApiElectronicChannelIn urls(List<VmOpenApiLanguageItem> urls) {
+  public VmOpenApiElectronicChannelInBase urls(List<VmOpenApiLanguageItem> urls) {
     this.urls = urls;
     return this;
   }
 
-  public VmOpenApiElectronicChannelIn addUrlsItem(VmOpenApiLanguageItem urlsItem) {
+  public VmOpenApiElectronicChannelInBase addUrlsItem(VmOpenApiLanguageItem urlsItem) {
     this.urls.add(urlsItem);
     return this;
   }
@@ -256,7 +265,7 @@ public class VmOpenApiElectronicChannelIn   {
    * Get urls
    * @return urls
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLanguageItem> getUrls() {
     return urls;
   }
@@ -265,12 +274,12 @@ public class VmOpenApiElectronicChannelIn   {
     this.urls = urls;
   }
 
-  public VmOpenApiElectronicChannelIn attachments(List<VmOpenApiAttachment> attachments) {
+  public VmOpenApiElectronicChannelInBase attachments(List<VmOpenApiAttachment> attachments) {
     this.attachments = attachments;
     return this;
   }
 
-  public VmOpenApiElectronicChannelIn addAttachmentsItem(VmOpenApiAttachment attachmentsItem) {
+  public VmOpenApiElectronicChannelInBase addAttachmentsItem(VmOpenApiAttachment attachmentsItem) {
     this.attachments.add(attachmentsItem);
     return this;
   }
@@ -288,12 +297,12 @@ public class VmOpenApiElectronicChannelIn   {
     this.attachments = attachments;
   }
 
-  public VmOpenApiElectronicChannelIn serviceHours(List<VmOpenApiServiceHour> serviceHours) {
+  public VmOpenApiElectronicChannelInBase serviceHours(List<VmOpenApiServiceHour> serviceHours) {
     this.serviceHours = serviceHours;
     return this;
   }
 
-  public VmOpenApiElectronicChannelIn addServiceHoursItem(VmOpenApiServiceHour serviceHoursItem) {
+  public VmOpenApiElectronicChannelInBase addServiceHoursItem(VmOpenApiServiceHour serviceHoursItem) {
     this.serviceHours.add(serviceHoursItem);
     return this;
   }
@@ -311,7 +320,7 @@ public class VmOpenApiElectronicChannelIn   {
     this.serviceHours = serviceHours;
   }
 
-  public VmOpenApiElectronicChannelIn publishingStatus(String publishingStatus) {
+  public VmOpenApiElectronicChannelInBase publishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
     return this;
   }
@@ -320,7 +329,7 @@ public class VmOpenApiElectronicChannelIn   {
    * Get publishingStatus
    * @return publishingStatus
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPublishingStatus() {
     return publishingStatus;
   }
@@ -329,7 +338,61 @@ public class VmOpenApiElectronicChannelIn   {
     this.publishingStatus = publishingStatus;
   }
 
-  public VmOpenApiElectronicChannelIn deleteAllAttachments(Boolean deleteAllAttachments) {
+  public VmOpenApiElectronicChannelInBase deleteAllWebPages(Boolean deleteAllWebPages) {
+    this.deleteAllWebPages = deleteAllWebPages;
+    return this;
+  }
+
+   /**
+   * Get deleteAllWebPages
+   * @return deleteAllWebPages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllWebPages() {
+    return deleteAllWebPages;
+  }
+
+  public void setDeleteAllWebPages(Boolean deleteAllWebPages) {
+    this.deleteAllWebPages = deleteAllWebPages;
+  }
+
+  public VmOpenApiElectronicChannelInBase deleteAllSupportContacts(Boolean deleteAllSupportContacts) {
+    this.deleteAllSupportContacts = deleteAllSupportContacts;
+    return this;
+  }
+
+   /**
+   * Get deleteAllSupportContacts
+   * @return deleteAllSupportContacts
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllSupportContacts() {
+    return deleteAllSupportContacts;
+  }
+
+  public void setDeleteAllSupportContacts(Boolean deleteAllSupportContacts) {
+    this.deleteAllSupportContacts = deleteAllSupportContacts;
+  }
+
+  public VmOpenApiElectronicChannelInBase deleteAllServiceHours(Boolean deleteAllServiceHours) {
+    this.deleteAllServiceHours = deleteAllServiceHours;
+    return this;
+  }
+
+   /**
+   * Get deleteAllServiceHours
+   * @return deleteAllServiceHours
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllServiceHours() {
+    return deleteAllServiceHours;
+  }
+
+  public void setDeleteAllServiceHours(Boolean deleteAllServiceHours) {
+    this.deleteAllServiceHours = deleteAllServiceHours;
+  }
+
+  public VmOpenApiElectronicChannelInBase deleteAllAttachments(Boolean deleteAllAttachments) {
     this.deleteAllAttachments = deleteAllAttachments;
     return this;
   }
@@ -356,31 +419,34 @@ public class VmOpenApiElectronicChannelIn   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiElectronicChannelIn vmOpenApiElectronicChannelIn = (VmOpenApiElectronicChannelIn) o;
-    return Objects.equals(this.sourceId, vmOpenApiElectronicChannelIn.sourceId) &&
-        Objects.equals(this.organizationId, vmOpenApiElectronicChannelIn.organizationId) &&
-        Objects.equals(this.serviceChannelNames, vmOpenApiElectronicChannelIn.serviceChannelNames) &&
-        Objects.equals(this.serviceChannelDescriptions, vmOpenApiElectronicChannelIn.serviceChannelDescriptions) &&
-        Objects.equals(this.signatureQuantity, vmOpenApiElectronicChannelIn.signatureQuantity) &&
-        Objects.equals(this.requiresSignature, vmOpenApiElectronicChannelIn.requiresSignature) &&
-        Objects.equals(this.supportContacts, vmOpenApiElectronicChannelIn.supportContacts) &&
-        Objects.equals(this.requiresAuthentication, vmOpenApiElectronicChannelIn.requiresAuthentication) &&
-        Objects.equals(this.urls, vmOpenApiElectronicChannelIn.urls) &&
-        Objects.equals(this.attachments, vmOpenApiElectronicChannelIn.attachments) &&
-        Objects.equals(this.serviceHours, vmOpenApiElectronicChannelIn.serviceHours) &&
-        Objects.equals(this.publishingStatus, vmOpenApiElectronicChannelIn.publishingStatus) &&
-        Objects.equals(this.deleteAllAttachments, vmOpenApiElectronicChannelIn.deleteAllAttachments);
+    VmOpenApiElectronicChannelInBase vmOpenApiElectronicChannelInBase = (VmOpenApiElectronicChannelInBase) o;
+    return Objects.equals(this.sourceId, vmOpenApiElectronicChannelInBase.sourceId) &&
+        Objects.equals(this.organizationId, vmOpenApiElectronicChannelInBase.organizationId) &&
+        Objects.equals(this.serviceChannelNames, vmOpenApiElectronicChannelInBase.serviceChannelNames) &&
+        Objects.equals(this.serviceChannelDescriptions, vmOpenApiElectronicChannelInBase.serviceChannelDescriptions) &&
+        Objects.equals(this.signatureQuantity, vmOpenApiElectronicChannelInBase.signatureQuantity) &&
+        Objects.equals(this.requiresSignature, vmOpenApiElectronicChannelInBase.requiresSignature) &&
+        Objects.equals(this.supportContacts, vmOpenApiElectronicChannelInBase.supportContacts) &&
+        Objects.equals(this.requiresAuthentication, vmOpenApiElectronicChannelInBase.requiresAuthentication) &&
+        Objects.equals(this.urls, vmOpenApiElectronicChannelInBase.urls) &&
+        Objects.equals(this.attachments, vmOpenApiElectronicChannelInBase.attachments) &&
+        Objects.equals(this.serviceHours, vmOpenApiElectronicChannelInBase.serviceHours) &&
+        Objects.equals(this.publishingStatus, vmOpenApiElectronicChannelInBase.publishingStatus) &&
+        Objects.equals(this.deleteAllWebPages, vmOpenApiElectronicChannelInBase.deleteAllWebPages) &&
+        Objects.equals(this.deleteAllSupportContacts, vmOpenApiElectronicChannelInBase.deleteAllSupportContacts) &&
+        Objects.equals(this.deleteAllServiceHours, vmOpenApiElectronicChannelInBase.deleteAllServiceHours) &&
+        Objects.equals(this.deleteAllAttachments, vmOpenApiElectronicChannelInBase.deleteAllAttachments);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, signatureQuantity, requiresSignature, supportContacts, requiresAuthentication, urls, attachments, serviceHours, publishingStatus, deleteAllAttachments);
+    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, signatureQuantity, requiresSignature, supportContacts, requiresAuthentication, urls, attachments, serviceHours, publishingStatus, deleteAllWebPages, deleteAllSupportContacts, deleteAllServiceHours, deleteAllAttachments);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiElectronicChannelIn {\n");
+    sb.append("class VmOpenApiElectronicChannelInBase {\n");
     
     sb.append("    sourceId: ").append(toIndentedString(sourceId)).append("\n");
     sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
@@ -394,6 +460,9 @@ public class VmOpenApiElectronicChannelIn   {
     sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
     sb.append("    serviceHours: ").append(toIndentedString(serviceHours)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
+    sb.append("    deleteAllWebPages: ").append(toIndentedString(deleteAllWebPages)).append("\n");
+    sb.append("    deleteAllSupportContacts: ").append(toIndentedString(deleteAllSupportContacts)).append("\n");
+    sb.append("    deleteAllServiceHours: ").append(toIndentedString(deleteAllServiceHours)).append("\n");
     sb.append("    deleteAllAttachments: ").append(toIndentedString(deleteAllAttachments)).append("\n");
     sb.append("}");
     return sb.toString();

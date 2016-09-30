@@ -28,6 +28,8 @@ import fi.otavanopisto.ptv.client.model.*;
 
 import fi.otavanopisto.ptv.client.model.VmOpenApiOrganization;
 import fi.otavanopisto.ptv.client.model.IVmError;
+import fi.otavanopisto.ptv.client.model.IVmOpenApiOrganization;
+import fi.otavanopisto.ptv.client.model.VmOpenApiOrganizationInBase;
 import fi.otavanopisto.ptv.client.model.VmOpenApiGuidPage;
 import java.time.OffsetDateTime;
 import fi.otavanopisto.ptv.client.model.VmOpenApiOrganizationIn;
@@ -37,13 +39,29 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class OrganizationApi {
 
   public OrganizationApi(ApiClient client) {
     this.client = client;
   }
   
+  /**
+   * Fetches all the information related to organizations with defined business identity code.
+   * 
+   * @param code Finnish business identity code (required)
+   */
+  public ApiResponse<List<VmOpenApiOrganization>> apiOrganizationBusinesscodeByCodeGet(String code) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/Organization/businesscode/{code}"
+      .replaceAll("\\{" + "code" + "\\}", code);
+      
+    ResultType<List<VmOpenApiOrganization>> resultType = new ResultType<List<VmOpenApiOrganization>>() {};
+    return client.doGETRequest(path, resultType, queryParams, formParams);
+  }
   /**
    * Fetches all the information related to a single organization.
    * 
@@ -59,6 +77,23 @@ public class OrganizationApi {
       
     ResultType<VmOpenApiOrganization> resultType = new ResultType<VmOpenApiOrganization>() {};
     return client.doGETRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Updates organization.
+   * 
+   * @param id organization entity id (required)
+   * @param request organization values (optional)
+   */
+  public ApiResponse<IVmOpenApiOrganization> apiOrganizationByIdPut(String id, VmOpenApiOrganizationInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/Organization/{id}"
+      .replaceAll("\\{" + "id" + "\\}", id);
+      
+    ResultType<IVmOpenApiOrganization> resultType = new ResultType<IVmOpenApiOrganization>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
   }
   /**
    * Gets all the published organizations within PTV as a list of organization ids.              Organizations created/modified after certain date can be fetched by adding date as query string parameter.
@@ -81,19 +116,52 @@ if (page != null)
     return client.doGETRequest(path, resultType, queryParams, formParams);
   }
   /**
-   * Creates a new organization with the data provided as input.
+   * Fetches all the information related to a single organization with defined Oid.
    * 
+   * @param oid Oid identifier (required)
+   */
+  public ApiResponse<VmOpenApiOrganization> apiOrganizationOidByOidGet(String oid) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/Organization/oid/{oid}"
+      .replaceAll("\\{" + "oid" + "\\}", oid);
+      
+    ResultType<VmOpenApiOrganization> resultType = new ResultType<VmOpenApiOrganization>() {};
+    return client.doGETRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Creates a new organization with the data provided as input.
+   * &lt;para&gt;HTTP status code 400 response model is a dictionary where key is property name and value is a list of error messages.&lt;/para&gt;  &lt;code&gt;              {                  \&quot;Addresses[1].StreetAddress\&quot;: [                      \&quot;The StreetAddress field is required.\&quot;                  ]              }              &lt;/code&gt;
    * @param request The organization data. (optional)
    */
-  public ApiResponse<VmOpenApiOrganizationIn> apiOrganizationPost(VmOpenApiOrganizationIn request) {
+  public ApiResponse<IVmOpenApiOrganization> apiOrganizationPost(VmOpenApiOrganizationIn request) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
         
         
     String path = "/api/Organization";
       
-    ResultType<VmOpenApiOrganizationIn> resultType = new ResultType<VmOpenApiOrganizationIn>() {};
+    ResultType<IVmOpenApiOrganization> resultType = new ResultType<IVmOpenApiOrganization>() {};
     return client.doPOSTRequest(path, resultType, queryParams, formParams);
+  }
+  /**
+   * Updates organization.
+   * 
+   * @param sourceId organization external id (required)
+   * @param request organization values (optional)
+   */
+  public ApiResponse<IVmOpenApiOrganization> apiOrganizationSourceIdBySourceIdPut(String sourceId, VmOpenApiOrganizationInBase request) {
+    Map<String, Object> queryParams = new HashMap<>();
+    Map<String, Object> formParams = new HashMap<>();
+        
+        
+    String path = "/api/Organization/sourceId/{sourceId}"
+      .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
+      
+    ResultType<IVmOpenApiOrganization> resultType = new ResultType<IVmOpenApiOrganization>() {};
+    return client.doPUTRequest(path, resultType, queryParams, formParams);
   }
   
   private ApiClient client;

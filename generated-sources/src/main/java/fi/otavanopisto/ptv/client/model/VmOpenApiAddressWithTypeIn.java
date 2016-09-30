@@ -36,10 +36,10 @@ import java.util.List;
 
 
 /**
- * VmOpenApiAddressWithType
+ * VmOpenApiAddressWithTypeIn
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
-public class VmOpenApiAddressWithType   {
+public class VmOpenApiAddressWithTypeIn   {
   @JsonProperty("type")
   private String type = null;
 
@@ -67,7 +67,7 @@ public class VmOpenApiAddressWithType   {
   @JsonProperty("additionalInformations")
   private List<VmOpenApiLanguageItem> additionalInformations = new ArrayList<VmOpenApiLanguageItem>();
 
-  public VmOpenApiAddressWithType type(String type) {
+  public VmOpenApiAddressWithTypeIn type(String type) {
     this.type = type;
     return this;
   }
@@ -85,7 +85,7 @@ public class VmOpenApiAddressWithType   {
     this.type = type;
   }
 
-  public VmOpenApiAddressWithType postOfficeBox(String postOfficeBox) {
+  public VmOpenApiAddressWithTypeIn postOfficeBox(String postOfficeBox) {
     this.postOfficeBox = postOfficeBox;
     return this;
   }
@@ -103,7 +103,7 @@ public class VmOpenApiAddressWithType   {
     this.postOfficeBox = postOfficeBox;
   }
 
-  public VmOpenApiAddressWithType postalCode(String postalCode) {
+  public VmOpenApiAddressWithTypeIn postalCode(String postalCode) {
     this.postalCode = postalCode;
     return this;
   }
@@ -121,7 +121,7 @@ public class VmOpenApiAddressWithType   {
     this.postalCode = postalCode;
   }
 
-  public VmOpenApiAddressWithType postOffice(String postOffice) {
+  public VmOpenApiAddressWithTypeIn postOffice(String postOffice) {
     this.postOffice = postOffice;
     return this;
   }
@@ -139,12 +139,12 @@ public class VmOpenApiAddressWithType   {
     this.postOffice = postOffice;
   }
 
-  public VmOpenApiAddressWithType streetAddress(List<VmOpenApiLanguageItem> streetAddress) {
+  public VmOpenApiAddressWithTypeIn streetAddress(List<VmOpenApiLanguageItem> streetAddress) {
     this.streetAddress = streetAddress;
     return this;
   }
 
-  public VmOpenApiAddressWithType addStreetAddressItem(VmOpenApiLanguageItem streetAddressItem) {
+  public VmOpenApiAddressWithTypeIn addStreetAddressItem(VmOpenApiLanguageItem streetAddressItem) {
     this.streetAddress.add(streetAddressItem);
     return this;
   }
@@ -162,7 +162,7 @@ public class VmOpenApiAddressWithType   {
     this.streetAddress = streetAddress;
   }
 
-  public VmOpenApiAddressWithType municipality(String municipality) {
+  public VmOpenApiAddressWithTypeIn municipality(String municipality) {
     this.municipality = municipality;
     return this;
   }
@@ -180,7 +180,7 @@ public class VmOpenApiAddressWithType   {
     this.municipality = municipality;
   }
 
-  public VmOpenApiAddressWithType country(String country) {
+  public VmOpenApiAddressWithTypeIn country(String country) {
     this.country = country;
     return this;
   }
@@ -198,7 +198,7 @@ public class VmOpenApiAddressWithType   {
     this.country = country;
   }
 
-  public VmOpenApiAddressWithType qualifier(String qualifier) {
+  public VmOpenApiAddressWithTypeIn qualifier(String qualifier) {
     this.qualifier = qualifier;
     return this;
   }
@@ -216,12 +216,12 @@ public class VmOpenApiAddressWithType   {
     this.qualifier = qualifier;
   }
 
-  public VmOpenApiAddressWithType additionalInformations(List<VmOpenApiLanguageItem> additionalInformations) {
+  public VmOpenApiAddressWithTypeIn additionalInformations(List<VmOpenApiLanguageItem> additionalInformations) {
     this.additionalInformations = additionalInformations;
     return this;
   }
 
-  public VmOpenApiAddressWithType addAdditionalInformationsItem(VmOpenApiLanguageItem additionalInformationsItem) {
+  public VmOpenApiAddressWithTypeIn addAdditionalInformationsItem(VmOpenApiLanguageItem additionalInformationsItem) {
     this.additionalInformations.add(additionalInformationsItem);
     return this;
   }
@@ -248,16 +248,16 @@ public class VmOpenApiAddressWithType   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiAddressWithType vmOpenApiAddressWithType = (VmOpenApiAddressWithType) o;
-    return Objects.equals(this.type, vmOpenApiAddressWithType.type) &&
-        Objects.equals(this.postOfficeBox, vmOpenApiAddressWithType.postOfficeBox) &&
-        Objects.equals(this.postalCode, vmOpenApiAddressWithType.postalCode) &&
-        Objects.equals(this.postOffice, vmOpenApiAddressWithType.postOffice) &&
-        Objects.equals(this.streetAddress, vmOpenApiAddressWithType.streetAddress) &&
-        Objects.equals(this.municipality, vmOpenApiAddressWithType.municipality) &&
-        Objects.equals(this.country, vmOpenApiAddressWithType.country) &&
-        Objects.equals(this.qualifier, vmOpenApiAddressWithType.qualifier) &&
-        Objects.equals(this.additionalInformations, vmOpenApiAddressWithType.additionalInformations);
+    VmOpenApiAddressWithTypeIn vmOpenApiAddressWithTypeIn = (VmOpenApiAddressWithTypeIn) o;
+    return Objects.equals(this.type, vmOpenApiAddressWithTypeIn.type) &&
+        Objects.equals(this.postOfficeBox, vmOpenApiAddressWithTypeIn.postOfficeBox) &&
+        Objects.equals(this.postalCode, vmOpenApiAddressWithTypeIn.postalCode) &&
+        Objects.equals(this.postOffice, vmOpenApiAddressWithTypeIn.postOffice) &&
+        Objects.equals(this.streetAddress, vmOpenApiAddressWithTypeIn.streetAddress) &&
+        Objects.equals(this.municipality, vmOpenApiAddressWithTypeIn.municipality) &&
+        Objects.equals(this.country, vmOpenApiAddressWithTypeIn.country) &&
+        Objects.equals(this.qualifier, vmOpenApiAddressWithTypeIn.qualifier) &&
+        Objects.equals(this.additionalInformations, vmOpenApiAddressWithTypeIn.additionalInformations);
   }
 
   @Override
@@ -268,7 +268,7 @@ public class VmOpenApiAddressWithType   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiAddressWithType {\n");
+    sb.append("class VmOpenApiAddressWithTypeIn {\n");
     
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    postOfficeBox: ").append(toIndentedString(postOfficeBox)).append("\n");

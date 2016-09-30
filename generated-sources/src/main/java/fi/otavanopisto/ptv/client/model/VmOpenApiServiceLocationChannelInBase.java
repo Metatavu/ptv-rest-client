@@ -40,10 +40,10 @@ import java.util.List;
 
 
 /**
- * VmOpenApiServiceLocationChannelIn
+ * VmOpenApiServiceLocationChannelInBase
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
-public class VmOpenApiServiceLocationChannelIn   {
+public class VmOpenApiServiceLocationChannelInBase   {
   @JsonProperty("sourceId")
   private String sourceId = null;
 
@@ -101,13 +101,37 @@ public class VmOpenApiServiceLocationChannelIn   {
   @JsonProperty("addresses")
   private List<VmOpenApiAddressWithType> addresses = new ArrayList<VmOpenApiAddressWithType>();
 
+  @JsonProperty("deleteAllAddresses")
+  private Boolean deleteAllAddresses = null;
+
   @JsonProperty("serviceHours")
   private List<VmOpenApiServiceHour> serviceHours = new ArrayList<VmOpenApiServiceHour>();
+
+  @JsonProperty("deleteEmail")
+  private Boolean deleteEmail = null;
+
+  @JsonProperty("deletePhone")
+  private Boolean deletePhone = null;
+
+  @JsonProperty("deleteFax")
+  private Boolean deleteFax = null;
+
+  @JsonProperty("deleteAllServiceChargeTypes")
+  private Boolean deleteAllServiceChargeTypes = null;
 
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
 
-  public VmOpenApiServiceLocationChannelIn sourceId(String sourceId) {
+  @JsonProperty("deleteAllLanguages")
+  private Boolean deleteAllLanguages = null;
+
+  @JsonProperty("deleteAllWebPages")
+  private Boolean deleteAllWebPages = null;
+
+  @JsonProperty("deleteAllServiceHours")
+  private Boolean deleteAllServiceHours = null;
+
+  public VmOpenApiServiceLocationChannelInBase sourceId(String sourceId) {
     this.sourceId = sourceId;
     return this;
   }
@@ -125,7 +149,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.sourceId = sourceId;
   }
 
-  public VmOpenApiServiceLocationChannelIn organizationId(String organizationId) {
+  public VmOpenApiServiceLocationChannelInBase organizationId(String organizationId) {
     this.organizationId = organizationId;
     return this;
   }
@@ -134,7 +158,7 @@ public class VmOpenApiServiceLocationChannelIn   {
    * Get organizationId
    * @return organizationId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getOrganizationId() {
     return organizationId;
   }
@@ -143,12 +167,12 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.organizationId = organizationId;
   }
 
-  public VmOpenApiServiceLocationChannelIn serviceChannelNames(List<VmOpenApiLanguageItem> serviceChannelNames) {
+  public VmOpenApiServiceLocationChannelInBase serviceChannelNames(List<VmOpenApiLanguageItem> serviceChannelNames) {
     this.serviceChannelNames = serviceChannelNames;
     return this;
   }
 
-  public VmOpenApiServiceLocationChannelIn addServiceChannelNamesItem(VmOpenApiLanguageItem serviceChannelNamesItem) {
+  public VmOpenApiServiceLocationChannelInBase addServiceChannelNamesItem(VmOpenApiLanguageItem serviceChannelNamesItem) {
     this.serviceChannelNames.add(serviceChannelNamesItem);
     return this;
   }
@@ -157,7 +181,7 @@ public class VmOpenApiServiceLocationChannelIn   {
    * Get serviceChannelNames
    * @return serviceChannelNames
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLanguageItem> getServiceChannelNames() {
     return serviceChannelNames;
   }
@@ -166,12 +190,12 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.serviceChannelNames = serviceChannelNames;
   }
 
-  public VmOpenApiServiceLocationChannelIn serviceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
+  public VmOpenApiServiceLocationChannelInBase serviceChannelDescriptions(List<VmOpenApiLocalizedListItem> serviceChannelDescriptions) {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
     return this;
   }
 
-  public VmOpenApiServiceLocationChannelIn addServiceChannelDescriptionsItem(VmOpenApiLocalizedListItem serviceChannelDescriptionsItem) {
+  public VmOpenApiServiceLocationChannelInBase addServiceChannelDescriptionsItem(VmOpenApiLocalizedListItem serviceChannelDescriptionsItem) {
     this.serviceChannelDescriptions.add(serviceChannelDescriptionsItem);
     return this;
   }
@@ -180,7 +204,7 @@ public class VmOpenApiServiceLocationChannelIn   {
    * Get serviceChannelDescriptions
    * @return serviceChannelDescriptions
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLocalizedListItem> getServiceChannelDescriptions() {
     return serviceChannelDescriptions;
   }
@@ -189,7 +213,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.serviceChannelDescriptions = serviceChannelDescriptions;
   }
 
-  public VmOpenApiServiceLocationChannelIn serviceAreaRestricted(Boolean serviceAreaRestricted) {
+  public VmOpenApiServiceLocationChannelInBase serviceAreaRestricted(Boolean serviceAreaRestricted) {
     this.serviceAreaRestricted = serviceAreaRestricted;
     return this;
   }
@@ -207,12 +231,12 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.serviceAreaRestricted = serviceAreaRestricted;
   }
 
-  public VmOpenApiServiceLocationChannelIn serviceAreas(List<String> serviceAreas) {
+  public VmOpenApiServiceLocationChannelInBase serviceAreas(List<String> serviceAreas) {
     this.serviceAreas = serviceAreas;
     return this;
   }
 
-  public VmOpenApiServiceLocationChannelIn addServiceAreasItem(String serviceAreasItem) {
+  public VmOpenApiServiceLocationChannelInBase addServiceAreasItem(String serviceAreasItem) {
     this.serviceAreas.add(serviceAreasItem);
     return this;
   }
@@ -230,7 +254,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.serviceAreas = serviceAreas;
   }
 
-  public VmOpenApiServiceLocationChannelIn email(String email) {
+  public VmOpenApiServiceLocationChannelInBase email(String email) {
     this.email = email;
     return this;
   }
@@ -248,12 +272,12 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.email = email;
   }
 
-  public VmOpenApiServiceLocationChannelIn languages(List<String> languages) {
+  public VmOpenApiServiceLocationChannelInBase languages(List<String> languages) {
     this.languages = languages;
     return this;
   }
 
-  public VmOpenApiServiceLocationChannelIn addLanguagesItem(String languagesItem) {
+  public VmOpenApiServiceLocationChannelInBase addLanguagesItem(String languagesItem) {
     this.languages.add(languagesItem);
     return this;
   }
@@ -271,7 +295,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.languages = languages;
   }
 
-  public VmOpenApiServiceLocationChannelIn phone(String phone) {
+  public VmOpenApiServiceLocationChannelInBase phone(String phone) {
     this.phone = phone;
     return this;
   }
@@ -289,7 +313,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.phone = phone;
   }
 
-  public VmOpenApiServiceLocationChannelIn fax(String fax) {
+  public VmOpenApiServiceLocationChannelInBase fax(String fax) {
     this.fax = fax;
     return this;
   }
@@ -307,12 +331,12 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.fax = fax;
   }
 
-  public VmOpenApiServiceLocationChannelIn serviceChargeTypes(List<String> serviceChargeTypes) {
+  public VmOpenApiServiceLocationChannelInBase serviceChargeTypes(List<String> serviceChargeTypes) {
     this.serviceChargeTypes = serviceChargeTypes;
     return this;
   }
 
-  public VmOpenApiServiceLocationChannelIn addServiceChargeTypesItem(String serviceChargeTypesItem) {
+  public VmOpenApiServiceLocationChannelInBase addServiceChargeTypesItem(String serviceChargeTypesItem) {
     this.serviceChargeTypes.add(serviceChargeTypesItem);
     return this;
   }
@@ -330,12 +354,12 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.serviceChargeTypes = serviceChargeTypes;
   }
 
-  public VmOpenApiServiceLocationChannelIn phoneChargeDescriptions(List<VmOpenApiLanguageItem> phoneChargeDescriptions) {
+  public VmOpenApiServiceLocationChannelInBase phoneChargeDescriptions(List<VmOpenApiLanguageItem> phoneChargeDescriptions) {
     this.phoneChargeDescriptions = phoneChargeDescriptions;
     return this;
   }
 
-  public VmOpenApiServiceLocationChannelIn addPhoneChargeDescriptionsItem(VmOpenApiLanguageItem phoneChargeDescriptionsItem) {
+  public VmOpenApiServiceLocationChannelInBase addPhoneChargeDescriptionsItem(VmOpenApiLanguageItem phoneChargeDescriptionsItem) {
     this.phoneChargeDescriptions.add(phoneChargeDescriptionsItem);
     return this;
   }
@@ -353,7 +377,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.phoneChargeDescriptions = phoneChargeDescriptions;
   }
 
-  public VmOpenApiServiceLocationChannelIn phoneServiceCharge(Boolean phoneServiceCharge) {
+  public VmOpenApiServiceLocationChannelInBase phoneServiceCharge(Boolean phoneServiceCharge) {
     this.phoneServiceCharge = phoneServiceCharge;
     return this;
   }
@@ -371,12 +395,12 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.phoneServiceCharge = phoneServiceCharge;
   }
 
-  public VmOpenApiServiceLocationChannelIn webPages(List<VmOpenApiWebPage> webPages) {
+  public VmOpenApiServiceLocationChannelInBase webPages(List<VmOpenApiWebPage> webPages) {
     this.webPages = webPages;
     return this;
   }
 
-  public VmOpenApiServiceLocationChannelIn addWebPagesItem(VmOpenApiWebPage webPagesItem) {
+  public VmOpenApiServiceLocationChannelInBase addWebPagesItem(VmOpenApiWebPage webPagesItem) {
     this.webPages.add(webPagesItem);
     return this;
   }
@@ -394,7 +418,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.webPages = webPages;
   }
 
-  public VmOpenApiServiceLocationChannelIn latitude(String latitude) {
+  public VmOpenApiServiceLocationChannelInBase latitude(String latitude) {
     this.latitude = latitude;
     return this;
   }
@@ -412,7 +436,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.latitude = latitude;
   }
 
-  public VmOpenApiServiceLocationChannelIn longitude(String longitude) {
+  public VmOpenApiServiceLocationChannelInBase longitude(String longitude) {
     this.longitude = longitude;
     return this;
   }
@@ -430,7 +454,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.longitude = longitude;
   }
 
-  public VmOpenApiServiceLocationChannelIn coordinateSystem(String coordinateSystem) {
+  public VmOpenApiServiceLocationChannelInBase coordinateSystem(String coordinateSystem) {
     this.coordinateSystem = coordinateSystem;
     return this;
   }
@@ -448,7 +472,7 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.coordinateSystem = coordinateSystem;
   }
 
-  public VmOpenApiServiceLocationChannelIn coordinatesSetManually(Boolean coordinatesSetManually) {
+  public VmOpenApiServiceLocationChannelInBase coordinatesSetManually(Boolean coordinatesSetManually) {
     this.coordinatesSetManually = coordinatesSetManually;
     return this;
   }
@@ -466,12 +490,12 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.coordinatesSetManually = coordinatesSetManually;
   }
 
-  public VmOpenApiServiceLocationChannelIn addresses(List<VmOpenApiAddressWithType> addresses) {
+  public VmOpenApiServiceLocationChannelInBase addresses(List<VmOpenApiAddressWithType> addresses) {
     this.addresses = addresses;
     return this;
   }
 
-  public VmOpenApiServiceLocationChannelIn addAddressesItem(VmOpenApiAddressWithType addressesItem) {
+  public VmOpenApiServiceLocationChannelInBase addAddressesItem(VmOpenApiAddressWithType addressesItem) {
     this.addresses.add(addressesItem);
     return this;
   }
@@ -480,7 +504,7 @@ public class VmOpenApiServiceLocationChannelIn   {
    * Get addresses
    * @return addresses
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiAddressWithType> getAddresses() {
     return addresses;
   }
@@ -489,12 +513,30 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.addresses = addresses;
   }
 
-  public VmOpenApiServiceLocationChannelIn serviceHours(List<VmOpenApiServiceHour> serviceHours) {
+  public VmOpenApiServiceLocationChannelInBase deleteAllAddresses(Boolean deleteAllAddresses) {
+    this.deleteAllAddresses = deleteAllAddresses;
+    return this;
+  }
+
+   /**
+   * Get deleteAllAddresses
+   * @return deleteAllAddresses
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllAddresses() {
+    return deleteAllAddresses;
+  }
+
+  public void setDeleteAllAddresses(Boolean deleteAllAddresses) {
+    this.deleteAllAddresses = deleteAllAddresses;
+  }
+
+  public VmOpenApiServiceLocationChannelInBase serviceHours(List<VmOpenApiServiceHour> serviceHours) {
     this.serviceHours = serviceHours;
     return this;
   }
 
-  public VmOpenApiServiceLocationChannelIn addServiceHoursItem(VmOpenApiServiceHour serviceHoursItem) {
+  public VmOpenApiServiceLocationChannelInBase addServiceHoursItem(VmOpenApiServiceHour serviceHoursItem) {
     this.serviceHours.add(serviceHoursItem);
     return this;
   }
@@ -512,7 +554,79 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.serviceHours = serviceHours;
   }
 
-  public VmOpenApiServiceLocationChannelIn publishingStatus(String publishingStatus) {
+  public VmOpenApiServiceLocationChannelInBase deleteEmail(Boolean deleteEmail) {
+    this.deleteEmail = deleteEmail;
+    return this;
+  }
+
+   /**
+   * Get deleteEmail
+   * @return deleteEmail
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteEmail() {
+    return deleteEmail;
+  }
+
+  public void setDeleteEmail(Boolean deleteEmail) {
+    this.deleteEmail = deleteEmail;
+  }
+
+  public VmOpenApiServiceLocationChannelInBase deletePhone(Boolean deletePhone) {
+    this.deletePhone = deletePhone;
+    return this;
+  }
+
+   /**
+   * Get deletePhone
+   * @return deletePhone
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeletePhone() {
+    return deletePhone;
+  }
+
+  public void setDeletePhone(Boolean deletePhone) {
+    this.deletePhone = deletePhone;
+  }
+
+  public VmOpenApiServiceLocationChannelInBase deleteFax(Boolean deleteFax) {
+    this.deleteFax = deleteFax;
+    return this;
+  }
+
+   /**
+   * Get deleteFax
+   * @return deleteFax
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteFax() {
+    return deleteFax;
+  }
+
+  public void setDeleteFax(Boolean deleteFax) {
+    this.deleteFax = deleteFax;
+  }
+
+  public VmOpenApiServiceLocationChannelInBase deleteAllServiceChargeTypes(Boolean deleteAllServiceChargeTypes) {
+    this.deleteAllServiceChargeTypes = deleteAllServiceChargeTypes;
+    return this;
+  }
+
+   /**
+   * Get deleteAllServiceChargeTypes
+   * @return deleteAllServiceChargeTypes
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllServiceChargeTypes() {
+    return deleteAllServiceChargeTypes;
+  }
+
+  public void setDeleteAllServiceChargeTypes(Boolean deleteAllServiceChargeTypes) {
+    this.deleteAllServiceChargeTypes = deleteAllServiceChargeTypes;
+  }
+
+  public VmOpenApiServiceLocationChannelInBase publishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
     return this;
   }
@@ -521,13 +635,67 @@ public class VmOpenApiServiceLocationChannelIn   {
    * Get publishingStatus
    * @return publishingStatus
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPublishingStatus() {
     return publishingStatus;
   }
 
   public void setPublishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
+  }
+
+  public VmOpenApiServiceLocationChannelInBase deleteAllLanguages(Boolean deleteAllLanguages) {
+    this.deleteAllLanguages = deleteAllLanguages;
+    return this;
+  }
+
+   /**
+   * Get deleteAllLanguages
+   * @return deleteAllLanguages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllLanguages() {
+    return deleteAllLanguages;
+  }
+
+  public void setDeleteAllLanguages(Boolean deleteAllLanguages) {
+    this.deleteAllLanguages = deleteAllLanguages;
+  }
+
+  public VmOpenApiServiceLocationChannelInBase deleteAllWebPages(Boolean deleteAllWebPages) {
+    this.deleteAllWebPages = deleteAllWebPages;
+    return this;
+  }
+
+   /**
+   * Get deleteAllWebPages
+   * @return deleteAllWebPages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllWebPages() {
+    return deleteAllWebPages;
+  }
+
+  public void setDeleteAllWebPages(Boolean deleteAllWebPages) {
+    this.deleteAllWebPages = deleteAllWebPages;
+  }
+
+  public VmOpenApiServiceLocationChannelInBase deleteAllServiceHours(Boolean deleteAllServiceHours) {
+    this.deleteAllServiceHours = deleteAllServiceHours;
+    return this;
+  }
+
+   /**
+   * Get deleteAllServiceHours
+   * @return deleteAllServiceHours
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getDeleteAllServiceHours() {
+    return deleteAllServiceHours;
+  }
+
+  public void setDeleteAllServiceHours(Boolean deleteAllServiceHours) {
+    this.deleteAllServiceHours = deleteAllServiceHours;
   }
 
 
@@ -539,39 +707,47 @@ public class VmOpenApiServiceLocationChannelIn   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiServiceLocationChannelIn vmOpenApiServiceLocationChannelIn = (VmOpenApiServiceLocationChannelIn) o;
-    return Objects.equals(this.sourceId, vmOpenApiServiceLocationChannelIn.sourceId) &&
-        Objects.equals(this.organizationId, vmOpenApiServiceLocationChannelIn.organizationId) &&
-        Objects.equals(this.serviceChannelNames, vmOpenApiServiceLocationChannelIn.serviceChannelNames) &&
-        Objects.equals(this.serviceChannelDescriptions, vmOpenApiServiceLocationChannelIn.serviceChannelDescriptions) &&
-        Objects.equals(this.serviceAreaRestricted, vmOpenApiServiceLocationChannelIn.serviceAreaRestricted) &&
-        Objects.equals(this.serviceAreas, vmOpenApiServiceLocationChannelIn.serviceAreas) &&
-        Objects.equals(this.email, vmOpenApiServiceLocationChannelIn.email) &&
-        Objects.equals(this.languages, vmOpenApiServiceLocationChannelIn.languages) &&
-        Objects.equals(this.phone, vmOpenApiServiceLocationChannelIn.phone) &&
-        Objects.equals(this.fax, vmOpenApiServiceLocationChannelIn.fax) &&
-        Objects.equals(this.serviceChargeTypes, vmOpenApiServiceLocationChannelIn.serviceChargeTypes) &&
-        Objects.equals(this.phoneChargeDescriptions, vmOpenApiServiceLocationChannelIn.phoneChargeDescriptions) &&
-        Objects.equals(this.phoneServiceCharge, vmOpenApiServiceLocationChannelIn.phoneServiceCharge) &&
-        Objects.equals(this.webPages, vmOpenApiServiceLocationChannelIn.webPages) &&
-        Objects.equals(this.latitude, vmOpenApiServiceLocationChannelIn.latitude) &&
-        Objects.equals(this.longitude, vmOpenApiServiceLocationChannelIn.longitude) &&
-        Objects.equals(this.coordinateSystem, vmOpenApiServiceLocationChannelIn.coordinateSystem) &&
-        Objects.equals(this.coordinatesSetManually, vmOpenApiServiceLocationChannelIn.coordinatesSetManually) &&
-        Objects.equals(this.addresses, vmOpenApiServiceLocationChannelIn.addresses) &&
-        Objects.equals(this.serviceHours, vmOpenApiServiceLocationChannelIn.serviceHours) &&
-        Objects.equals(this.publishingStatus, vmOpenApiServiceLocationChannelIn.publishingStatus);
+    VmOpenApiServiceLocationChannelInBase vmOpenApiServiceLocationChannelInBase = (VmOpenApiServiceLocationChannelInBase) o;
+    return Objects.equals(this.sourceId, vmOpenApiServiceLocationChannelInBase.sourceId) &&
+        Objects.equals(this.organizationId, vmOpenApiServiceLocationChannelInBase.organizationId) &&
+        Objects.equals(this.serviceChannelNames, vmOpenApiServiceLocationChannelInBase.serviceChannelNames) &&
+        Objects.equals(this.serviceChannelDescriptions, vmOpenApiServiceLocationChannelInBase.serviceChannelDescriptions) &&
+        Objects.equals(this.serviceAreaRestricted, vmOpenApiServiceLocationChannelInBase.serviceAreaRestricted) &&
+        Objects.equals(this.serviceAreas, vmOpenApiServiceLocationChannelInBase.serviceAreas) &&
+        Objects.equals(this.email, vmOpenApiServiceLocationChannelInBase.email) &&
+        Objects.equals(this.languages, vmOpenApiServiceLocationChannelInBase.languages) &&
+        Objects.equals(this.phone, vmOpenApiServiceLocationChannelInBase.phone) &&
+        Objects.equals(this.fax, vmOpenApiServiceLocationChannelInBase.fax) &&
+        Objects.equals(this.serviceChargeTypes, vmOpenApiServiceLocationChannelInBase.serviceChargeTypes) &&
+        Objects.equals(this.phoneChargeDescriptions, vmOpenApiServiceLocationChannelInBase.phoneChargeDescriptions) &&
+        Objects.equals(this.phoneServiceCharge, vmOpenApiServiceLocationChannelInBase.phoneServiceCharge) &&
+        Objects.equals(this.webPages, vmOpenApiServiceLocationChannelInBase.webPages) &&
+        Objects.equals(this.latitude, vmOpenApiServiceLocationChannelInBase.latitude) &&
+        Objects.equals(this.longitude, vmOpenApiServiceLocationChannelInBase.longitude) &&
+        Objects.equals(this.coordinateSystem, vmOpenApiServiceLocationChannelInBase.coordinateSystem) &&
+        Objects.equals(this.coordinatesSetManually, vmOpenApiServiceLocationChannelInBase.coordinatesSetManually) &&
+        Objects.equals(this.addresses, vmOpenApiServiceLocationChannelInBase.addresses) &&
+        Objects.equals(this.deleteAllAddresses, vmOpenApiServiceLocationChannelInBase.deleteAllAddresses) &&
+        Objects.equals(this.serviceHours, vmOpenApiServiceLocationChannelInBase.serviceHours) &&
+        Objects.equals(this.deleteEmail, vmOpenApiServiceLocationChannelInBase.deleteEmail) &&
+        Objects.equals(this.deletePhone, vmOpenApiServiceLocationChannelInBase.deletePhone) &&
+        Objects.equals(this.deleteFax, vmOpenApiServiceLocationChannelInBase.deleteFax) &&
+        Objects.equals(this.deleteAllServiceChargeTypes, vmOpenApiServiceLocationChannelInBase.deleteAllServiceChargeTypes) &&
+        Objects.equals(this.publishingStatus, vmOpenApiServiceLocationChannelInBase.publishingStatus) &&
+        Objects.equals(this.deleteAllLanguages, vmOpenApiServiceLocationChannelInBase.deleteAllLanguages) &&
+        Objects.equals(this.deleteAllWebPages, vmOpenApiServiceLocationChannelInBase.deleteAllWebPages) &&
+        Objects.equals(this.deleteAllServiceHours, vmOpenApiServiceLocationChannelInBase.deleteAllServiceHours);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, serviceAreaRestricted, serviceAreas, email, languages, phone, fax, serviceChargeTypes, phoneChargeDescriptions, phoneServiceCharge, webPages, latitude, longitude, coordinateSystem, coordinatesSetManually, addresses, serviceHours, publishingStatus);
+    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, serviceAreaRestricted, serviceAreas, email, languages, phone, fax, serviceChargeTypes, phoneChargeDescriptions, phoneServiceCharge, webPages, latitude, longitude, coordinateSystem, coordinatesSetManually, addresses, deleteAllAddresses, serviceHours, deleteEmail, deletePhone, deleteFax, deleteAllServiceChargeTypes, publishingStatus, deleteAllLanguages, deleteAllWebPages, deleteAllServiceHours);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiServiceLocationChannelIn {\n");
+    sb.append("class VmOpenApiServiceLocationChannelInBase {\n");
     
     sb.append("    sourceId: ").append(toIndentedString(sourceId)).append("\n");
     sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
@@ -592,8 +768,16 @@ public class VmOpenApiServiceLocationChannelIn   {
     sb.append("    coordinateSystem: ").append(toIndentedString(coordinateSystem)).append("\n");
     sb.append("    coordinatesSetManually: ").append(toIndentedString(coordinatesSetManually)).append("\n");
     sb.append("    addresses: ").append(toIndentedString(addresses)).append("\n");
+    sb.append("    deleteAllAddresses: ").append(toIndentedString(deleteAllAddresses)).append("\n");
     sb.append("    serviceHours: ").append(toIndentedString(serviceHours)).append("\n");
+    sb.append("    deleteEmail: ").append(toIndentedString(deleteEmail)).append("\n");
+    sb.append("    deletePhone: ").append(toIndentedString(deletePhone)).append("\n");
+    sb.append("    deleteFax: ").append(toIndentedString(deleteFax)).append("\n");
+    sb.append("    deleteAllServiceChargeTypes: ").append(toIndentedString(deleteAllServiceChargeTypes)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
+    sb.append("    deleteAllLanguages: ").append(toIndentedString(deleteAllLanguages)).append("\n");
+    sb.append("    deleteAllWebPages: ").append(toIndentedString(deleteAllWebPages)).append("\n");
+    sb.append("    deleteAllServiceHours: ").append(toIndentedString(deleteAllServiceHours)).append("\n");
     sb.append("}");
     return sb.toString();
   }

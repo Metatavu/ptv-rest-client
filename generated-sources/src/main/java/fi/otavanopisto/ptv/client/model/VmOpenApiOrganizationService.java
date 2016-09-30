@@ -28,14 +28,18 @@ package fi.otavanopisto.ptv.client.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import fi.otavanopisto.ptv.client.model.VmOpenApiLanguageItem;
+import fi.otavanopisto.ptv.client.model.VmOpenApiWebPage;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * VmOpenApiOrganizationService
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:22:24.276+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
 public class VmOpenApiOrganizationService   {
   @JsonProperty("serviceId")
   private String serviceId = null;
@@ -48,6 +52,12 @@ public class VmOpenApiOrganizationService   {
 
   @JsonProperty("provisionType")
   private String provisionType = null;
+
+  @JsonProperty("additionalInformation")
+  private List<VmOpenApiLanguageItem> additionalInformation = new ArrayList<VmOpenApiLanguageItem>();
+
+  @JsonProperty("webPages")
+  private List<VmOpenApiWebPage> webPages = new ArrayList<VmOpenApiWebPage>();
 
   public VmOpenApiOrganizationService serviceId(String serviceId) {
     this.serviceId = serviceId;
@@ -76,7 +86,7 @@ public class VmOpenApiOrganizationService   {
    * Get organizationId
    * @return organizationId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getOrganizationId() {
     return organizationId;
   }
@@ -112,13 +122,59 @@ public class VmOpenApiOrganizationService   {
    * Get provisionType
    * @return provisionType
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getProvisionType() {
     return provisionType;
   }
 
   public void setProvisionType(String provisionType) {
     this.provisionType = provisionType;
+  }
+
+  public VmOpenApiOrganizationService additionalInformation(List<VmOpenApiLanguageItem> additionalInformation) {
+    this.additionalInformation = additionalInformation;
+    return this;
+  }
+
+  public VmOpenApiOrganizationService addAdditionalInformationItem(VmOpenApiLanguageItem additionalInformationItem) {
+    this.additionalInformation.add(additionalInformationItem);
+    return this;
+  }
+
+   /**
+   * Get additionalInformation
+   * @return additionalInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiLanguageItem> getAdditionalInformation() {
+    return additionalInformation;
+  }
+
+  public void setAdditionalInformation(List<VmOpenApiLanguageItem> additionalInformation) {
+    this.additionalInformation = additionalInformation;
+  }
+
+  public VmOpenApiOrganizationService webPages(List<VmOpenApiWebPage> webPages) {
+    this.webPages = webPages;
+    return this;
+  }
+
+  public VmOpenApiOrganizationService addWebPagesItem(VmOpenApiWebPage webPagesItem) {
+    this.webPages.add(webPagesItem);
+    return this;
+  }
+
+   /**
+   * Get webPages
+   * @return webPages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiWebPage> getWebPages() {
+    return webPages;
+  }
+
+  public void setWebPages(List<VmOpenApiWebPage> webPages) {
+    this.webPages = webPages;
   }
 
 
@@ -134,12 +190,14 @@ public class VmOpenApiOrganizationService   {
     return Objects.equals(this.serviceId, vmOpenApiOrganizationService.serviceId) &&
         Objects.equals(this.organizationId, vmOpenApiOrganizationService.organizationId) &&
         Objects.equals(this.roleType, vmOpenApiOrganizationService.roleType) &&
-        Objects.equals(this.provisionType, vmOpenApiOrganizationService.provisionType);
+        Objects.equals(this.provisionType, vmOpenApiOrganizationService.provisionType) &&
+        Objects.equals(this.additionalInformation, vmOpenApiOrganizationService.additionalInformation) &&
+        Objects.equals(this.webPages, vmOpenApiOrganizationService.webPages);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(serviceId, organizationId, roleType, provisionType);
+    return Objects.hash(serviceId, organizationId, roleType, provisionType, additionalInformation, webPages);
   }
 
   @Override
@@ -151,6 +209,8 @@ public class VmOpenApiOrganizationService   {
     sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
     sb.append("    roleType: ").append(toIndentedString(roleType)).append("\n");
     sb.append("    provisionType: ").append(toIndentedString(provisionType)).append("\n");
+    sb.append("    additionalInformation: ").append(toIndentedString(additionalInformation)).append("\n");
+    sb.append("    webPages: ").append(toIndentedString(webPages)).append("\n");
     sb.append("}");
     return sb.toString();
   }

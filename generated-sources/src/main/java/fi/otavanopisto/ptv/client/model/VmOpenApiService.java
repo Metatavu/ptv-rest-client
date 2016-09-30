@@ -28,6 +28,7 @@ package fi.otavanopisto.ptv.client.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import fi.otavanopisto.ptv.client.model.VmOpenApiFintoItem;
 import fi.otavanopisto.ptv.client.model.VmOpenApiLanguageItem;
 import fi.otavanopisto.ptv.client.model.VmOpenApiLocalizedListItem;
 import fi.otavanopisto.ptv.client.model.VmOpenApiServiceOrganization;
@@ -39,12 +40,12 @@ import java.util.List;
 
 
 /**
- * VmOpenApiServiceIn
+ * VmOpenApiService
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
-public class VmOpenApiServiceIn   {
-  @JsonProperty("sourceId")
-  private String sourceId = null;
+public class VmOpenApiService   {
+  @JsonProperty("id")
+  private String id = null;
 
   @JsonProperty("type")
   private String type = null;
@@ -65,19 +66,19 @@ public class VmOpenApiServiceIn   {
   private List<String> languages = new ArrayList<String>();
 
   @JsonProperty("serviceClasses")
-  private List<String> serviceClasses = new ArrayList<String>();
+  private List<VmOpenApiFintoItem> serviceClasses = new ArrayList<VmOpenApiFintoItem>();
 
   @JsonProperty("ontologyTerms")
-  private List<String> ontologyTerms = new ArrayList<String>();
+  private List<VmOpenApiFintoItem> ontologyTerms = new ArrayList<VmOpenApiFintoItem>();
 
   @JsonProperty("targetGroups")
-  private List<String> targetGroups = new ArrayList<String>();
+  private List<VmOpenApiFintoItem> targetGroups = new ArrayList<VmOpenApiFintoItem>();
 
   @JsonProperty("lifeEvents")
-  private List<String> lifeEvents = new ArrayList<String>();
+  private List<VmOpenApiFintoItem> lifeEvents = new ArrayList<VmOpenApiFintoItem>();
 
   @JsonProperty("industrialClasses")
-  private List<String> industrialClasses = new ArrayList<String>();
+  private List<VmOpenApiFintoItem> industrialClasses = new ArrayList<VmOpenApiFintoItem>();
 
   @JsonProperty("keywords")
   private List<String> keywords = new ArrayList<String>();
@@ -97,34 +98,34 @@ public class VmOpenApiServiceIn   {
   @JsonProperty("serviceAdditionalInformations")
   private List<VmOpenApiLocalizedListItem> serviceAdditionalInformations = new ArrayList<VmOpenApiLocalizedListItem>();
 
-  @JsonProperty("serviceOrganizations")
-  private List<VmOpenApiServiceOrganization> serviceOrganizations = new ArrayList<VmOpenApiServiceOrganization>();
+  @JsonProperty("serviceChannels")
+  private List<String> serviceChannels = new ArrayList<String>();
+
+  @JsonProperty("organizations")
+  private List<VmOpenApiServiceOrganization> organizations = new ArrayList<VmOpenApiServiceOrganization>();
 
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
 
-  @JsonProperty("deleteAllIndustrialClasses")
-  private Boolean deleteAllIndustrialClasses = null;
-
-  public VmOpenApiServiceIn sourceId(String sourceId) {
-    this.sourceId = sourceId;
+  public VmOpenApiService id(String id) {
+    this.id = id;
     return this;
   }
 
    /**
-   * Get sourceId
-   * @return sourceId
+   * Get id
+   * @return id
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getSourceId() {
-    return sourceId;
+  public String getId() {
+    return id;
   }
 
-  public void setSourceId(String sourceId) {
-    this.sourceId = sourceId;
+  public void setId(String id) {
+    this.id = id;
   }
 
-  public VmOpenApiServiceIn type(String type) {
+  public VmOpenApiService type(String type) {
     this.type = type;
     return this;
   }
@@ -133,7 +134,7 @@ public class VmOpenApiServiceIn   {
    * Get type
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getType() {
     return type;
   }
@@ -142,7 +143,7 @@ public class VmOpenApiServiceIn   {
     this.type = type;
   }
 
-  public VmOpenApiServiceIn statutoryServiceGeneralDescriptionId(String statutoryServiceGeneralDescriptionId) {
+  public VmOpenApiService statutoryServiceGeneralDescriptionId(String statutoryServiceGeneralDescriptionId) {
     this.statutoryServiceGeneralDescriptionId = statutoryServiceGeneralDescriptionId;
     return this;
   }
@@ -160,7 +161,7 @@ public class VmOpenApiServiceIn   {
     this.statutoryServiceGeneralDescriptionId = statutoryServiceGeneralDescriptionId;
   }
 
-  public VmOpenApiServiceIn serviceChargeType(String serviceChargeType) {
+  public VmOpenApiService serviceChargeType(String serviceChargeType) {
     this.serviceChargeType = serviceChargeType;
     return this;
   }
@@ -178,12 +179,12 @@ public class VmOpenApiServiceIn   {
     this.serviceChargeType = serviceChargeType;
   }
 
-  public VmOpenApiServiceIn serviceNames(List<VmOpenApiLocalizedListItem> serviceNames) {
+  public VmOpenApiService serviceNames(List<VmOpenApiLocalizedListItem> serviceNames) {
     this.serviceNames = serviceNames;
     return this;
   }
 
-  public VmOpenApiServiceIn addServiceNamesItem(VmOpenApiLocalizedListItem serviceNamesItem) {
+  public VmOpenApiService addServiceNamesItem(VmOpenApiLocalizedListItem serviceNamesItem) {
     this.serviceNames.add(serviceNamesItem);
     return this;
   }
@@ -192,7 +193,7 @@ public class VmOpenApiServiceIn   {
    * Get serviceNames
    * @return serviceNames
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLocalizedListItem> getServiceNames() {
     return serviceNames;
   }
@@ -201,12 +202,12 @@ public class VmOpenApiServiceIn   {
     this.serviceNames = serviceNames;
   }
 
-  public VmOpenApiServiceIn serviceDescriptions(List<VmOpenApiLocalizedListItem> serviceDescriptions) {
+  public VmOpenApiService serviceDescriptions(List<VmOpenApiLocalizedListItem> serviceDescriptions) {
     this.serviceDescriptions = serviceDescriptions;
     return this;
   }
 
-  public VmOpenApiServiceIn addServiceDescriptionsItem(VmOpenApiLocalizedListItem serviceDescriptionsItem) {
+  public VmOpenApiService addServiceDescriptionsItem(VmOpenApiLocalizedListItem serviceDescriptionsItem) {
     this.serviceDescriptions.add(serviceDescriptionsItem);
     return this;
   }
@@ -215,7 +216,7 @@ public class VmOpenApiServiceIn   {
    * Get serviceDescriptions
    * @return serviceDescriptions
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<VmOpenApiLocalizedListItem> getServiceDescriptions() {
     return serviceDescriptions;
   }
@@ -224,12 +225,12 @@ public class VmOpenApiServiceIn   {
     this.serviceDescriptions = serviceDescriptions;
   }
 
-  public VmOpenApiServiceIn languages(List<String> languages) {
+  public VmOpenApiService languages(List<String> languages) {
     this.languages = languages;
     return this;
   }
 
-  public VmOpenApiServiceIn addLanguagesItem(String languagesItem) {
+  public VmOpenApiService addLanguagesItem(String languagesItem) {
     this.languages.add(languagesItem);
     return this;
   }
@@ -238,7 +239,7 @@ public class VmOpenApiServiceIn   {
    * Get languages
    * @return languages
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public List<String> getLanguages() {
     return languages;
   }
@@ -247,12 +248,12 @@ public class VmOpenApiServiceIn   {
     this.languages = languages;
   }
 
-  public VmOpenApiServiceIn serviceClasses(List<String> serviceClasses) {
+  public VmOpenApiService serviceClasses(List<VmOpenApiFintoItem> serviceClasses) {
     this.serviceClasses = serviceClasses;
     return this;
   }
 
-  public VmOpenApiServiceIn addServiceClassesItem(String serviceClassesItem) {
+  public VmOpenApiService addServiceClassesItem(VmOpenApiFintoItem serviceClassesItem) {
     this.serviceClasses.add(serviceClassesItem);
     return this;
   }
@@ -261,21 +262,21 @@ public class VmOpenApiServiceIn   {
    * Get serviceClasses
    * @return serviceClasses
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
-  public List<String> getServiceClasses() {
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiFintoItem> getServiceClasses() {
     return serviceClasses;
   }
 
-  public void setServiceClasses(List<String> serviceClasses) {
+  public void setServiceClasses(List<VmOpenApiFintoItem> serviceClasses) {
     this.serviceClasses = serviceClasses;
   }
 
-  public VmOpenApiServiceIn ontologyTerms(List<String> ontologyTerms) {
+  public VmOpenApiService ontologyTerms(List<VmOpenApiFintoItem> ontologyTerms) {
     this.ontologyTerms = ontologyTerms;
     return this;
   }
 
-  public VmOpenApiServiceIn addOntologyTermsItem(String ontologyTermsItem) {
+  public VmOpenApiService addOntologyTermsItem(VmOpenApiFintoItem ontologyTermsItem) {
     this.ontologyTerms.add(ontologyTermsItem);
     return this;
   }
@@ -284,21 +285,21 @@ public class VmOpenApiServiceIn   {
    * Get ontologyTerms
    * @return ontologyTerms
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
-  public List<String> getOntologyTerms() {
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiFintoItem> getOntologyTerms() {
     return ontologyTerms;
   }
 
-  public void setOntologyTerms(List<String> ontologyTerms) {
+  public void setOntologyTerms(List<VmOpenApiFintoItem> ontologyTerms) {
     this.ontologyTerms = ontologyTerms;
   }
 
-  public VmOpenApiServiceIn targetGroups(List<String> targetGroups) {
+  public VmOpenApiService targetGroups(List<VmOpenApiFintoItem> targetGroups) {
     this.targetGroups = targetGroups;
     return this;
   }
 
-  public VmOpenApiServiceIn addTargetGroupsItem(String targetGroupsItem) {
+  public VmOpenApiService addTargetGroupsItem(VmOpenApiFintoItem targetGroupsItem) {
     this.targetGroups.add(targetGroupsItem);
     return this;
   }
@@ -307,21 +308,21 @@ public class VmOpenApiServiceIn   {
    * Get targetGroups
    * @return targetGroups
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
-  public List<String> getTargetGroups() {
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiFintoItem> getTargetGroups() {
     return targetGroups;
   }
 
-  public void setTargetGroups(List<String> targetGroups) {
+  public void setTargetGroups(List<VmOpenApiFintoItem> targetGroups) {
     this.targetGroups = targetGroups;
   }
 
-  public VmOpenApiServiceIn lifeEvents(List<String> lifeEvents) {
+  public VmOpenApiService lifeEvents(List<VmOpenApiFintoItem> lifeEvents) {
     this.lifeEvents = lifeEvents;
     return this;
   }
 
-  public VmOpenApiServiceIn addLifeEventsItem(String lifeEventsItem) {
+  public VmOpenApiService addLifeEventsItem(VmOpenApiFintoItem lifeEventsItem) {
     this.lifeEvents.add(lifeEventsItem);
     return this;
   }
@@ -331,20 +332,20 @@ public class VmOpenApiServiceIn   {
    * @return lifeEvents
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<String> getLifeEvents() {
+  public List<VmOpenApiFintoItem> getLifeEvents() {
     return lifeEvents;
   }
 
-  public void setLifeEvents(List<String> lifeEvents) {
+  public void setLifeEvents(List<VmOpenApiFintoItem> lifeEvents) {
     this.lifeEvents = lifeEvents;
   }
 
-  public VmOpenApiServiceIn industrialClasses(List<String> industrialClasses) {
+  public VmOpenApiService industrialClasses(List<VmOpenApiFintoItem> industrialClasses) {
     this.industrialClasses = industrialClasses;
     return this;
   }
 
-  public VmOpenApiServiceIn addIndustrialClassesItem(String industrialClassesItem) {
+  public VmOpenApiService addIndustrialClassesItem(VmOpenApiFintoItem industrialClassesItem) {
     this.industrialClasses.add(industrialClassesItem);
     return this;
   }
@@ -354,20 +355,20 @@ public class VmOpenApiServiceIn   {
    * @return industrialClasses
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<String> getIndustrialClasses() {
+  public List<VmOpenApiFintoItem> getIndustrialClasses() {
     return industrialClasses;
   }
 
-  public void setIndustrialClasses(List<String> industrialClasses) {
+  public void setIndustrialClasses(List<VmOpenApiFintoItem> industrialClasses) {
     this.industrialClasses = industrialClasses;
   }
 
-  public VmOpenApiServiceIn keywords(List<String> keywords) {
+  public VmOpenApiService keywords(List<String> keywords) {
     this.keywords = keywords;
     return this;
   }
 
-  public VmOpenApiServiceIn addKeywordsItem(String keywordsItem) {
+  public VmOpenApiService addKeywordsItem(String keywordsItem) {
     this.keywords.add(keywordsItem);
     return this;
   }
@@ -385,7 +386,7 @@ public class VmOpenApiServiceIn   {
     this.keywords = keywords;
   }
 
-  public VmOpenApiServiceIn serviceCoverageType(String serviceCoverageType) {
+  public VmOpenApiService serviceCoverageType(String serviceCoverageType) {
     this.serviceCoverageType = serviceCoverageType;
     return this;
   }
@@ -394,7 +395,7 @@ public class VmOpenApiServiceIn   {
    * Get serviceCoverageType
    * @return serviceCoverageType
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getServiceCoverageType() {
     return serviceCoverageType;
   }
@@ -403,12 +404,12 @@ public class VmOpenApiServiceIn   {
     this.serviceCoverageType = serviceCoverageType;
   }
 
-  public VmOpenApiServiceIn municipalities(List<String> municipalities) {
+  public VmOpenApiService municipalities(List<String> municipalities) {
     this.municipalities = municipalities;
     return this;
   }
 
-  public VmOpenApiServiceIn addMunicipalitiesItem(String municipalitiesItem) {
+  public VmOpenApiService addMunicipalitiesItem(String municipalitiesItem) {
     this.municipalities.add(municipalitiesItem);
     return this;
   }
@@ -426,12 +427,12 @@ public class VmOpenApiServiceIn   {
     this.municipalities = municipalities;
   }
 
-  public VmOpenApiServiceIn webPages(List<VmOpenApiWebPage> webPages) {
+  public VmOpenApiService webPages(List<VmOpenApiWebPage> webPages) {
     this.webPages = webPages;
     return this;
   }
 
-  public VmOpenApiServiceIn addWebPagesItem(VmOpenApiWebPage webPagesItem) {
+  public VmOpenApiService addWebPagesItem(VmOpenApiWebPage webPagesItem) {
     this.webPages.add(webPagesItem);
     return this;
   }
@@ -449,12 +450,12 @@ public class VmOpenApiServiceIn   {
     this.webPages = webPages;
   }
 
-  public VmOpenApiServiceIn requirements(List<VmOpenApiLanguageItem> requirements) {
+  public VmOpenApiService requirements(List<VmOpenApiLanguageItem> requirements) {
     this.requirements = requirements;
     return this;
   }
 
-  public VmOpenApiServiceIn addRequirementsItem(VmOpenApiLanguageItem requirementsItem) {
+  public VmOpenApiService addRequirementsItem(VmOpenApiLanguageItem requirementsItem) {
     this.requirements.add(requirementsItem);
     return this;
   }
@@ -472,12 +473,12 @@ public class VmOpenApiServiceIn   {
     this.requirements = requirements;
   }
 
-  public VmOpenApiServiceIn serviceAdditionalInformations(List<VmOpenApiLocalizedListItem> serviceAdditionalInformations) {
+  public VmOpenApiService serviceAdditionalInformations(List<VmOpenApiLocalizedListItem> serviceAdditionalInformations) {
     this.serviceAdditionalInformations = serviceAdditionalInformations;
     return this;
   }
 
-  public VmOpenApiServiceIn addServiceAdditionalInformationsItem(VmOpenApiLocalizedListItem serviceAdditionalInformationsItem) {
+  public VmOpenApiService addServiceAdditionalInformationsItem(VmOpenApiLocalizedListItem serviceAdditionalInformationsItem) {
     this.serviceAdditionalInformations.add(serviceAdditionalInformationsItem);
     return this;
   }
@@ -495,30 +496,53 @@ public class VmOpenApiServiceIn   {
     this.serviceAdditionalInformations = serviceAdditionalInformations;
   }
 
-  public VmOpenApiServiceIn serviceOrganizations(List<VmOpenApiServiceOrganization> serviceOrganizations) {
-    this.serviceOrganizations = serviceOrganizations;
+  public VmOpenApiService serviceChannels(List<String> serviceChannels) {
+    this.serviceChannels = serviceChannels;
     return this;
   }
 
-  public VmOpenApiServiceIn addServiceOrganizationsItem(VmOpenApiServiceOrganization serviceOrganizationsItem) {
-    this.serviceOrganizations.add(serviceOrganizationsItem);
+  public VmOpenApiService addServiceChannelsItem(String serviceChannelsItem) {
+    this.serviceChannels.add(serviceChannelsItem);
     return this;
   }
 
    /**
-   * Get serviceOrganizations
-   * @return serviceOrganizations
+   * Get serviceChannels
+   * @return serviceChannels
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
-  public List<VmOpenApiServiceOrganization> getServiceOrganizations() {
-    return serviceOrganizations;
+  @ApiModelProperty(example = "null", value = "")
+  public List<String> getServiceChannels() {
+    return serviceChannels;
   }
 
-  public void setServiceOrganizations(List<VmOpenApiServiceOrganization> serviceOrganizations) {
-    this.serviceOrganizations = serviceOrganizations;
+  public void setServiceChannels(List<String> serviceChannels) {
+    this.serviceChannels = serviceChannels;
   }
 
-  public VmOpenApiServiceIn publishingStatus(String publishingStatus) {
+  public VmOpenApiService organizations(List<VmOpenApiServiceOrganization> organizations) {
+    this.organizations = organizations;
+    return this;
+  }
+
+  public VmOpenApiService addOrganizationsItem(VmOpenApiServiceOrganization organizationsItem) {
+    this.organizations.add(organizationsItem);
+    return this;
+  }
+
+   /**
+   * Get organizations
+   * @return organizations
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public List<VmOpenApiServiceOrganization> getOrganizations() {
+    return organizations;
+  }
+
+  public void setOrganizations(List<VmOpenApiServiceOrganization> organizations) {
+    this.organizations = organizations;
+  }
+
+  public VmOpenApiService publishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
     return this;
   }
@@ -527,31 +551,13 @@ public class VmOpenApiServiceIn   {
    * Get publishingStatus
    * @return publishingStatus
   **/
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   public String getPublishingStatus() {
     return publishingStatus;
   }
 
   public void setPublishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
-  }
-
-  public VmOpenApiServiceIn deleteAllIndustrialClasses(Boolean deleteAllIndustrialClasses) {
-    this.deleteAllIndustrialClasses = deleteAllIndustrialClasses;
-    return this;
-  }
-
-   /**
-   * Get deleteAllIndustrialClasses
-   * @return deleteAllIndustrialClasses
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getDeleteAllIndustrialClasses() {
-    return deleteAllIndustrialClasses;
-  }
-
-  public void setDeleteAllIndustrialClasses(Boolean deleteAllIndustrialClasses) {
-    this.deleteAllIndustrialClasses = deleteAllIndustrialClasses;
   }
 
 
@@ -563,41 +569,41 @@ public class VmOpenApiServiceIn   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiServiceIn vmOpenApiServiceIn = (VmOpenApiServiceIn) o;
-    return Objects.equals(this.sourceId, vmOpenApiServiceIn.sourceId) &&
-        Objects.equals(this.type, vmOpenApiServiceIn.type) &&
-        Objects.equals(this.statutoryServiceGeneralDescriptionId, vmOpenApiServiceIn.statutoryServiceGeneralDescriptionId) &&
-        Objects.equals(this.serviceChargeType, vmOpenApiServiceIn.serviceChargeType) &&
-        Objects.equals(this.serviceNames, vmOpenApiServiceIn.serviceNames) &&
-        Objects.equals(this.serviceDescriptions, vmOpenApiServiceIn.serviceDescriptions) &&
-        Objects.equals(this.languages, vmOpenApiServiceIn.languages) &&
-        Objects.equals(this.serviceClasses, vmOpenApiServiceIn.serviceClasses) &&
-        Objects.equals(this.ontologyTerms, vmOpenApiServiceIn.ontologyTerms) &&
-        Objects.equals(this.targetGroups, vmOpenApiServiceIn.targetGroups) &&
-        Objects.equals(this.lifeEvents, vmOpenApiServiceIn.lifeEvents) &&
-        Objects.equals(this.industrialClasses, vmOpenApiServiceIn.industrialClasses) &&
-        Objects.equals(this.keywords, vmOpenApiServiceIn.keywords) &&
-        Objects.equals(this.serviceCoverageType, vmOpenApiServiceIn.serviceCoverageType) &&
-        Objects.equals(this.municipalities, vmOpenApiServiceIn.municipalities) &&
-        Objects.equals(this.webPages, vmOpenApiServiceIn.webPages) &&
-        Objects.equals(this.requirements, vmOpenApiServiceIn.requirements) &&
-        Objects.equals(this.serviceAdditionalInformations, vmOpenApiServiceIn.serviceAdditionalInformations) &&
-        Objects.equals(this.serviceOrganizations, vmOpenApiServiceIn.serviceOrganizations) &&
-        Objects.equals(this.publishingStatus, vmOpenApiServiceIn.publishingStatus) &&
-        Objects.equals(this.deleteAllIndustrialClasses, vmOpenApiServiceIn.deleteAllIndustrialClasses);
+    VmOpenApiService vmOpenApiService = (VmOpenApiService) o;
+    return Objects.equals(this.id, vmOpenApiService.id) &&
+        Objects.equals(this.type, vmOpenApiService.type) &&
+        Objects.equals(this.statutoryServiceGeneralDescriptionId, vmOpenApiService.statutoryServiceGeneralDescriptionId) &&
+        Objects.equals(this.serviceChargeType, vmOpenApiService.serviceChargeType) &&
+        Objects.equals(this.serviceNames, vmOpenApiService.serviceNames) &&
+        Objects.equals(this.serviceDescriptions, vmOpenApiService.serviceDescriptions) &&
+        Objects.equals(this.languages, vmOpenApiService.languages) &&
+        Objects.equals(this.serviceClasses, vmOpenApiService.serviceClasses) &&
+        Objects.equals(this.ontologyTerms, vmOpenApiService.ontologyTerms) &&
+        Objects.equals(this.targetGroups, vmOpenApiService.targetGroups) &&
+        Objects.equals(this.lifeEvents, vmOpenApiService.lifeEvents) &&
+        Objects.equals(this.industrialClasses, vmOpenApiService.industrialClasses) &&
+        Objects.equals(this.keywords, vmOpenApiService.keywords) &&
+        Objects.equals(this.serviceCoverageType, vmOpenApiService.serviceCoverageType) &&
+        Objects.equals(this.municipalities, vmOpenApiService.municipalities) &&
+        Objects.equals(this.webPages, vmOpenApiService.webPages) &&
+        Objects.equals(this.requirements, vmOpenApiService.requirements) &&
+        Objects.equals(this.serviceAdditionalInformations, vmOpenApiService.serviceAdditionalInformations) &&
+        Objects.equals(this.serviceChannels, vmOpenApiService.serviceChannels) &&
+        Objects.equals(this.organizations, vmOpenApiService.organizations) &&
+        Objects.equals(this.publishingStatus, vmOpenApiService.publishingStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceId, type, statutoryServiceGeneralDescriptionId, serviceChargeType, serviceNames, serviceDescriptions, languages, serviceClasses, ontologyTerms, targetGroups, lifeEvents, industrialClasses, keywords, serviceCoverageType, municipalities, webPages, requirements, serviceAdditionalInformations, serviceOrganizations, publishingStatus, deleteAllIndustrialClasses);
+    return Objects.hash(id, type, statutoryServiceGeneralDescriptionId, serviceChargeType, serviceNames, serviceDescriptions, languages, serviceClasses, ontologyTerms, targetGroups, lifeEvents, industrialClasses, keywords, serviceCoverageType, municipalities, webPages, requirements, serviceAdditionalInformations, serviceChannels, organizations, publishingStatus);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiServiceIn {\n");
+    sb.append("class VmOpenApiService {\n");
     
-    sb.append("    sourceId: ").append(toIndentedString(sourceId)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    statutoryServiceGeneralDescriptionId: ").append(toIndentedString(statutoryServiceGeneralDescriptionId)).append("\n");
     sb.append("    serviceChargeType: ").append(toIndentedString(serviceChargeType)).append("\n");
@@ -615,9 +621,9 @@ public class VmOpenApiServiceIn   {
     sb.append("    webPages: ").append(toIndentedString(webPages)).append("\n");
     sb.append("    requirements: ").append(toIndentedString(requirements)).append("\n");
     sb.append("    serviceAdditionalInformations: ").append(toIndentedString(serviceAdditionalInformations)).append("\n");
-    sb.append("    serviceOrganizations: ").append(toIndentedString(serviceOrganizations)).append("\n");
+    sb.append("    serviceChannels: ").append(toIndentedString(serviceChannels)).append("\n");
+    sb.append("    organizations: ").append(toIndentedString(organizations)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
-    sb.append("    deleteAllIndustrialClasses: ").append(toIndentedString(deleteAllIndustrialClasses)).append("\n");
     sb.append("}");
     return sb.toString();
   }
