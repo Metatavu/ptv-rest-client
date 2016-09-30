@@ -35,7 +35,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * VmOpenApiServiceOrganization
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:08:05.109+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:14:27.897+03:00")
 public class VmOpenApiServiceOrganization   {
   @JsonProperty("organizationId")
   private String organizationId = null;

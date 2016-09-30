@@ -39,7 +39,7 @@ import java.util.List;
 /**
  * VmOpenApiGeneralDescription
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:08:05.109+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:14:27.897+03:00")
 public class VmOpenApiGeneralDescription   {
   @JsonProperty("id")
   private String id = null;
