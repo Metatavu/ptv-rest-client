@@ -41,7 +41,7 @@ import java.util.List;
 /**
  * VmOpenApiServiceIn
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:14:27.897+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:19:41.117+03:00")
 public class VmOpenApiServiceIn   {
   @JsonProperty("statutoryServiceGeneralDescriptionId")
   private String statutoryServiceGeneralDescriptionId = null;
