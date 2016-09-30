@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       'generate-ptv-java-client': {
         command : 'mv generated-sources/pom.xml generated-sources/pom.xml.before && \
           java -jar swagger-codegen-cli.jar generate \
-          -i https://api.palvelutietovaranto.suomi.fi/swagger/v1/swagger.json \
+          -i https://api.palvelutietovaranto.trn.suomi.fi/swagger/v1/swagger.json \
           -l java \
           --api-package fi.otavanopisto.ptv.client\
           --model-package fi.otavanopisto.ptv.client.model \
