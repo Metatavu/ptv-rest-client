@@ -35,7 +35,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * VmOpenApiAttachment
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:04:31.719+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:08:05.109+03:00")
 public class VmOpenApiAttachment   {
   @JsonProperty("name")
   private String name = null;
