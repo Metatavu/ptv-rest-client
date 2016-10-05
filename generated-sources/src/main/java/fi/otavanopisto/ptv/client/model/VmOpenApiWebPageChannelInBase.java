@@ -40,7 +40,7 @@ import java.util.List;
 /**
  * VmOpenApiWebPageChannelInBase
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-05T14:39:52.801+03:00")
 public class VmOpenApiWebPageChannelInBase   {
   @JsonProperty("sourceId")
   private String sourceId = null;
@@ -65,9 +65,6 @@ public class VmOpenApiWebPageChannelInBase   {
 
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
-
-  @JsonProperty("deleteAllLanguages")
-  private Boolean deleteAllLanguages = null;
 
   @JsonProperty("deleteAllWebPages")
   private Boolean deleteAllWebPages = null;
@@ -244,24 +241,6 @@ public class VmOpenApiWebPageChannelInBase   {
     this.publishingStatus = publishingStatus;
   }
 
-  public VmOpenApiWebPageChannelInBase deleteAllLanguages(Boolean deleteAllLanguages) {
-    this.deleteAllLanguages = deleteAllLanguages;
-    return this;
-  }
-
-   /**
-   * Get deleteAllLanguages
-   * @return deleteAllLanguages
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getDeleteAllLanguages() {
-    return deleteAllLanguages;
-  }
-
-  public void setDeleteAllLanguages(Boolean deleteAllLanguages) {
-    this.deleteAllLanguages = deleteAllLanguages;
-  }
-
   public VmOpenApiWebPageChannelInBase deleteAllWebPages(Boolean deleteAllWebPages) {
     this.deleteAllWebPages = deleteAllWebPages;
     return this;
@@ -316,14 +295,13 @@ public class VmOpenApiWebPageChannelInBase   {
         Objects.equals(this.supportContacts, vmOpenApiWebPageChannelInBase.supportContacts) &&
         Objects.equals(this.languages, vmOpenApiWebPageChannelInBase.languages) &&
         Objects.equals(this.publishingStatus, vmOpenApiWebPageChannelInBase.publishingStatus) &&
-        Objects.equals(this.deleteAllLanguages, vmOpenApiWebPageChannelInBase.deleteAllLanguages) &&
         Objects.equals(this.deleteAllWebPages, vmOpenApiWebPageChannelInBase.deleteAllWebPages) &&
         Objects.equals(this.deleteAllSupportContacts, vmOpenApiWebPageChannelInBase.deleteAllSupportContacts);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, urls, supportContacts, languages, publishingStatus, deleteAllLanguages, deleteAllWebPages, deleteAllSupportContacts);
+    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, urls, supportContacts, languages, publishingStatus, deleteAllWebPages, deleteAllSupportContacts);
   }
 
   @Override
@@ -339,7 +317,6 @@ public class VmOpenApiWebPageChannelInBase   {
     sb.append("    supportContacts: ").append(toIndentedString(supportContacts)).append("\n");
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
-    sb.append("    deleteAllLanguages: ").append(toIndentedString(deleteAllLanguages)).append("\n");
     sb.append("    deleteAllWebPages: ").append(toIndentedString(deleteAllWebPages)).append("\n");
     sb.append("    deleteAllSupportContacts: ").append(toIndentedString(deleteAllSupportContacts)).append("\n");
     sb.append("}");

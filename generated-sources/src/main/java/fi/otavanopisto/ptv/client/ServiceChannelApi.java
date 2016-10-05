@@ -31,8 +31,8 @@ import fi.otavanopisto.ptv.client.model.VmOpenApiServiceChannels;
 import fi.otavanopisto.ptv.client.model.VmOpenApiElectronicChannelInBase;
 import fi.otavanopisto.ptv.client.model.VmOpenApiElectronicChannel;
 import fi.otavanopisto.ptv.client.model.VmOpenApiElectronicChannelIn;
+import java.time.LocalDateTime;
 import fi.otavanopisto.ptv.client.model.VmOpenApiGuidPage;
-import java.time.OffsetDateTime;
 import fi.otavanopisto.ptv.client.model.VmOpenApiPhoneChannelInBase;
 import fi.otavanopisto.ptv.client.model.VmOpenApiPhoneChannel;
 import fi.otavanopisto.ptv.client.model.VmOpenApiPhoneChannelIn;
@@ -51,7 +51,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-05T14:39:52.801+03:00")
 public class ServiceChannelApi {
 
   public ServiceChannelApi(ApiClient client) {
@@ -129,7 +129,7 @@ public class ServiceChannelApi {
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    * @param page The page to be fetched. (optional)
    */
-  public ApiResponse<VmOpenApiGuidPage> apiServiceChannelGet(OffsetDateTime date, Integer page) {
+  public ApiResponse<VmOpenApiGuidPage> apiServiceChannelGet(LocalDateTime date, Integer page) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)
@@ -149,7 +149,7 @@ if (page != null)
    * @param organizationId Guid (required)
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    */
-  public ApiResponse<List<VmOpenApiServiceChannels>> apiServiceChannelOrganizationByOrganizationIdGet(String organizationId, OffsetDateTime date) {
+  public ApiResponse<List<VmOpenApiServiceChannels>> apiServiceChannelOrganizationByOrganizationIdGet(String organizationId, LocalDateTime date) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)
@@ -169,7 +169,7 @@ if (page != null)
    * @param type Service channel type (required)
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    */
-  public ApiResponse<List<VmOpenApiServiceChannels>> apiServiceChannelOrganizationByOrganizationIdTypeByTypeGet(String organizationId, String type, OffsetDateTime date) {
+  public ApiResponse<List<VmOpenApiServiceChannels>> apiServiceChannelOrganizationByOrganizationIdTypeByTypeGet(String organizationId, String type, LocalDateTime date) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)
@@ -336,7 +336,7 @@ if (page != null)
    * @param type Service channel type (required)
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    */
-  public ApiResponse<List<VmOpenApiServiceChannels>> apiServiceChannelTypeByTypeGet(String type, OffsetDateTime date) {
+  public ApiResponse<List<VmOpenApiServiceChannels>> apiServiceChannelTypeByTypeGet(String type, LocalDateTime date) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)

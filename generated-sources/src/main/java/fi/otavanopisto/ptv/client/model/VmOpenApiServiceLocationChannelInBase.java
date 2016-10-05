@@ -42,7 +42,7 @@ import java.util.List;
 /**
  * VmOpenApiServiceLocationChannelInBase
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-05T14:39:52.801+03:00")
 public class VmOpenApiServiceLocationChannelInBase   {
   @JsonProperty("sourceId")
   private String sourceId = null;
@@ -121,9 +121,6 @@ public class VmOpenApiServiceLocationChannelInBase   {
 
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
-
-  @JsonProperty("deleteAllLanguages")
-  private Boolean deleteAllLanguages = null;
 
   @JsonProperty("deleteAllWebPages")
   private Boolean deleteAllWebPages = null;
@@ -644,24 +641,6 @@ public class VmOpenApiServiceLocationChannelInBase   {
     this.publishingStatus = publishingStatus;
   }
 
-  public VmOpenApiServiceLocationChannelInBase deleteAllLanguages(Boolean deleteAllLanguages) {
-    this.deleteAllLanguages = deleteAllLanguages;
-    return this;
-  }
-
-   /**
-   * Get deleteAllLanguages
-   * @return deleteAllLanguages
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getDeleteAllLanguages() {
-    return deleteAllLanguages;
-  }
-
-  public void setDeleteAllLanguages(Boolean deleteAllLanguages) {
-    this.deleteAllLanguages = deleteAllLanguages;
-  }
-
   public VmOpenApiServiceLocationChannelInBase deleteAllWebPages(Boolean deleteAllWebPages) {
     this.deleteAllWebPages = deleteAllWebPages;
     return this;
@@ -734,14 +713,13 @@ public class VmOpenApiServiceLocationChannelInBase   {
         Objects.equals(this.deleteFax, vmOpenApiServiceLocationChannelInBase.deleteFax) &&
         Objects.equals(this.deleteAllServiceChargeTypes, vmOpenApiServiceLocationChannelInBase.deleteAllServiceChargeTypes) &&
         Objects.equals(this.publishingStatus, vmOpenApiServiceLocationChannelInBase.publishingStatus) &&
-        Objects.equals(this.deleteAllLanguages, vmOpenApiServiceLocationChannelInBase.deleteAllLanguages) &&
         Objects.equals(this.deleteAllWebPages, vmOpenApiServiceLocationChannelInBase.deleteAllWebPages) &&
         Objects.equals(this.deleteAllServiceHours, vmOpenApiServiceLocationChannelInBase.deleteAllServiceHours);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, serviceAreaRestricted, serviceAreas, email, languages, phone, fax, serviceChargeTypes, phoneChargeDescriptions, phoneServiceCharge, webPages, latitude, longitude, coordinateSystem, coordinatesSetManually, addresses, deleteAllAddresses, serviceHours, deleteEmail, deletePhone, deleteFax, deleteAllServiceChargeTypes, publishingStatus, deleteAllLanguages, deleteAllWebPages, deleteAllServiceHours);
+    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, serviceAreaRestricted, serviceAreas, email, languages, phone, fax, serviceChargeTypes, phoneChargeDescriptions, phoneServiceCharge, webPages, latitude, longitude, coordinateSystem, coordinatesSetManually, addresses, deleteAllAddresses, serviceHours, deleteEmail, deletePhone, deleteFax, deleteAllServiceChargeTypes, publishingStatus, deleteAllWebPages, deleteAllServiceHours);
   }
 
   @Override
@@ -775,7 +753,6 @@ public class VmOpenApiServiceLocationChannelInBase   {
     sb.append("    deleteFax: ").append(toIndentedString(deleteFax)).append("\n");
     sb.append("    deleteAllServiceChargeTypes: ").append(toIndentedString(deleteAllServiceChargeTypes)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
-    sb.append("    deleteAllLanguages: ").append(toIndentedString(deleteAllLanguages)).append("\n");
     sb.append("    deleteAllWebPages: ").append(toIndentedString(deleteAllWebPages)).append("\n");
     sb.append("    deleteAllServiceHours: ").append(toIndentedString(deleteAllServiceHours)).append("\n");
     sb.append("}");

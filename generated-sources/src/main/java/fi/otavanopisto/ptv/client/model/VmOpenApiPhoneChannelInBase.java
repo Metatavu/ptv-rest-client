@@ -40,7 +40,7 @@ import java.util.List;
 /**
  * VmOpenApiPhoneChannelInBase
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-05T14:39:52.801+03:00")
 public class VmOpenApiPhoneChannelInBase   {
   @JsonProperty("sourceId")
   private String sourceId = null;
@@ -80,9 +80,6 @@ public class VmOpenApiPhoneChannelInBase   {
 
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
-
-  @JsonProperty("deleteAllLanguages")
-  private Boolean deleteAllLanguages = null;
 
   @JsonProperty("deleteAllWebPages")
   private Boolean deleteAllWebPages = null;
@@ -365,24 +362,6 @@ public class VmOpenApiPhoneChannelInBase   {
     this.publishingStatus = publishingStatus;
   }
 
-  public VmOpenApiPhoneChannelInBase deleteAllLanguages(Boolean deleteAllLanguages) {
-    this.deleteAllLanguages = deleteAllLanguages;
-    return this;
-  }
-
-   /**
-   * Get deleteAllLanguages
-   * @return deleteAllLanguages
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getDeleteAllLanguages() {
-    return deleteAllLanguages;
-  }
-
-  public void setDeleteAllLanguages(Boolean deleteAllLanguages) {
-    this.deleteAllLanguages = deleteAllLanguages;
-  }
-
   public VmOpenApiPhoneChannelInBase deleteAllWebPages(Boolean deleteAllWebPages) {
     this.deleteAllWebPages = deleteAllWebPages;
     return this;
@@ -478,7 +457,6 @@ public class VmOpenApiPhoneChannelInBase   {
         Objects.equals(this.phoneChargeDescription, vmOpenApiPhoneChannelInBase.phoneChargeDescription) &&
         Objects.equals(this.serviceHours, vmOpenApiPhoneChannelInBase.serviceHours) &&
         Objects.equals(this.publishingStatus, vmOpenApiPhoneChannelInBase.publishingStatus) &&
-        Objects.equals(this.deleteAllLanguages, vmOpenApiPhoneChannelInBase.deleteAllLanguages) &&
         Objects.equals(this.deleteAllWebPages, vmOpenApiPhoneChannelInBase.deleteAllWebPages) &&
         Objects.equals(this.deleteAllSupportContacts, vmOpenApiPhoneChannelInBase.deleteAllSupportContacts) &&
         Objects.equals(this.deleteAllServiceChargeTypes, vmOpenApiPhoneChannelInBase.deleteAllServiceChargeTypes) &&
@@ -487,7 +465,7 @@ public class VmOpenApiPhoneChannelInBase   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, phoneType, serviceChargeTypes, phoneNumbers, urls, languages, supportContactEmail, phoneChargeDescription, serviceHours, publishingStatus, deleteAllLanguages, deleteAllWebPages, deleteAllSupportContacts, deleteAllServiceChargeTypes, deleteAllServiceHours);
+    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, phoneType, serviceChargeTypes, phoneNumbers, urls, languages, supportContactEmail, phoneChargeDescription, serviceHours, publishingStatus, deleteAllWebPages, deleteAllSupportContacts, deleteAllServiceChargeTypes, deleteAllServiceHours);
   }
 
   @Override
@@ -508,7 +486,6 @@ public class VmOpenApiPhoneChannelInBase   {
     sb.append("    phoneChargeDescription: ").append(toIndentedString(phoneChargeDescription)).append("\n");
     sb.append("    serviceHours: ").append(toIndentedString(serviceHours)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
-    sb.append("    deleteAllLanguages: ").append(toIndentedString(deleteAllLanguages)).append("\n");
     sb.append("    deleteAllWebPages: ").append(toIndentedString(deleteAllWebPages)).append("\n");
     sb.append("    deleteAllSupportContacts: ").append(toIndentedString(deleteAllSupportContacts)).append("\n");
     sb.append("    deleteAllServiceChargeTypes: ").append(toIndentedString(deleteAllServiceChargeTypes)).append("\n");

@@ -35,7 +35,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * VmOpenApiLocalizedListItem
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-05T14:39:52.801+03:00")
 public class VmOpenApiLocalizedListItem   {
   @JsonProperty("language")
   private String language = null;

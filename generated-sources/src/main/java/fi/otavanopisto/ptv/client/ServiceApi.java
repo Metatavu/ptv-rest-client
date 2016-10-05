@@ -30,8 +30,8 @@ import fi.otavanopisto.ptv.client.model.IVmError;
 import fi.otavanopisto.ptv.client.model.VmOpenApiServiceAndChannel;
 import fi.otavanopisto.ptv.client.model.IVmOpenApiService;
 import fi.otavanopisto.ptv.client.model.VmOpenApiServiceInBase;
+import java.time.LocalDateTime;
 import fi.otavanopisto.ptv.client.model.VmOpenApiGuidPage;
-import java.time.OffsetDateTime;
 import fi.otavanopisto.ptv.client.model.VmOpenApiService;
 import fi.otavanopisto.ptv.client.model.VmOpenApiServiceIn;
 
@@ -40,7 +40,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-05T14:39:52.801+03:00")
 public class ServiceApi {
 
   public ServiceApi(ApiClient client) {
@@ -101,7 +101,7 @@ public class ServiceApi {
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    * @param page The page number to be fetched. (optional)
    */
-  public ApiResponse<VmOpenApiGuidPage> apiServiceGet(OffsetDateTime date, Integer page) {
+  public ApiResponse<VmOpenApiGuidPage> apiServiceGet(LocalDateTime date, Integer page) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)
@@ -136,7 +136,7 @@ if (page != null)
    * @param serviceChannelId Guid (required)
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    */
-  public ApiResponse<List<IVmOpenApiService>> apiServiceServiceChannelByServiceChannelIdGet(String serviceChannelId, OffsetDateTime date) {
+  public ApiResponse<List<IVmOpenApiService>> apiServiceServiceChannelByServiceChannelIdGet(String serviceChannelId, LocalDateTime date) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)

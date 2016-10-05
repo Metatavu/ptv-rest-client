@@ -30,8 +30,8 @@ import fi.otavanopisto.ptv.client.model.VmOpenApiOrganization;
 import fi.otavanopisto.ptv.client.model.IVmError;
 import fi.otavanopisto.ptv.client.model.IVmOpenApiOrganization;
 import fi.otavanopisto.ptv.client.model.VmOpenApiOrganizationInBase;
+import java.time.LocalDateTime;
 import fi.otavanopisto.ptv.client.model.VmOpenApiGuidPage;
-import java.time.OffsetDateTime;
 import fi.otavanopisto.ptv.client.model.VmOpenApiOrganizationIn;
 
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-05T14:39:52.801+03:00")
 public class OrganizationApi {
 
   public OrganizationApi(ApiClient client) {
@@ -101,7 +101,7 @@ public class OrganizationApi {
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    * @param page The page number to be fetched. (optional)
    */
-  public ApiResponse<VmOpenApiGuidPage> apiOrganizationGet(OffsetDateTime date, Integer page) {
+  public ApiResponse<VmOpenApiGuidPage> apiOrganizationGet(LocalDateTime date, Integer page) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)

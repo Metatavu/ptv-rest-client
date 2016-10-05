@@ -42,7 +42,7 @@ import java.util.List;
 /**
  * VmOpenApiServiceLocationChannelIn
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-09-30T08:33:13.270+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-05T14:39:52.801+03:00")
 public class VmOpenApiServiceLocationChannelIn   {
   @JsonProperty("sourceId")
   private String sourceId = null;
@@ -62,11 +62,11 @@ public class VmOpenApiServiceLocationChannelIn   {
   @JsonProperty("serviceAreas")
   private List<String> serviceAreas = new ArrayList<String>();
 
-  @JsonProperty("email")
-  private String email = null;
-
   @JsonProperty("languages")
   private List<String> languages = new ArrayList<String>();
+
+  @JsonProperty("email")
+  private String email = null;
 
   @JsonProperty("phone")
   private String phone = null;
@@ -230,6 +230,29 @@ public class VmOpenApiServiceLocationChannelIn   {
     this.serviceAreas = serviceAreas;
   }
 
+  public VmOpenApiServiceLocationChannelIn languages(List<String> languages) {
+    this.languages = languages;
+    return this;
+  }
+
+  public VmOpenApiServiceLocationChannelIn addLanguagesItem(String languagesItem) {
+    this.languages.add(languagesItem);
+    return this;
+  }
+
+   /**
+   * Get languages
+   * @return languages
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "")
+  public List<String> getLanguages() {
+    return languages;
+  }
+
+  public void setLanguages(List<String> languages) {
+    this.languages = languages;
+  }
+
   public VmOpenApiServiceLocationChannelIn email(String email) {
     this.email = email;
     return this;
@@ -246,29 +269,6 @@ public class VmOpenApiServiceLocationChannelIn   {
 
   public void setEmail(String email) {
     this.email = email;
-  }
-
-  public VmOpenApiServiceLocationChannelIn languages(List<String> languages) {
-    this.languages = languages;
-    return this;
-  }
-
-  public VmOpenApiServiceLocationChannelIn addLanguagesItem(String languagesItem) {
-    this.languages.add(languagesItem);
-    return this;
-  }
-
-   /**
-   * Get languages
-   * @return languages
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<String> getLanguages() {
-    return languages;
-  }
-
-  public void setLanguages(List<String> languages) {
-    this.languages = languages;
   }
 
   public VmOpenApiServiceLocationChannelIn phone(String phone) {
@@ -546,8 +546,8 @@ public class VmOpenApiServiceLocationChannelIn   {
         Objects.equals(this.serviceChannelDescriptions, vmOpenApiServiceLocationChannelIn.serviceChannelDescriptions) &&
         Objects.equals(this.serviceAreaRestricted, vmOpenApiServiceLocationChannelIn.serviceAreaRestricted) &&
         Objects.equals(this.serviceAreas, vmOpenApiServiceLocationChannelIn.serviceAreas) &&
-        Objects.equals(this.email, vmOpenApiServiceLocationChannelIn.email) &&
         Objects.equals(this.languages, vmOpenApiServiceLocationChannelIn.languages) &&
+        Objects.equals(this.email, vmOpenApiServiceLocationChannelIn.email) &&
         Objects.equals(this.phone, vmOpenApiServiceLocationChannelIn.phone) &&
         Objects.equals(this.fax, vmOpenApiServiceLocationChannelIn.fax) &&
         Objects.equals(this.serviceChargeTypes, vmOpenApiServiceLocationChannelIn.serviceChargeTypes) &&
@@ -565,7 +565,7 @@ public class VmOpenApiServiceLocationChannelIn   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, serviceAreaRestricted, serviceAreas, email, languages, phone, fax, serviceChargeTypes, phoneChargeDescriptions, phoneServiceCharge, webPages, latitude, longitude, coordinateSystem, coordinatesSetManually, addresses, serviceHours, publishingStatus);
+    return Objects.hash(sourceId, organizationId, serviceChannelNames, serviceChannelDescriptions, serviceAreaRestricted, serviceAreas, languages, email, phone, fax, serviceChargeTypes, phoneChargeDescriptions, phoneServiceCharge, webPages, latitude, longitude, coordinateSystem, coordinatesSetManually, addresses, serviceHours, publishingStatus);
   }
 
   @Override
@@ -579,8 +579,8 @@ public class VmOpenApiServiceLocationChannelIn   {
     sb.append("    serviceChannelDescriptions: ").append(toIndentedString(serviceChannelDescriptions)).append("\n");
     sb.append("    serviceAreaRestricted: ").append(toIndentedString(serviceAreaRestricted)).append("\n");
     sb.append("    serviceAreas: ").append(toIndentedString(serviceAreas)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
     sb.append("    fax: ").append(toIndentedString(fax)).append("\n");
     sb.append("    serviceChargeTypes: ").append(toIndentedString(serviceChargeTypes)).append("\n");
