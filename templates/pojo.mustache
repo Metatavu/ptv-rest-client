@@ -19,14 +19,6 @@ public class {{classname}} {{#parent}}extends {{{parent}}}{{/parent}} {{#seriali
     {{/items.isEnum}}
   {{#jackson}}
   @JsonProperty("{{baseName}}")
-  {{#isDateTime}}
-  @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.datatype.jsr310.deser.OffsetDateTimeDeserializer.class)  
-  @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class)  
-  {{/isDateTime}}
-  {{#isDate}}
-  @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.datatype.jsr310.deser.OffsetDateDeserializer.class)  
-  @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateSerializer.class)    
-  {{/isDate}}
   {{/jackson}}
   {{#gson}}
   @SerializedName("{{baseName}}")
