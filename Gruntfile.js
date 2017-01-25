@@ -43,19 +43,19 @@ module.exports = function(grunt) {
     },
     'shell': {
       'generate-ptv-java-client': {
-        command : 'mv generated-sources/pom.xml generated-sources/pom.xml.before && \
-          java -jar swagger-codegen-cli.jar generate \
-          -i https://api.palvelutietovaranto.trn.suomi.fi/swagger/v1/swagger.json \
-          -l java \
-          --api-package fi.metatavu.ptv.client\
-          --model-package fi.metatavu.ptv.client.model \
-          --group-id fi.metatavu.ptv.rest-client \
-          --artifact-id ptv-rest-client\
-          --artifact-version `cat generated-sources/pom.xml.before|grep version -m 1|sed -e \'s/.*<version>//\'|sed -e \'s/<.*//\'` \
-          --template-dir templates \
-          --library jersey2 \
-          --additional-properties dateLibrary=java8-localdatetime \
-          -o generated-sources/'
+        command : 'mv generated-sources/pom.xml generated-sources/pom.xml.before && ' +
+          'java -jar swagger-codegen-cli.jar generate ' +
+          '-i https://api.palvelutietovaranto.trn.suomi.fi/swagger/v1/swagger.json ' +
+          '-l java ' +
+          '--api-package fi.metatavu.ptv.client ' +
+          '--model-package fi.metatavu.ptv.client.model ' +
+          '--group-id fi.metatavu.ptv.rest-client ' +
+          '--artifact-id ptv-rest-client ' +
+          '--artifact-version `cat generated-sources/pom.xml.before|grep version -m 1|sed -e \'s/.*<version>//\'|sed -e \'s/<.*//\'` ' +
+          '--template-dir templates ' +
+          '--library jersey2 ' +
+          '--additional-properties dateLibrary=java8 ' +
+          '-o generated-sources/'
       },
       'install-ptv-java-client': {
         command : 'mvn install',
