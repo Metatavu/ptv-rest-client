@@ -39,7 +39,7 @@ import java.util.List;
 /**
  * VmOpenApiServiceHour
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T20:15:02.299+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T21:37:08.668+02:00")
 public class VmOpenApiServiceHour   {
   @JsonProperty("serviceHourType")
   private String serviceHourType = null;
@@ -48,13 +48,9 @@ public class VmOpenApiServiceHour   {
   private String exceptionHourType = null;
 
   @JsonProperty("validFrom")
-  @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer.class)  
-  @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer.class)  
   private OffsetDateTime validFrom = null;
 
   @JsonProperty("validTo")
-  @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer.class)  
-  @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer.class)  
   private OffsetDateTime validTo = null;
 
   @JsonProperty("monday")
