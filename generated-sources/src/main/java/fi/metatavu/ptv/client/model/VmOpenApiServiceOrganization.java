@@ -39,7 +39,7 @@ import java.util.List;
 /**
  * VmOpenApiServiceOrganization
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T15:52:10.525+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T18:16:20.101+02:00")
 public class VmOpenApiServiceOrganization   {
   @JsonProperty("webPages")
   private List<VmOpenApiWebPage> webPages = new ArrayList<VmOpenApiWebPage>();
