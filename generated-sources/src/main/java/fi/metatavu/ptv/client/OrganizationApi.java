@@ -29,8 +29,8 @@ import fi.metatavu.ptv.client.model.*;
 import fi.metatavu.ptv.client.model.VmOpenApiOrganization;
 import fi.metatavu.ptv.client.model.IVmError;
 import fi.metatavu.ptv.client.model.VmOpenApiOrganizationInBase;
-import java.time.LocalDateTime;
 import fi.metatavu.ptv.client.model.VmOpenApiGuidPage;
+import java.time.OffsetDateTime;
 import fi.metatavu.ptv.client.model.VmOpenApiOrganizationIn;
 
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T18:16:20.101+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T20:15:02.299+02:00")
 public class OrganizationApi {
 
   public OrganizationApi(ApiClient client) {
@@ -100,7 +100,7 @@ public class OrganizationApi {
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    * @param page The page number to be fetched. (optional)
    */
-  public ApiResponse<VmOpenApiGuidPage> apiOrganizationGet(LocalDateTime date, Integer page) {
+  public ApiResponse<VmOpenApiGuidPage> apiOrganizationGet(OffsetDateTime date, Integer page) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)

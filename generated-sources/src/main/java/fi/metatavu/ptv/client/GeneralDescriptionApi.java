@@ -28,15 +28,15 @@ import fi.metatavu.ptv.client.model.*;
 
 import fi.metatavu.ptv.client.model.VmOpenApiGeneralDescription;
 import fi.metatavu.ptv.client.model.IVmError;
-import java.time.LocalDateTime;
 import fi.metatavu.ptv.client.model.VmOpenApiGuidPage;
+import java.time.OffsetDateTime;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T18:16:20.101+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T20:15:02.299+02:00")
 public class GeneralDescriptionApi {
 
   public GeneralDescriptionApi(ApiClient client) {
@@ -65,7 +65,7 @@ public class GeneralDescriptionApi {
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (optional)
    * @param page The page to be fetched. Page numbering starts from one. (optional)
    */
-  public ApiResponse<VmOpenApiGuidPage> apiGeneralDescriptionGet(LocalDateTime date, Integer page) {
+  public ApiResponse<VmOpenApiGuidPage> apiGeneralDescriptionGet(OffsetDateTime date, Integer page) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)

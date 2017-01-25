@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import fi.metatavu.ptv.client.model.VmOpenApiLanguageItem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +39,7 @@ import java.util.List;
 /**
  * VmOpenApiServiceHour
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T18:16:20.101+02:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-25T20:15:02.299+02:00")
 public class VmOpenApiServiceHour   {
   @JsonProperty("serviceHourType")
   private String serviceHourType = null;
@@ -50,12 +50,12 @@ public class VmOpenApiServiceHour   {
   @JsonProperty("validFrom")
   @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer.class)  
   @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer.class)  
-  private LocalDateTime validFrom = null;
+  private OffsetDateTime validFrom = null;
 
   @JsonProperty("validTo")
   @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer.class)  
   @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer.class)  
-  private LocalDateTime validTo = null;
+  private OffsetDateTime validTo = null;
 
   @JsonProperty("monday")
   private Boolean monday = null;
@@ -123,7 +123,7 @@ public class VmOpenApiServiceHour   {
     this.exceptionHourType = exceptionHourType;
   }
 
-  public VmOpenApiServiceHour validFrom(LocalDateTime validFrom) {
+  public VmOpenApiServiceHour validFrom(OffsetDateTime validFrom) {
     this.validFrom = validFrom;
     return this;
   }
@@ -133,15 +133,15 @@ public class VmOpenApiServiceHour   {
    * @return validFrom
   **/
   @ApiModelProperty(example = "null", value = "Date time where from this entry is valid.")
-  public LocalDateTime getValidFrom() {
+  public OffsetDateTime getValidFrom() {
     return validFrom;
   }
 
-  public void setValidFrom(LocalDateTime validFrom) {
+  public void setValidFrom(OffsetDateTime validFrom) {
     this.validFrom = validFrom;
   }
 
-  public VmOpenApiServiceHour validTo(LocalDateTime validTo) {
+  public VmOpenApiServiceHour validTo(OffsetDateTime validTo) {
     this.validTo = validTo;
     return this;
   }
@@ -151,11 +151,11 @@ public class VmOpenApiServiceHour   {
    * @return validTo
   **/
   @ApiModelProperty(example = "null", value = "Date time to this entry is valid.")
-  public LocalDateTime getValidTo() {
+  public OffsetDateTime getValidTo() {
     return validTo;
   }
 
-  public void setValidTo(LocalDateTime validTo) {
+  public void setValidTo(OffsetDateTime validTo) {
     this.validTo = validTo;
   }
 
