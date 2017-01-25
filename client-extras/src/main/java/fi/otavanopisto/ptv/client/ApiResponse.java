@@ -1,4 +1,4 @@
-package fi.otavanopisto.ptv.client;
+package fi.metatavu.ptv.client;
 
 public class ApiResponse<T> {
 

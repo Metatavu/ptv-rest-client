@@ -22,8 +22,8 @@ module.exports = function(grunt) {
         'generated-sources/src/test',
         'generated-sources/src/main/AndroidManifest.xml',
         'generated-sources/src/main/java/io',
-        'generated-sources/src/main/java/fi/otavanopisto/ptv/auth',
-        'generated-sources/src/main/java/fi/otavanopisto/ptv/*.java'
+        'generated-sources/src/main/java/fi/metatavu/ptv/auth',
+        'generated-sources/src/main/java/fi/metatavu/ptv/*.java'
       ],
       'sources': ['generated-sources/src']
     },
@@ -47,11 +47,11 @@ module.exports = function(grunt) {
           java -jar swagger-codegen-cli.jar generate \
           -i https://api.palvelutietovaranto.trn.suomi.fi/swagger/v1/swagger.json \
           -l java \
-          --api-package fi.otavanopisto.ptv.client\
-          --model-package fi.otavanopisto.ptv.client.model \
-          --group-id fi.otavanopisto.ptv.rest-client \
+          --api-package fi.metatavu.ptv.client\
+          --model-package fi.metatavu.ptv.client.model \
+          --group-id fi.metatavu.ptv.rest-client \
           --artifact-id ptv-rest-client\
-          --artifact-version `mvn -f generated-sources/pom.xml.before -q -Dexec.executable=\'echo\' -Dexec.args=\'${project.version}\' --non-recursive org.codehaus.mojo:exec-maven-plugin:1.3.1:exec` \
+          --artifact-version `cat generated-sources/pom.xml.before|grep version -m 1|sed -e \'s/.*<version>//\'|sed -e \'s/<.*//\'` \
           --template-dir templates \
           --library jersey2 \
           --additional-properties dateLibrary=java8-localdatetime \

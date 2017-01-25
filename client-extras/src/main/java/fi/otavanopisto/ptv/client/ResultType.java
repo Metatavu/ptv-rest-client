@@ -1,4 +1,4 @@
-package fi.otavanopisto.ptv.client;
+package fi.metatavu.ptv.client;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
