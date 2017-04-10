@@ -1,6 +1,10 @@
 /*global module:false*/
 
-var fs = require('fs');
+const fs = require('fs');
+const util = require('util');
+
+const PTV_VERSION = 'v4';
+const SWAGGER_URL = util.format('https://api.palvelutietovaranto.trn.suomi.fi/swagger/%s/swagger.json', PTV_VERSION);
 
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
@@ -45,7 +49,7 @@ module.exports = function(grunt) {
       'generate-ptv-java-client': {
         command : 'mv generated-sources/pom.xml generated-sources/pom.xml.before && ' +
           'java -jar swagger-codegen-cli.jar generate ' +
-          '-i https://api.palvelutietovaranto.trn.suomi.fi/swagger/v1/swagger.json ' +
+          util.format('-i %s ', SWAGGER_URL) +
           '-l java ' +
           '--api-package fi.metatavu.ptv.client ' +
           '--model-package fi.metatavu.ptv.client.model ' +
