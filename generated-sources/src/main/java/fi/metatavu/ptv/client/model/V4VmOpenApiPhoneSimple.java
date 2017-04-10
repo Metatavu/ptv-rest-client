@@ -33,78 +33,78 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * OPEN API - View Model of Attachment
+ * OPEN API - View Model of phone. Version 4
  */
-@ApiModel(description = "OPEN API - View Model of Attachment")
+@ApiModel(description = "OPEN API - View Model of phone. Version 4")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
-public class VmOpenApiAttachment   {
-  @JsonProperty("name")
-  private String name = null;
+public class V4VmOpenApiPhoneSimple   {
+  @JsonProperty("prefixNumber")
+  private String prefixNumber = null;
 
-  @JsonProperty("description")
-  private String description = null;
+  @JsonProperty("isFinnishServiceNumber")
+  private Boolean isFinnishServiceNumber = null;
 
-  @JsonProperty("url")
-  private String url = null;
+  @JsonProperty("number")
+  private String number = null;
 
   @JsonProperty("language")
   private String language = null;
 
-  public VmOpenApiAttachment name(String name) {
-    this.name = name;
+  public V4VmOpenApiPhoneSimple prefixNumber(String prefixNumber) {
+    this.prefixNumber = prefixNumber;
     return this;
   }
 
    /**
-   * Name of the attachment.
-   * @return name
+   * Prefix for the phone number.
+   * @return prefixNumber
   **/
-  @ApiModelProperty(example = "null", value = "Name of the attachment.")
-  public String getName() {
-    return name;
+  @ApiModelProperty(example = "null", value = "Prefix for the phone number.")
+  public String getPrefixNumber() {
+    return prefixNumber;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setPrefixNumber(String prefixNumber) {
+    this.prefixNumber = prefixNumber;
   }
 
-  public VmOpenApiAttachment description(String description) {
-    this.description = description;
+  public V4VmOpenApiPhoneSimple isFinnishServiceNumber(Boolean isFinnishServiceNumber) {
+    this.isFinnishServiceNumber = isFinnishServiceNumber;
     return this;
   }
 
    /**
-   * Description of the attachment.
-   * @return description
+   * Defines if number is Finnish service number. If true prefix number can be left empty.
+   * @return isFinnishServiceNumber
   **/
-  @ApiModelProperty(example = "null", value = "Description of the attachment.")
-  public String getDescription() {
-    return description;
+  @ApiModelProperty(example = "null", value = "Defines if number is Finnish service number. If true prefix number can be left empty.")
+  public Boolean getIsFinnishServiceNumber() {
+    return isFinnishServiceNumber;
   }
 
-  public void setDescription(String description) {
-    this.description = description;
+  public void setIsFinnishServiceNumber(Boolean isFinnishServiceNumber) {
+    this.isFinnishServiceNumber = isFinnishServiceNumber;
   }
 
-  public VmOpenApiAttachment url(String url) {
-    this.url = url;
+  public V4VmOpenApiPhoneSimple number(String number) {
+    this.number = number;
     return this;
   }
 
    /**
-   * Url to the attachment.
-   * @return url
+   * Phone number.
+   * @return number
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Url to the attachment.")
-  public String getUrl() {
-    return url;
+  @ApiModelProperty(example = "null", required = true, value = "Phone number.")
+  public String getNumber() {
+    return number;
   }
 
-  public void setUrl(String url) {
-    this.url = url;
+  public void setNumber(String number) {
+    this.number = number;
   }
 
-  public VmOpenApiAttachment language(String language) {
+  public V4VmOpenApiPhoneSimple language(String language) {
     this.language = language;
     return this;
   }
@@ -131,26 +131,26 @@ public class VmOpenApiAttachment   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiAttachment vmOpenApiAttachment = (VmOpenApiAttachment) o;
-    return Objects.equals(this.name, vmOpenApiAttachment.name) &&
-        Objects.equals(this.description, vmOpenApiAttachment.description) &&
-        Objects.equals(this.url, vmOpenApiAttachment.url) &&
-        Objects.equals(this.language, vmOpenApiAttachment.language);
+    V4VmOpenApiPhoneSimple v4VmOpenApiPhoneSimple = (V4VmOpenApiPhoneSimple) o;
+    return Objects.equals(this.prefixNumber, v4VmOpenApiPhoneSimple.prefixNumber) &&
+        Objects.equals(this.isFinnishServiceNumber, v4VmOpenApiPhoneSimple.isFinnishServiceNumber) &&
+        Objects.equals(this.number, v4VmOpenApiPhoneSimple.number) &&
+        Objects.equals(this.language, v4VmOpenApiPhoneSimple.language);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, url, language);
+    return Objects.hash(prefixNumber, isFinnishServiceNumber, number, language);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiAttachment {\n");
+    sb.append("class V4VmOpenApiPhoneSimple {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    prefixNumber: ").append(toIndentedString(prefixNumber)).append("\n");
+    sb.append("    isFinnishServiceNumber: ").append(toIndentedString(isFinnishServiceNumber)).append("\n");
+    sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("}");
     return sb.toString();

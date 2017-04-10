@@ -28,35 +28,64 @@ package fi.metatavu.ptv.client.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import fi.metatavu.ptv.client.model.VmOpenApiLanguageItem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * Interface for view model error message.
+ * OPEN API - View Model of municipality
  */
-@ApiModel(description = "Interface for view model error message.")
+@ApiModel(description = "OPEN API - View Model of municipality")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
-public class IVmError   {
-  @JsonProperty("errorMessage")
-  private String errorMessage = null;
+public class VmOpenApiMunicipality   {
+  @JsonProperty("code")
+  private String code = null;
 
-  public IVmError errorMessage(String errorMessage) {
-    this.errorMessage = errorMessage;
+  @JsonProperty("name")
+  private List<VmOpenApiLanguageItem> name = new ArrayList<VmOpenApiLanguageItem>();
+
+  public VmOpenApiMunicipality code(String code) {
+    this.code = code;
     return this;
   }
 
    /**
-   * View model error message.
-   * @return errorMessage
+   * Municipality code (like 491 or 091).
+   * @return code
   **/
-  @ApiModelProperty(example = "null", value = "View model error message.")
-  public String getErrorMessage() {
-    return errorMessage;
+  @ApiModelProperty(example = "null", value = "Municipality code (like 491 or 091).")
+  public String getCode() {
+    return code;
   }
 
-  public void setErrorMessage(String errorMessage) {
-    this.errorMessage = errorMessage;
+  public void setCode(String code) {
+    this.code = code;
+  }
+
+  public VmOpenApiMunicipality name(List<VmOpenApiLanguageItem> name) {
+    this.name = name;
+    return this;
+  }
+
+  public VmOpenApiMunicipality addNameItem(VmOpenApiLanguageItem nameItem) {
+    this.name.add(nameItem);
+    return this;
+  }
+
+   /**
+   * List of localized municipality names.
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "List of localized municipality names.")
+  public List<VmOpenApiLanguageItem> getName() {
+    return name;
+  }
+
+  public void setName(List<VmOpenApiLanguageItem> name) {
+    this.name = name;
   }
 
 
@@ -68,21 +97,23 @@ public class IVmError   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    IVmError iVmError = (IVmError) o;
-    return Objects.equals(this.errorMessage, iVmError.errorMessage);
+    VmOpenApiMunicipality vmOpenApiMunicipality = (VmOpenApiMunicipality) o;
+    return Objects.equals(this.code, vmOpenApiMunicipality.code) &&
+        Objects.equals(this.name, vmOpenApiMunicipality.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errorMessage);
+    return Objects.hash(code, name);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class IVmError {\n");
+    sb.append("class VmOpenApiMunicipality {\n");
     
-    sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

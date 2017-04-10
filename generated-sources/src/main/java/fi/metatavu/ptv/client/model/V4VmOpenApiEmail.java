@@ -33,21 +33,57 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * OPEN API - View Model of localized list item
+ * OPEN API V4 - View Model of email
  */
-@ApiModel(description = "OPEN API - View Model of localized list item")
+@ApiModel(description = "OPEN API V4 - View Model of email")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
-public class VmOpenApiLocalizedListItem   {
-  @JsonProperty("language")
-  private String language = null;
+public class V4VmOpenApiEmail   {
+  @JsonProperty("description")
+  private String description = null;
 
   @JsonProperty("value")
   private String value = null;
 
-  @JsonProperty("type")
-  private String type = null;
+  @JsonProperty("language")
+  private String language = null;
 
-  public VmOpenApiLocalizedListItem language(String language) {
+  public V4VmOpenApiEmail description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Email address description.
+   * @return description
+  **/
+  @ApiModelProperty(example = "null", value = "Email address description.")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public V4VmOpenApiEmail value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * Localized value corresponding to the Language property value.
+   * @return value
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "Localized value corresponding to the Language property value.")
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  public V4VmOpenApiEmail language(String language) {
     this.language = language;
     return this;
   }
@@ -65,42 +101,6 @@ public class VmOpenApiLocalizedListItem   {
     this.language = language;
   }
 
-  public VmOpenApiLocalizedListItem value(String value) {
-    this.value = value;
-    return this;
-  }
-
-   /**
-   * Value of the item.
-   * @return value
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "Value of the item.")
-  public String getValue() {
-    return value;
-  }
-
-  public void setValue(String value) {
-    this.value = value;
-  }
-
-  public VmOpenApiLocalizedListItem type(String type) {
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Type of the item. For example: Name, AlternateName, Description, ShortDescription.
-   * @return type
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "Type of the item. For example: Name, AlternateName, Description, ShortDescription.")
-  public String getType() {
-    return type;
-  }
-
-  public void setType(String type) {
-    this.type = type;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -110,25 +110,25 @@ public class VmOpenApiLocalizedListItem   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiLocalizedListItem vmOpenApiLocalizedListItem = (VmOpenApiLocalizedListItem) o;
-    return Objects.equals(this.language, vmOpenApiLocalizedListItem.language) &&
-        Objects.equals(this.value, vmOpenApiLocalizedListItem.value) &&
-        Objects.equals(this.type, vmOpenApiLocalizedListItem.type);
+    V4VmOpenApiEmail v4VmOpenApiEmail = (V4VmOpenApiEmail) o;
+    return Objects.equals(this.description, v4VmOpenApiEmail.description) &&
+        Objects.equals(this.value, v4VmOpenApiEmail.value) &&
+        Objects.equals(this.language, v4VmOpenApiEmail.language);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(language, value, type);
+    return Objects.hash(description, value, language);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiLocalizedListItem {\n");
+    sb.append("class V4VmOpenApiEmail {\n");
     
-    sb.append("    language: ").append(toIndentedString(language)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -33,21 +33,57 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * OPEN API - View Model of localized list item
+ * Open API web page model.
  */
-@ApiModel(description = "OPEN API - View Model of localized list item")
+@ApiModel(description = "Open API web page model.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
-public class VmOpenApiLocalizedListItem   {
-  @JsonProperty("language")
-  private String language = null;
-
+public class V4VmOpenApiWebPage   {
   @JsonProperty("value")
   private String value = null;
 
-  @JsonProperty("type")
-  private String type = null;
+  @JsonProperty("url")
+  private String url = null;
 
-  public VmOpenApiLocalizedListItem language(String language) {
+  @JsonProperty("language")
+  private String language = null;
+
+  public V4VmOpenApiWebPage value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * Name of the web page.
+   * @return value
+  **/
+  @ApiModelProperty(example = "null", value = "Name of the web page.")
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  public V4VmOpenApiWebPage url(String url) {
+    this.url = url;
+    return this;
+  }
+
+   /**
+   * Web page url.
+   * @return url
+  **/
+  @ApiModelProperty(example = "null", required = true, value = "Web page url.")
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  public V4VmOpenApiWebPage language(String language) {
     this.language = language;
     return this;
   }
@@ -65,42 +101,6 @@ public class VmOpenApiLocalizedListItem   {
     this.language = language;
   }
 
-  public VmOpenApiLocalizedListItem value(String value) {
-    this.value = value;
-    return this;
-  }
-
-   /**
-   * Value of the item.
-   * @return value
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "Value of the item.")
-  public String getValue() {
-    return value;
-  }
-
-  public void setValue(String value) {
-    this.value = value;
-  }
-
-  public VmOpenApiLocalizedListItem type(String type) {
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Type of the item. For example: Name, AlternateName, Description, ShortDescription.
-   * @return type
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "Type of the item. For example: Name, AlternateName, Description, ShortDescription.")
-  public String getType() {
-    return type;
-  }
-
-  public void setType(String type) {
-    this.type = type;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -110,25 +110,25 @@ public class VmOpenApiLocalizedListItem   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiLocalizedListItem vmOpenApiLocalizedListItem = (VmOpenApiLocalizedListItem) o;
-    return Objects.equals(this.language, vmOpenApiLocalizedListItem.language) &&
-        Objects.equals(this.value, vmOpenApiLocalizedListItem.value) &&
-        Objects.equals(this.type, vmOpenApiLocalizedListItem.type);
+    V4VmOpenApiWebPage v4VmOpenApiWebPage = (V4VmOpenApiWebPage) o;
+    return Objects.equals(this.value, v4VmOpenApiWebPage.value) &&
+        Objects.equals(this.url, v4VmOpenApiWebPage.url) &&
+        Objects.equals(this.language, v4VmOpenApiWebPage.language);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(language, value, type);
+    return Objects.hash(value, url, language);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiLocalizedListItem {\n");
+    sb.append("class V4VmOpenApiWebPage {\n");
     
-    sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("}");
     return sb.toString();
   }

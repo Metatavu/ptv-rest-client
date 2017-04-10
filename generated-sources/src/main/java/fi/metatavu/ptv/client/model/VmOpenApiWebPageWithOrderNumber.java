@@ -33,16 +33,16 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * OPEN API - View Model of Attachment
+ * OPEN API - View Model of web page with order number
  */
-@ApiModel(description = "OPEN API - View Model of Attachment")
+@ApiModel(description = "OPEN API - View Model of web page with order number")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
-public class VmOpenApiAttachment   {
-  @JsonProperty("name")
-  private String name = null;
+public class VmOpenApiWebPageWithOrderNumber   {
+  @JsonProperty("orderNumber")
+  private String orderNumber = null;
 
-  @JsonProperty("description")
-  private String description = null;
+  @JsonProperty("value")
+  private String value = null;
 
   @JsonProperty("url")
   private String url = null;
@@ -50,52 +50,52 @@ public class VmOpenApiAttachment   {
   @JsonProperty("language")
   private String language = null;
 
-  public VmOpenApiAttachment name(String name) {
-    this.name = name;
+  public VmOpenApiWebPageWithOrderNumber orderNumber(String orderNumber) {
+    this.orderNumber = orderNumber;
     return this;
   }
 
    /**
-   * Name of the attachment.
-   * @return name
+   * The order of web pages.
+   * @return orderNumber
   **/
-  @ApiModelProperty(example = "null", value = "Name of the attachment.")
-  public String getName() {
-    return name;
+  @ApiModelProperty(example = "null", required = true, value = "The order of web pages.")
+  public String getOrderNumber() {
+    return orderNumber;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setOrderNumber(String orderNumber) {
+    this.orderNumber = orderNumber;
   }
 
-  public VmOpenApiAttachment description(String description) {
-    this.description = description;
+  public VmOpenApiWebPageWithOrderNumber value(String value) {
+    this.value = value;
     return this;
   }
 
    /**
-   * Description of the attachment.
-   * @return description
+   * Name of the web page.
+   * @return value
   **/
-  @ApiModelProperty(example = "null", value = "Description of the attachment.")
-  public String getDescription() {
-    return description;
+  @ApiModelProperty(example = "null", value = "Name of the web page.")
+  public String getValue() {
+    return value;
   }
 
-  public void setDescription(String description) {
-    this.description = description;
+  public void setValue(String value) {
+    this.value = value;
   }
 
-  public VmOpenApiAttachment url(String url) {
+  public VmOpenApiWebPageWithOrderNumber url(String url) {
     this.url = url;
     return this;
   }
 
    /**
-   * Url to the attachment.
+   * Web page url.
    * @return url
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Url to the attachment.")
+  @ApiModelProperty(example = "null", required = true, value = "Web page url.")
   public String getUrl() {
     return url;
   }
@@ -104,16 +104,16 @@ public class VmOpenApiAttachment   {
     this.url = url;
   }
 
-  public VmOpenApiAttachment language(String language) {
+  public VmOpenApiWebPageWithOrderNumber language(String language) {
     this.language = language;
     return this;
   }
 
    /**
-   * Language of this object. Valid values are: fi, sv or en.
+   * Language code.
    * @return language
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Language of this object. Valid values are: fi, sv or en.")
+  @ApiModelProperty(example = "null", required = true, value = "Language code.")
   public String getLanguage() {
     return language;
   }
@@ -131,25 +131,25 @@ public class VmOpenApiAttachment   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiAttachment vmOpenApiAttachment = (VmOpenApiAttachment) o;
-    return Objects.equals(this.name, vmOpenApiAttachment.name) &&
-        Objects.equals(this.description, vmOpenApiAttachment.description) &&
-        Objects.equals(this.url, vmOpenApiAttachment.url) &&
-        Objects.equals(this.language, vmOpenApiAttachment.language);
+    VmOpenApiWebPageWithOrderNumber vmOpenApiWebPageWithOrderNumber = (VmOpenApiWebPageWithOrderNumber) o;
+    return Objects.equals(this.orderNumber, vmOpenApiWebPageWithOrderNumber.orderNumber) &&
+        Objects.equals(this.value, vmOpenApiWebPageWithOrderNumber.value) &&
+        Objects.equals(this.url, vmOpenApiWebPageWithOrderNumber.url) &&
+        Objects.equals(this.language, vmOpenApiWebPageWithOrderNumber.language);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, url, language);
+    return Objects.hash(orderNumber, value, url, language);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiAttachment {\n");
+    sb.append("class VmOpenApiWebPageWithOrderNumber {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    orderNumber: ").append(toIndentedString(orderNumber)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("}");

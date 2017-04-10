@@ -33,30 +33,51 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Interface for view model error message.
+ * OPEN API - View Model of item
  */
-@ApiModel(description = "Interface for view model error message.")
+@ApiModel(description = "OPEN API - View Model of item")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
-public class IVmError   {
-  @JsonProperty("errorMessage")
-  private String errorMessage = null;
+public class VmOpenApiItem   {
+  @JsonProperty("id")
+  private String id = null;
 
-  public IVmError errorMessage(String errorMessage) {
-    this.errorMessage = errorMessage;
+  @JsonProperty("name")
+  private String name = null;
+
+  public VmOpenApiItem id(String id) {
+    this.id = id;
     return this;
   }
 
    /**
-   * View model error message.
-   * @return errorMessage
+   * Id of the item.
+   * @return id
   **/
-  @ApiModelProperty(example = "null", value = "View model error message.")
-  public String getErrorMessage() {
-    return errorMessage;
+  @ApiModelProperty(example = "null", value = "Id of the item.")
+  public String getId() {
+    return id;
   }
 
-  public void setErrorMessage(String errorMessage) {
-    this.errorMessage = errorMessage;
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public VmOpenApiItem name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Name of the item.
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "Name of the item.")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -68,21 +89,23 @@ public class IVmError   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    IVmError iVmError = (IVmError) o;
-    return Objects.equals(this.errorMessage, iVmError.errorMessage);
+    VmOpenApiItem vmOpenApiItem = (VmOpenApiItem) o;
+    return Objects.equals(this.id, vmOpenApiItem.id) &&
+        Objects.equals(this.name, vmOpenApiItem.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errorMessage);
+    return Objects.hash(id, name);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class IVmError {\n");
+    sb.append("class VmOpenApiItem {\n");
     
-    sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
