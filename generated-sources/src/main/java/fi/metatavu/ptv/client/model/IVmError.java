@@ -36,7 +36,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Interface for view model error message.
  */
 @ApiModel(description = "Interface for view model error message.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:12:40.139+03:00")
 public class IVmError   {
   @JsonProperty("errorMessage")
   private String errorMessage = null;

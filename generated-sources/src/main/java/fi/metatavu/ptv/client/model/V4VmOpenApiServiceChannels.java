@@ -41,7 +41,7 @@ import io.swagger.annotations.ApiModelProperty;
  * OPEN API - View Model of service and channels
  */
 @ApiModel(description = "OPEN API - View Model of service and channels")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:12:40.139+03:00")
 public class V4VmOpenApiServiceChannels   {
   @JsonProperty("electronicChannel")
   private V4VmOpenApiElectronicChannel electronicChannel = null;

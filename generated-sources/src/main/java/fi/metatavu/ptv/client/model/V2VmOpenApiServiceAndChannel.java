@@ -39,7 +39,7 @@ import java.util.List;
  * OPEN API V2 - View Model of service and channel relation
  */
 @ApiModel(description = "OPEN API V2 - View Model of service and channel relation")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:12:40.139+03:00")
 public class V2VmOpenApiServiceAndChannel   {
   @JsonProperty("serviceId")
   private String serviceId = null;

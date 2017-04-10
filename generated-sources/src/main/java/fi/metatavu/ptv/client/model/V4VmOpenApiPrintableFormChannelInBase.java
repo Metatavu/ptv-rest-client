@@ -43,7 +43,7 @@ import java.util.List;
  * OPEN API V4 - View Model of printable form channel for IN api - base
  */
 @ApiModel(description = "OPEN API V4 - View Model of printable form channel for IN api - base")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:09:28.826+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-04-10T07:12:40.139+03:00")
 public class V4VmOpenApiPrintableFormChannelInBase   {
   @JsonProperty("sourceId")
   private String sourceId = null;
