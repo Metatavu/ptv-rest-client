@@ -38,11 +38,14 @@ import java.util.List;
 
 
 /**
- * OPEN API - View Model of general description for IN api (POST)
+ * OPEN API - View Model of general description for IN api base (PUT)
  */
-@ApiModel(description = "OPEN API - View Model of general description for IN api (POST)")
+@ApiModel(description = "OPEN API - View Model of general description for IN api base (PUT)")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-04T15:53:23.977+03:00")
-public class VmOpenApiGeneralDescriptionIn   {
+public class VmOpenApiGeneralDescriptionInBase   {
+  @JsonProperty("id")
+  private String id = null;
+
   @JsonProperty("names")
   private List<VmOpenApiLocalizedListItem> names = new ArrayList<VmOpenApiLocalizedListItem>();
 
@@ -82,21 +85,48 @@ public class VmOpenApiGeneralDescriptionIn   {
   @JsonProperty("publishingStatus")
   private String publishingStatus = null;
 
-  public VmOpenApiGeneralDescriptionIn names(List<VmOpenApiLocalizedListItem> names) {
+  @JsonProperty("deleteAllLifeEvents")
+  private Boolean deleteAllLifeEvents = null;
+
+  @JsonProperty("deleteAllIndustrialClasses")
+  private Boolean deleteAllIndustrialClasses = null;
+
+  @JsonProperty("deleteAllLaws")
+  private Boolean deleteAllLaws = null;
+
+  public VmOpenApiGeneralDescriptionInBase id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Entity Guid identifier.
+   * @return id
+  **/
+  @ApiModelProperty(example = "null", value = "Entity Guid identifier.")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public VmOpenApiGeneralDescriptionInBase names(List<VmOpenApiLocalizedListItem> names) {
     this.names = names;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addNamesItem(VmOpenApiLocalizedListItem namesItem) {
+  public VmOpenApiGeneralDescriptionInBase addNamesItem(VmOpenApiLocalizedListItem namesItem) {
     this.names.add(namesItem);
     return this;
   }
 
    /**
-   * List of name entities. Value of \"type\" has to be always \"Name\".   Sample single JSON object: {\"language\": \"fi\", \"value\": \"Perhepäivähoito esiopetusikäisille\", \"type\": \"Name\"}. (Max.Length: 100).
+   * List of localized names. (Max.Length: 100).
    * @return names
   **/
-  @ApiModelProperty(example = "null", required = true, value = "List of name entities. Value of \"type\" has to be always \"Name\".   Sample single JSON object: {\"language\": \"fi\", \"value\": \"Perhepäivähoito esiopetusikäisille\", \"type\": \"Name\"}. (Max.Length: 100).")
+  @ApiModelProperty(example = "null", value = "List of localized names. (Max.Length: 100).")
   public List<VmOpenApiLocalizedListItem> getNames() {
     return names;
   }
@@ -105,21 +135,21 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.names = names;
   }
 
-  public VmOpenApiGeneralDescriptionIn descriptions(List<VmOpenApiLocalizedListItem> descriptions) {
+  public VmOpenApiGeneralDescriptionInBase descriptions(List<VmOpenApiLocalizedListItem> descriptions) {
     this.descriptions = descriptions;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addDescriptionsItem(VmOpenApiLocalizedListItem descriptionsItem) {
+  public VmOpenApiGeneralDescriptionInBase addDescriptionsItem(VmOpenApiLocalizedListItem descriptionsItem) {
     this.descriptions.add(descriptionsItem);
     return this;
   }
 
    /**
-   * List of description entities. Requires two entities where ones type is \"Description\" and the other ones type is \"ShortDescription\".  Sample single JSON object: {\"language\": \"fi\", \"value\": \"Lyhyen kuvauksen kuvaus esimerkki teksti.\", \"type\": \"ShortDescription\"}.  Other optional description types are ServiceUserInstruction, ChargeTypeAdditionalInfo, DeadLineAdditionalInfo, ProcessingTimeAdditionalInfo, ValidityTimeAdditionalInfo. (Max.Length: 150 ShortDescription). (Max.Length: 4000 Description). (Max.Length: 4000 ServiceUserInstruction).
+   * List of localized descriptions. (Max.Length: 150 ShortDescription). (Max.Length: 4000 Description). (Max.Length: 4000 ServiceUserInstruction).
    * @return descriptions
   **/
-  @ApiModelProperty(example = "null", required = true, value = "List of description entities. Requires two entities where ones type is \"Description\" and the other ones type is \"ShortDescription\".  Sample single JSON object: {\"language\": \"fi\", \"value\": \"Lyhyen kuvauksen kuvaus esimerkki teksti.\", \"type\": \"ShortDescription\"}.  Other optional description types are ServiceUserInstruction, ChargeTypeAdditionalInfo, DeadLineAdditionalInfo, ProcessingTimeAdditionalInfo, ValidityTimeAdditionalInfo. (Max.Length: 150 ShortDescription). (Max.Length: 4000 Description). (Max.Length: 4000 ServiceUserInstruction).")
+  @ApiModelProperty(example = "null", value = "List of localized descriptions. (Max.Length: 150 ShortDescription). (Max.Length: 4000 Description). (Max.Length: 4000 ServiceUserInstruction).")
   public List<VmOpenApiLocalizedListItem> getDescriptions() {
     return descriptions;
   }
@@ -128,21 +158,21 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.descriptions = descriptions;
   }
 
-  public VmOpenApiGeneralDescriptionIn languages(List<String> languages) {
+  public VmOpenApiGeneralDescriptionInBase languages(List<String> languages) {
     this.languages = languages;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addLanguagesItem(String languagesItem) {
+  public VmOpenApiGeneralDescriptionInBase addLanguagesItem(String languagesItem) {
     this.languages.add(languagesItem);
     return this;
   }
 
    /**
-   * List of language codes.
+   * List of statutory service general description languages.
    * @return languages
   **/
-  @ApiModelProperty(example = "null", required = true, value = "List of language codes.")
+  @ApiModelProperty(example = "null", value = "List of statutory service general description languages.")
   public List<String> getLanguages() {
     return languages;
   }
@@ -151,12 +181,12 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.languages = languages;
   }
 
-  public VmOpenApiGeneralDescriptionIn serviceClasses(List<String> serviceClasses) {
+  public VmOpenApiGeneralDescriptionInBase serviceClasses(List<String> serviceClasses) {
     this.serviceClasses = serviceClasses;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addServiceClassesItem(String serviceClassesItem) {
+  public VmOpenApiGeneralDescriptionInBase addServiceClassesItem(String serviceClassesItem) {
     this.serviceClasses.add(serviceClassesItem);
     return this;
   }
@@ -165,7 +195,7 @@ public class VmOpenApiGeneralDescriptionIn   {
    * List of service class urls. Sample url: http://urn.fi/URN:NBN:fi:au:ptvl:P6.5
    * @return serviceClasses
   **/
-  @ApiModelProperty(example = "null", required = true, value = "List of service class urls. Sample url: http://urn.fi/URN:NBN:fi:au:ptvl:P6.5")
+  @ApiModelProperty(example = "null", value = "List of service class urls. Sample url: http://urn.fi/URN:NBN:fi:au:ptvl:P6.5")
   public List<String> getServiceClasses() {
     return serviceClasses;
   }
@@ -174,12 +204,12 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.serviceClasses = serviceClasses;
   }
 
-  public VmOpenApiGeneralDescriptionIn ontologyTerms(List<String> ontologyTerms) {
+  public VmOpenApiGeneralDescriptionInBase ontologyTerms(List<String> ontologyTerms) {
     this.ontologyTerms = ontologyTerms;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addOntologyTermsItem(String ontologyTermsItem) {
+  public VmOpenApiGeneralDescriptionInBase addOntologyTermsItem(String ontologyTermsItem) {
     this.ontologyTerms.add(ontologyTermsItem);
     return this;
   }
@@ -188,7 +218,7 @@ public class VmOpenApiGeneralDescriptionIn   {
    * List of ontology term urls. Sample url: http://www.yso.fi/onto/koko/p2435
    * @return ontologyTerms
   **/
-  @ApiModelProperty(example = "null", required = true, value = "List of ontology term urls. Sample url: http://www.yso.fi/onto/koko/p2435")
+  @ApiModelProperty(example = "null", value = "List of ontology term urls. Sample url: http://www.yso.fi/onto/koko/p2435")
   public List<String> getOntologyTerms() {
     return ontologyTerms;
   }
@@ -197,12 +227,12 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.ontologyTerms = ontologyTerms;
   }
 
-  public VmOpenApiGeneralDescriptionIn targetGroups(List<String> targetGroups) {
+  public VmOpenApiGeneralDescriptionInBase targetGroups(List<String> targetGroups) {
     this.targetGroups = targetGroups;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addTargetGroupsItem(String targetGroupsItem) {
+  public VmOpenApiGeneralDescriptionInBase addTargetGroupsItem(String targetGroupsItem) {
     this.targetGroups.add(targetGroupsItem);
     return this;
   }
@@ -211,7 +241,7 @@ public class VmOpenApiGeneralDescriptionIn   {
    * List of target group urls. Sample url: http://urn.fi/URN:NBN:fi:au:ptvl:KR1.3
    * @return targetGroups
   **/
-  @ApiModelProperty(example = "null", required = true, value = "List of target group urls. Sample url: http://urn.fi/URN:NBN:fi:au:ptvl:KR1.3")
+  @ApiModelProperty(example = "null", value = "List of target group urls. Sample url: http://urn.fi/URN:NBN:fi:au:ptvl:KR1.3")
   public List<String> getTargetGroups() {
     return targetGroups;
   }
@@ -220,12 +250,12 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.targetGroups = targetGroups;
   }
 
-  public VmOpenApiGeneralDescriptionIn lifeEvents(List<String> lifeEvents) {
+  public VmOpenApiGeneralDescriptionInBase lifeEvents(List<String> lifeEvents) {
     this.lifeEvents = lifeEvents;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addLifeEventsItem(String lifeEventsItem) {
+  public VmOpenApiGeneralDescriptionInBase addLifeEventsItem(String lifeEventsItem) {
     this.lifeEvents.add(lifeEventsItem);
     return this;
   }
@@ -243,12 +273,12 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.lifeEvents = lifeEvents;
   }
 
-  public VmOpenApiGeneralDescriptionIn industrialClasses(List<String> industrialClasses) {
+  public VmOpenApiGeneralDescriptionInBase industrialClasses(List<String> industrialClasses) {
     this.industrialClasses = industrialClasses;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addIndustrialClassesItem(String industrialClassesItem) {
+  public VmOpenApiGeneralDescriptionInBase addIndustrialClassesItem(String industrialClassesItem) {
     this.industrialClasses.add(industrialClassesItem);
     return this;
   }
@@ -266,12 +296,12 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.industrialClasses = industrialClasses;
   }
 
-  public VmOpenApiGeneralDescriptionIn requirements(List<VmOpenApiLanguageItem> requirements) {
+  public VmOpenApiGeneralDescriptionInBase requirements(List<VmOpenApiLanguageItem> requirements) {
     this.requirements = requirements;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addRequirementsItem(VmOpenApiLanguageItem requirementsItem) {
+  public VmOpenApiGeneralDescriptionInBase addRequirementsItem(VmOpenApiLanguageItem requirementsItem) {
     this.requirements.add(requirementsItem);
     return this;
   }
@@ -289,7 +319,7 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.requirements = requirements;
   }
 
-  public VmOpenApiGeneralDescriptionIn type(String type) {
+  public VmOpenApiGeneralDescriptionInBase type(String type) {
     this.type = type;
     return this;
   }
@@ -307,7 +337,7 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.type = type;
   }
 
-  public VmOpenApiGeneralDescriptionIn serviceChargeType(String serviceChargeType) {
+  public VmOpenApiGeneralDescriptionInBase serviceChargeType(String serviceChargeType) {
     this.serviceChargeType = serviceChargeType;
     return this;
   }
@@ -325,12 +355,12 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.serviceChargeType = serviceChargeType;
   }
 
-  public VmOpenApiGeneralDescriptionIn legislation(List<V4VmOpenApiLaw> legislation) {
+  public VmOpenApiGeneralDescriptionInBase legislation(List<V4VmOpenApiLaw> legislation) {
     this.legislation = legislation;
     return this;
   }
 
-  public VmOpenApiGeneralDescriptionIn addLegislationItem(V4VmOpenApiLaw legislationItem) {
+  public VmOpenApiGeneralDescriptionInBase addLegislationItem(V4VmOpenApiLaw legislationItem) {
     this.legislation.add(legislationItem);
     return this;
   }
@@ -348,22 +378,76 @@ public class VmOpenApiGeneralDescriptionIn   {
     this.legislation = legislation;
   }
 
-  public VmOpenApiGeneralDescriptionIn publishingStatus(String publishingStatus) {
+  public VmOpenApiGeneralDescriptionInBase publishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
     return this;
   }
 
    /**
-   * Publishing status. Possible values are: Draft or Published.
+   * Publishing status. Possible values are: Draft, Published, Deleted or Modified.
    * @return publishingStatus
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Publishing status. Possible values are: Draft or Published.")
+  @ApiModelProperty(example = "null", value = "Publishing status. Possible values are: Draft, Published, Deleted or Modified.")
   public String getPublishingStatus() {
     return publishingStatus;
   }
 
   public void setPublishingStatus(String publishingStatus) {
     this.publishingStatus = publishingStatus;
+  }
+
+  public VmOpenApiGeneralDescriptionInBase deleteAllLifeEvents(Boolean deleteAllLifeEvents) {
+    this.deleteAllLifeEvents = deleteAllLifeEvents;
+    return this;
+  }
+
+   /**
+   * Set to true to delete all existing life events (the LifeEvents collection for this object should be empty collection when this option is used).
+   * @return deleteAllLifeEvents
+  **/
+  @ApiModelProperty(example = "null", value = "Set to true to delete all existing life events (the LifeEvents collection for this object should be empty collection when this option is used).")
+  public Boolean getDeleteAllLifeEvents() {
+    return deleteAllLifeEvents;
+  }
+
+  public void setDeleteAllLifeEvents(Boolean deleteAllLifeEvents) {
+    this.deleteAllLifeEvents = deleteAllLifeEvents;
+  }
+
+  public VmOpenApiGeneralDescriptionInBase deleteAllIndustrialClasses(Boolean deleteAllIndustrialClasses) {
+    this.deleteAllIndustrialClasses = deleteAllIndustrialClasses;
+    return this;
+  }
+
+   /**
+   * Set to true to delete all existing industrial classes (the IndustrialClasses collection for this object should be empty collection when this option is used).
+   * @return deleteAllIndustrialClasses
+  **/
+  @ApiModelProperty(example = "null", value = "Set to true to delete all existing industrial classes (the IndustrialClasses collection for this object should be empty collection when this option is used).")
+  public Boolean getDeleteAllIndustrialClasses() {
+    return deleteAllIndustrialClasses;
+  }
+
+  public void setDeleteAllIndustrialClasses(Boolean deleteAllIndustrialClasses) {
+    this.deleteAllIndustrialClasses = deleteAllIndustrialClasses;
+  }
+
+  public VmOpenApiGeneralDescriptionInBase deleteAllLaws(Boolean deleteAllLaws) {
+    this.deleteAllLaws = deleteAllLaws;
+    return this;
+  }
+
+   /**
+   * Set to true to delete all existing laws within legislation (the legislation collection for this object should be empty collection when this option is used).
+   * @return deleteAllLaws
+  **/
+  @ApiModelProperty(example = "null", value = "Set to true to delete all existing laws within legislation (the legislation collection for this object should be empty collection when this option is used).")
+  public Boolean getDeleteAllLaws() {
+    return deleteAllLaws;
+  }
+
+  public void setDeleteAllLaws(Boolean deleteAllLaws) {
+    this.deleteAllLaws = deleteAllLaws;
   }
 
 
@@ -375,32 +459,37 @@ public class VmOpenApiGeneralDescriptionIn   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiGeneralDescriptionIn vmOpenApiGeneralDescriptionIn = (VmOpenApiGeneralDescriptionIn) o;
-    return Objects.equals(this.names, vmOpenApiGeneralDescriptionIn.names) &&
-        Objects.equals(this.descriptions, vmOpenApiGeneralDescriptionIn.descriptions) &&
-        Objects.equals(this.languages, vmOpenApiGeneralDescriptionIn.languages) &&
-        Objects.equals(this.serviceClasses, vmOpenApiGeneralDescriptionIn.serviceClasses) &&
-        Objects.equals(this.ontologyTerms, vmOpenApiGeneralDescriptionIn.ontologyTerms) &&
-        Objects.equals(this.targetGroups, vmOpenApiGeneralDescriptionIn.targetGroups) &&
-        Objects.equals(this.lifeEvents, vmOpenApiGeneralDescriptionIn.lifeEvents) &&
-        Objects.equals(this.industrialClasses, vmOpenApiGeneralDescriptionIn.industrialClasses) &&
-        Objects.equals(this.requirements, vmOpenApiGeneralDescriptionIn.requirements) &&
-        Objects.equals(this.type, vmOpenApiGeneralDescriptionIn.type) &&
-        Objects.equals(this.serviceChargeType, vmOpenApiGeneralDescriptionIn.serviceChargeType) &&
-        Objects.equals(this.legislation, vmOpenApiGeneralDescriptionIn.legislation) &&
-        Objects.equals(this.publishingStatus, vmOpenApiGeneralDescriptionIn.publishingStatus);
+    VmOpenApiGeneralDescriptionInBase vmOpenApiGeneralDescriptionInBase = (VmOpenApiGeneralDescriptionInBase) o;
+    return Objects.equals(this.id, vmOpenApiGeneralDescriptionInBase.id) &&
+        Objects.equals(this.names, vmOpenApiGeneralDescriptionInBase.names) &&
+        Objects.equals(this.descriptions, vmOpenApiGeneralDescriptionInBase.descriptions) &&
+        Objects.equals(this.languages, vmOpenApiGeneralDescriptionInBase.languages) &&
+        Objects.equals(this.serviceClasses, vmOpenApiGeneralDescriptionInBase.serviceClasses) &&
+        Objects.equals(this.ontologyTerms, vmOpenApiGeneralDescriptionInBase.ontologyTerms) &&
+        Objects.equals(this.targetGroups, vmOpenApiGeneralDescriptionInBase.targetGroups) &&
+        Objects.equals(this.lifeEvents, vmOpenApiGeneralDescriptionInBase.lifeEvents) &&
+        Objects.equals(this.industrialClasses, vmOpenApiGeneralDescriptionInBase.industrialClasses) &&
+        Objects.equals(this.requirements, vmOpenApiGeneralDescriptionInBase.requirements) &&
+        Objects.equals(this.type, vmOpenApiGeneralDescriptionInBase.type) &&
+        Objects.equals(this.serviceChargeType, vmOpenApiGeneralDescriptionInBase.serviceChargeType) &&
+        Objects.equals(this.legislation, vmOpenApiGeneralDescriptionInBase.legislation) &&
+        Objects.equals(this.publishingStatus, vmOpenApiGeneralDescriptionInBase.publishingStatus) &&
+        Objects.equals(this.deleteAllLifeEvents, vmOpenApiGeneralDescriptionInBase.deleteAllLifeEvents) &&
+        Objects.equals(this.deleteAllIndustrialClasses, vmOpenApiGeneralDescriptionInBase.deleteAllIndustrialClasses) &&
+        Objects.equals(this.deleteAllLaws, vmOpenApiGeneralDescriptionInBase.deleteAllLaws);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(names, descriptions, languages, serviceClasses, ontologyTerms, targetGroups, lifeEvents, industrialClasses, requirements, type, serviceChargeType, legislation, publishingStatus);
+    return Objects.hash(id, names, descriptions, languages, serviceClasses, ontologyTerms, targetGroups, lifeEvents, industrialClasses, requirements, type, serviceChargeType, legislation, publishingStatus, deleteAllLifeEvents, deleteAllIndustrialClasses, deleteAllLaws);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiGeneralDescriptionIn {\n");
+    sb.append("class VmOpenApiGeneralDescriptionInBase {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    names: ").append(toIndentedString(names)).append("\n");
     sb.append("    descriptions: ").append(toIndentedString(descriptions)).append("\n");
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
@@ -414,6 +503,9 @@ public class VmOpenApiGeneralDescriptionIn   {
     sb.append("    serviceChargeType: ").append(toIndentedString(serviceChargeType)).append("\n");
     sb.append("    legislation: ").append(toIndentedString(legislation)).append("\n");
     sb.append("    publishingStatus: ").append(toIndentedString(publishingStatus)).append("\n");
+    sb.append("    deleteAllLifeEvents: ").append(toIndentedString(deleteAllLifeEvents)).append("\n");
+    sb.append("    deleteAllIndustrialClasses: ").append(toIndentedString(deleteAllIndustrialClasses)).append("\n");
+    sb.append("    deleteAllLaws: ").append(toIndentedString(deleteAllLaws)).append("\n");
     sb.append("}");
     return sb.toString();
   }

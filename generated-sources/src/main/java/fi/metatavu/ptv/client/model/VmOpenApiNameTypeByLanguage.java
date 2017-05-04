@@ -33,57 +33,36 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * OPEN API V4 - View Model of email
+ * OPEN API - View Model of type by language
  */
-@ApiModel(description = "OPEN API V4 - View Model of email")
+@ApiModel(description = "OPEN API - View Model of type by language")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-04T15:53:23.977+03:00")
-public class V4VmOpenApiEmail   {
-  @JsonProperty("description")
-  private String description = null;
-
-  @JsonProperty("value")
-  private String value = null;
+public class VmOpenApiNameTypeByLanguage   {
+  @JsonProperty("type")
+  private String type = null;
 
   @JsonProperty("language")
   private String language = null;
 
-  public V4VmOpenApiEmail description(String description) {
-    this.description = description;
+  public VmOpenApiNameTypeByLanguage type(String type) {
+    this.type = type;
     return this;
   }
 
    /**
-   * Email address description. (Max.Length: 100).
-   * @return description
+   * DisplayNameType preferred by language code (Name or AlternateName).
+   * @return type
   **/
-  @ApiModelProperty(example = "null", value = "Email address description. (Max.Length: 100).")
-  public String getDescription() {
-    return description;
+  @ApiModelProperty(example = "null", required = true, value = "DisplayNameType preferred by language code (Name or AlternateName).")
+  public String getType() {
+    return type;
   }
 
-  public void setDescription(String description) {
-    this.description = description;
+  public void setType(String type) {
+    this.type = type;
   }
 
-  public V4VmOpenApiEmail value(String value) {
-    this.value = value;
-    return this;
-  }
-
-   /**
-   * Localized value corresponding to the Language property value. (Max.Length: 100).
-   * @return value
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "Localized value corresponding to the Language property value. (Max.Length: 100).")
-  public String getValue() {
-    return value;
-  }
-
-  public void setValue(String value) {
-    this.value = value;
-  }
-
-  public V4VmOpenApiEmail language(String language) {
+  public VmOpenApiNameTypeByLanguage language(String language) {
     this.language = language;
     return this;
   }
@@ -110,24 +89,22 @@ public class V4VmOpenApiEmail   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V4VmOpenApiEmail v4VmOpenApiEmail = (V4VmOpenApiEmail) o;
-    return Objects.equals(this.description, v4VmOpenApiEmail.description) &&
-        Objects.equals(this.value, v4VmOpenApiEmail.value) &&
-        Objects.equals(this.language, v4VmOpenApiEmail.language);
+    VmOpenApiNameTypeByLanguage vmOpenApiNameTypeByLanguage = (VmOpenApiNameTypeByLanguage) o;
+    return Objects.equals(this.type, vmOpenApiNameTypeByLanguage.type) &&
+        Objects.equals(this.language, vmOpenApiNameTypeByLanguage.language);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, value, language);
+    return Objects.hash(type, language);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V4VmOpenApiEmail {\n");
+    sb.append("class VmOpenApiNameTypeByLanguage {\n");
     
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("}");
     return sb.toString();

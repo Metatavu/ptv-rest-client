@@ -33,16 +33,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * OPEN API V4 - View Model of phone with type
+ * OPEN API V5 - View Model of phone
  */
-@ApiModel(description = "OPEN API V4 - View Model of phone with type")
+@ApiModel(description = "OPEN API V5 - View Model of phone")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-04T15:53:23.977+03:00")
-public class V4VmOpenApiPhoneWithType   {
+public class V5VmOpenApiPhoneChannelPhone   {
   @JsonProperty("type")
   private String type = null;
-
-  @JsonProperty("additionalInformation")
-  private String additionalInformation = null;
 
   @JsonProperty("serviceChargeType")
   private String serviceChargeType = null;
@@ -62,7 +59,7 @@ public class V4VmOpenApiPhoneWithType   {
   @JsonProperty("language")
   private String language = null;
 
-  public V4VmOpenApiPhoneWithType type(String type) {
+  public V5VmOpenApiPhoneChannelPhone type(String type) {
     this.type = type;
     return this;
   }
@@ -80,25 +77,7 @@ public class V4VmOpenApiPhoneWithType   {
     this.type = type;
   }
 
-  public V4VmOpenApiPhoneWithType additionalInformation(String additionalInformation) {
-    this.additionalInformation = additionalInformation;
-    return this;
-  }
-
-   /**
-   * Additional information. (Max.Length: 150).
-   * @return additionalInformation
-  **/
-  @ApiModelProperty(example = "null", value = "Additional information. (Max.Length: 150).")
-  public String getAdditionalInformation() {
-    return additionalInformation;
-  }
-
-  public void setAdditionalInformation(String additionalInformation) {
-    this.additionalInformation = additionalInformation;
-  }
-
-  public V4VmOpenApiPhoneWithType serviceChargeType(String serviceChargeType) {
+  public V5VmOpenApiPhoneChannelPhone serviceChargeType(String serviceChargeType) {
     this.serviceChargeType = serviceChargeType;
     return this;
   }
@@ -116,7 +95,7 @@ public class V4VmOpenApiPhoneWithType   {
     this.serviceChargeType = serviceChargeType;
   }
 
-  public V4VmOpenApiPhoneWithType chargeDescription(String chargeDescription) {
+  public V5VmOpenApiPhoneChannelPhone chargeDescription(String chargeDescription) {
     this.chargeDescription = chargeDescription;
     return this;
   }
@@ -134,7 +113,7 @@ public class V4VmOpenApiPhoneWithType   {
     this.chargeDescription = chargeDescription;
   }
 
-  public V4VmOpenApiPhoneWithType prefixNumber(String prefixNumber) {
+  public V5VmOpenApiPhoneChannelPhone prefixNumber(String prefixNumber) {
     this.prefixNumber = prefixNumber;
     return this;
   }
@@ -152,7 +131,7 @@ public class V4VmOpenApiPhoneWithType   {
     this.prefixNumber = prefixNumber;
   }
 
-  public V4VmOpenApiPhoneWithType isFinnishServiceNumber(Boolean isFinnishServiceNumber) {
+  public V5VmOpenApiPhoneChannelPhone isFinnishServiceNumber(Boolean isFinnishServiceNumber) {
     this.isFinnishServiceNumber = isFinnishServiceNumber;
     return this;
   }
@@ -170,7 +149,7 @@ public class V4VmOpenApiPhoneWithType   {
     this.isFinnishServiceNumber = isFinnishServiceNumber;
   }
 
-  public V4VmOpenApiPhoneWithType number(String number) {
+  public V5VmOpenApiPhoneChannelPhone number(String number) {
     this.number = number;
     return this;
   }
@@ -188,7 +167,7 @@ public class V4VmOpenApiPhoneWithType   {
     this.number = number;
   }
 
-  public V4VmOpenApiPhoneWithType language(String language) {
+  public V5VmOpenApiPhoneChannelPhone language(String language) {
     this.language = language;
     return this;
   }
@@ -215,29 +194,27 @@ public class V4VmOpenApiPhoneWithType   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V4VmOpenApiPhoneWithType v4VmOpenApiPhoneWithType = (V4VmOpenApiPhoneWithType) o;
-    return Objects.equals(this.type, v4VmOpenApiPhoneWithType.type) &&
-        Objects.equals(this.additionalInformation, v4VmOpenApiPhoneWithType.additionalInformation) &&
-        Objects.equals(this.serviceChargeType, v4VmOpenApiPhoneWithType.serviceChargeType) &&
-        Objects.equals(this.chargeDescription, v4VmOpenApiPhoneWithType.chargeDescription) &&
-        Objects.equals(this.prefixNumber, v4VmOpenApiPhoneWithType.prefixNumber) &&
-        Objects.equals(this.isFinnishServiceNumber, v4VmOpenApiPhoneWithType.isFinnishServiceNumber) &&
-        Objects.equals(this.number, v4VmOpenApiPhoneWithType.number) &&
-        Objects.equals(this.language, v4VmOpenApiPhoneWithType.language);
+    V5VmOpenApiPhoneChannelPhone v5VmOpenApiPhoneChannelPhone = (V5VmOpenApiPhoneChannelPhone) o;
+    return Objects.equals(this.type, v5VmOpenApiPhoneChannelPhone.type) &&
+        Objects.equals(this.serviceChargeType, v5VmOpenApiPhoneChannelPhone.serviceChargeType) &&
+        Objects.equals(this.chargeDescription, v5VmOpenApiPhoneChannelPhone.chargeDescription) &&
+        Objects.equals(this.prefixNumber, v5VmOpenApiPhoneChannelPhone.prefixNumber) &&
+        Objects.equals(this.isFinnishServiceNumber, v5VmOpenApiPhoneChannelPhone.isFinnishServiceNumber) &&
+        Objects.equals(this.number, v5VmOpenApiPhoneChannelPhone.number) &&
+        Objects.equals(this.language, v5VmOpenApiPhoneChannelPhone.language);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, additionalInformation, serviceChargeType, chargeDescription, prefixNumber, isFinnishServiceNumber, number, language);
+    return Objects.hash(type, serviceChargeType, chargeDescription, prefixNumber, isFinnishServiceNumber, number, language);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V4VmOpenApiPhoneWithType {\n");
+    sb.append("class V5VmOpenApiPhoneChannelPhone {\n");
     
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    additionalInformation: ").append(toIndentedString(additionalInformation)).append("\n");
     sb.append("    serviceChargeType: ").append(toIndentedString(serviceChargeType)).append("\n");
     sb.append("    chargeDescription: ").append(toIndentedString(chargeDescription)).append("\n");
     sb.append("    prefixNumber: ").append(toIndentedString(prefixNumber)).append("\n");

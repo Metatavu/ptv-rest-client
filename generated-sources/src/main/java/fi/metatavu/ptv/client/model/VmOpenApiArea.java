@@ -29,6 +29,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import fi.metatavu.ptv.client.model.VmOpenApiLanguageItem;
+import fi.metatavu.ptv.client.model.VmOpenApiMunicipality;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -36,27 +37,51 @@ import java.util.List;
 
 
 /**
- * OPEN API - View Model of municipality
+ * OPEN API - View Model of Area
  */
-@ApiModel(description = "OPEN API - View Model of municipality")
+@ApiModel(description = "OPEN API - View Model of Area")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-04T15:53:23.977+03:00")
-public class VmOpenApiMunicipality   {
+public class VmOpenApiArea   {
+  @JsonProperty("type")
+  private String type = null;
+
   @JsonProperty("code")
   private String code = null;
 
   @JsonProperty("name")
   private List<VmOpenApiLanguageItem> name = new ArrayList<VmOpenApiLanguageItem>();
 
-  public VmOpenApiMunicipality code(String code) {
+  @JsonProperty("municipalities")
+  private List<VmOpenApiMunicipality> municipalities = new ArrayList<VmOpenApiMunicipality>();
+
+  public VmOpenApiArea type(String type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Type of the area (Municipality, Province, BusinessRegions, HospitalRegions).
+   * @return type
+  **/
+  @ApiModelProperty(example = "null", value = "Type of the area (Municipality, Province, BusinessRegions, HospitalRegions).")
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
+  public VmOpenApiArea code(String code) {
     this.code = code;
     return this;
   }
 
    /**
-   * Municipality code (like 491 or 091).
+   * Code of the area.
    * @return code
   **/
-  @ApiModelProperty(example = "null", value = "Municipality code (like 491 or 091).")
+  @ApiModelProperty(example = "null", value = "Code of the area.")
   public String getCode() {
     return code;
   }
@@ -65,27 +90,50 @@ public class VmOpenApiMunicipality   {
     this.code = code;
   }
 
-  public VmOpenApiMunicipality name(List<VmOpenApiLanguageItem> name) {
+  public VmOpenApiArea name(List<VmOpenApiLanguageItem> name) {
     this.name = name;
     return this;
   }
 
-  public VmOpenApiMunicipality addNameItem(VmOpenApiLanguageItem nameItem) {
+  public VmOpenApiArea addNameItem(VmOpenApiLanguageItem nameItem) {
     this.name.add(nameItem);
     return this;
   }
 
    /**
-   * List of localized municipality names.
+   * Localized list of names for the area
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "List of localized municipality names.")
+  @ApiModelProperty(example = "null", value = "Localized list of names for the area")
   public List<VmOpenApiLanguageItem> getName() {
     return name;
   }
 
   public void setName(List<VmOpenApiLanguageItem> name) {
     this.name = name;
+  }
+
+  public VmOpenApiArea municipalities(List<VmOpenApiMunicipality> municipalities) {
+    this.municipalities = municipalities;
+    return this;
+  }
+
+  public VmOpenApiArea addMunicipalitiesItem(VmOpenApiMunicipality municipalitiesItem) {
+    this.municipalities.add(municipalitiesItem);
+    return this;
+  }
+
+   /**
+   * List of municipalities including municipality code and a localized list of municipality names.
+   * @return municipalities
+  **/
+  @ApiModelProperty(example = "null", value = "List of municipalities including municipality code and a localized list of municipality names.")
+  public List<VmOpenApiMunicipality> getMunicipalities() {
+    return municipalities;
+  }
+
+  public void setMunicipalities(List<VmOpenApiMunicipality> municipalities) {
+    this.municipalities = municipalities;
   }
 
 
@@ -97,23 +145,27 @@ public class VmOpenApiMunicipality   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiMunicipality vmOpenApiMunicipality = (VmOpenApiMunicipality) o;
-    return Objects.equals(this.code, vmOpenApiMunicipality.code) &&
-        Objects.equals(this.name, vmOpenApiMunicipality.name);
+    VmOpenApiArea vmOpenApiArea = (VmOpenApiArea) o;
+    return Objects.equals(this.type, vmOpenApiArea.type) &&
+        Objects.equals(this.code, vmOpenApiArea.code) &&
+        Objects.equals(this.name, vmOpenApiArea.name) &&
+        Objects.equals(this.municipalities, vmOpenApiArea.municipalities);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, name);
+    return Objects.hash(type, code, name, municipalities);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiMunicipality {\n");
+    sb.append("class VmOpenApiArea {\n");
     
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    municipalities: ").append(toIndentedString(municipalities)).append("\n");
     sb.append("}");
     return sb.toString();
   }

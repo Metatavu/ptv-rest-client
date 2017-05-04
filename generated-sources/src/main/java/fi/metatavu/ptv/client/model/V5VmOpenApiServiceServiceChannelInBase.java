@@ -36,14 +36,11 @@ import java.util.List;
 
 
 /**
- * OPEN API V2 - View Model of service and channel relation
+ * OPEN API V5 - View Model of service service channel IN.
  */
-@ApiModel(description = "OPEN API V2 - View Model of service and channel relation")
+@ApiModel(description = "OPEN API V5 - View Model of service service channel IN.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-04T15:53:23.977+03:00")
-public class V2VmOpenApiServiceAndChannel   {
-  @JsonProperty("serviceId")
-  private String serviceId = null;
-
+public class V5VmOpenApiServiceServiceChannelInBase   {
   @JsonProperty("serviceChannelId")
   private String serviceChannelId = null;
 
@@ -53,25 +50,7 @@ public class V2VmOpenApiServiceAndChannel   {
   @JsonProperty("serviceChargeType")
   private String serviceChargeType = null;
 
-  public V2VmOpenApiServiceAndChannel serviceId(String serviceId) {
-    this.serviceId = serviceId;
-    return this;
-  }
-
-   /**
-   * PTV service channel identifier.
-   * @return serviceId
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "PTV service channel identifier.")
-  public String getServiceId() {
-    return serviceId;
-  }
-
-  public void setServiceId(String serviceId) {
-    this.serviceId = serviceId;
-  }
-
-  public V2VmOpenApiServiceAndChannel serviceChannelId(String serviceChannelId) {
+  public V5VmOpenApiServiceServiceChannelInBase serviceChannelId(String serviceChannelId) {
     this.serviceChannelId = serviceChannelId;
     return this;
   }
@@ -89,12 +68,12 @@ public class V2VmOpenApiServiceAndChannel   {
     this.serviceChannelId = serviceChannelId;
   }
 
-  public V2VmOpenApiServiceAndChannel description(List<VmOpenApiLocalizedListItem> description) {
+  public V5VmOpenApiServiceServiceChannelInBase description(List<VmOpenApiLocalizedListItem> description) {
     this.description = description;
     return this;
   }
 
-  public V2VmOpenApiServiceAndChannel addDescriptionItem(VmOpenApiLocalizedListItem descriptionItem) {
+  public V5VmOpenApiServiceServiceChannelInBase addDescriptionItem(VmOpenApiLocalizedListItem descriptionItem) {
     this.description.add(descriptionItem);
     return this;
   }
@@ -112,7 +91,7 @@ public class V2VmOpenApiServiceAndChannel   {
     this.description = description;
   }
 
-  public V2VmOpenApiServiceAndChannel serviceChargeType(String serviceChargeType) {
+  public V5VmOpenApiServiceServiceChannelInBase serviceChargeType(String serviceChargeType) {
     this.serviceChargeType = serviceChargeType;
     return this;
   }
@@ -139,24 +118,22 @@ public class V2VmOpenApiServiceAndChannel   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V2VmOpenApiServiceAndChannel v2VmOpenApiServiceAndChannel = (V2VmOpenApiServiceAndChannel) o;
-    return Objects.equals(this.serviceId, v2VmOpenApiServiceAndChannel.serviceId) &&
-        Objects.equals(this.serviceChannelId, v2VmOpenApiServiceAndChannel.serviceChannelId) &&
-        Objects.equals(this.description, v2VmOpenApiServiceAndChannel.description) &&
-        Objects.equals(this.serviceChargeType, v2VmOpenApiServiceAndChannel.serviceChargeType);
+    V5VmOpenApiServiceServiceChannelInBase v5VmOpenApiServiceServiceChannelInBase = (V5VmOpenApiServiceServiceChannelInBase) o;
+    return Objects.equals(this.serviceChannelId, v5VmOpenApiServiceServiceChannelInBase.serviceChannelId) &&
+        Objects.equals(this.description, v5VmOpenApiServiceServiceChannelInBase.description) &&
+        Objects.equals(this.serviceChargeType, v5VmOpenApiServiceServiceChannelInBase.serviceChargeType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(serviceId, serviceChannelId, description, serviceChargeType);
+    return Objects.hash(serviceChannelId, description, serviceChargeType);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V2VmOpenApiServiceAndChannel {\n");
+    sb.append("class V5VmOpenApiServiceServiceChannelInBase {\n");
     
-    sb.append("    serviceId: ").append(toIndentedString(serviceId)).append("\n");
     sb.append("    serviceChannelId: ").append(toIndentedString(serviceChannelId)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    serviceChargeType: ").append(toIndentedString(serviceChargeType)).append("\n");

@@ -30,54 +30,61 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
- * OPEN API - View Model of language item
+ * OPEN API - View Model interface of area IN (POST and PUT).
  */
-@ApiModel(description = "OPEN API - View Model of language item")
+@ApiModel(description = "OPEN API - View Model interface of area IN (POST and PUT).")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-04T15:53:23.977+03:00")
-public class VmOpenApiLanguageItem   {
-  @JsonProperty("value")
-  private String value = null;
+public class VmOpenApiAreaIn   {
+  @JsonProperty("type")
+  private String type = null;
 
-  @JsonProperty("language")
-  private String language = null;
+  @JsonProperty("areaCodes")
+  private List<String> areaCodes = new ArrayList<String>();
 
-  public VmOpenApiLanguageItem value(String value) {
-    this.value = value;
+  public VmOpenApiAreaIn type(String type) {
+    this.type = type;
     return this;
   }
 
    /**
-   * Localized value corresponding to the Language property value.
-   * @return value
+   * Type of the area (Municipality, Province, BusinessRegions, HospitalRegions).
+   * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Localized value corresponding to the Language property value.")
-  public String getValue() {
-    return value;
+  @ApiModelProperty(example = "null", required = true, value = "Type of the area (Municipality, Province, BusinessRegions, HospitalRegions).")
+  public String getType() {
+    return type;
   }
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setType(String type) {
+    this.type = type;
   }
 
-  public VmOpenApiLanguageItem language(String language) {
-    this.language = language;
+  public VmOpenApiAreaIn areaCodes(List<String> areaCodes) {
+    this.areaCodes = areaCodes;
+    return this;
+  }
+
+  public VmOpenApiAreaIn addAreaCodesItem(String areaCodesItem) {
+    this.areaCodes.add(areaCodesItem);
     return this;
   }
 
    /**
-   * Language code.
-   * @return language
+   * List of area codes related to type. For example if type = Municipality, areaCodes-list need to include municipality codes like 491 or 091.
+   * @return areaCodes
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Language code.")
-  public String getLanguage() {
-    return language;
+  @ApiModelProperty(example = "null", required = true, value = "List of area codes related to type. For example if type = Municipality, areaCodes-list need to include municipality codes like 491 or 091.")
+  public List<String> getAreaCodes() {
+    return areaCodes;
   }
 
-  public void setLanguage(String language) {
-    this.language = language;
+  public void setAreaCodes(List<String> areaCodes) {
+    this.areaCodes = areaCodes;
   }
 
 
@@ -89,23 +96,23 @@ public class VmOpenApiLanguageItem   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiLanguageItem vmOpenApiLanguageItem = (VmOpenApiLanguageItem) o;
-    return Objects.equals(this.value, vmOpenApiLanguageItem.value) &&
-        Objects.equals(this.language, vmOpenApiLanguageItem.language);
+    VmOpenApiAreaIn vmOpenApiAreaIn = (VmOpenApiAreaIn) o;
+    return Objects.equals(this.type, vmOpenApiAreaIn.type) &&
+        Objects.equals(this.areaCodes, vmOpenApiAreaIn.areaCodes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, language);
+    return Objects.hash(type, areaCodes);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiLanguageItem {\n");
+    sb.append("class VmOpenApiAreaIn {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    language: ").append(toIndentedString(language)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    areaCodes: ").append(toIndentedString(areaCodes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
