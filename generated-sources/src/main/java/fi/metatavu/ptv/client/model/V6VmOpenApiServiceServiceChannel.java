@@ -28,6 +28,8 @@ package fi.metatavu.ptv.client.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import fi.metatavu.ptv.client.model.V4VmOpenApiFintoItem;
+import fi.metatavu.ptv.client.model.VmOpenApiItem;
 import fi.metatavu.ptv.client.model.VmOpenApiLocalizedListItem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -36,16 +38,13 @@ import java.util.List;
 
 
 /**
- * OPEN API V2 - View Model of service and channel relation
+ * OPEN API V6 - View Model of service channel
  */
-@ApiModel(description = "OPEN API V2 - View Model of service and channel relation")
+@ApiModel(description = "OPEN API V6 - View Model of service channel")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-16T08:07:52.212+03:00")
-public class V2VmOpenApiServiceAndChannel   {
-  @JsonProperty("serviceId")
-  private String serviceId = null;
-
-  @JsonProperty("serviceChannelId")
-  private String serviceChannelId = null;
+public class V6VmOpenApiServiceServiceChannel   {
+  @JsonProperty("serviceChannel")
+  private VmOpenApiItem serviceChannel = null;
 
   @JsonProperty("serviceChargeType")
   private String serviceChargeType = null;
@@ -53,43 +52,28 @@ public class V2VmOpenApiServiceAndChannel   {
   @JsonProperty("description")
   private List<VmOpenApiLocalizedListItem> description = new ArrayList<VmOpenApiLocalizedListItem>();
 
-  public V2VmOpenApiServiceAndChannel serviceId(String serviceId) {
-    this.serviceId = serviceId;
+  @JsonProperty("digitalAuthorizations")
+  private List<V4VmOpenApiFintoItem> digitalAuthorizations = new ArrayList<V4VmOpenApiFintoItem>();
+
+  public V6VmOpenApiServiceServiceChannel serviceChannel(VmOpenApiItem serviceChannel) {
+    this.serviceChannel = serviceChannel;
     return this;
   }
 
    /**
-   * PTV service channel identifier.
-   * @return serviceId
+   * Service channel identifier and name.
+   * @return serviceChannel
   **/
-  @ApiModelProperty(example = "null", required = true, value = "PTV service channel identifier.")
-  public String getServiceId() {
-    return serviceId;
+  @ApiModelProperty(example = "null", value = "Service channel identifier and name.")
+  public VmOpenApiItem getServiceChannel() {
+    return serviceChannel;
   }
 
-  public void setServiceId(String serviceId) {
-    this.serviceId = serviceId;
+  public void setServiceChannel(VmOpenApiItem serviceChannel) {
+    this.serviceChannel = serviceChannel;
   }
 
-  public V2VmOpenApiServiceAndChannel serviceChannelId(String serviceChannelId) {
-    this.serviceChannelId = serviceChannelId;
-    return this;
-  }
-
-   /**
-   * PTV service channel identifier.
-   * @return serviceChannelId
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "PTV service channel identifier.")
-  public String getServiceChannelId() {
-    return serviceChannelId;
-  }
-
-  public void setServiceChannelId(String serviceChannelId) {
-    this.serviceChannelId = serviceChannelId;
-  }
-
-  public V2VmOpenApiServiceAndChannel serviceChargeType(String serviceChargeType) {
+  public V6VmOpenApiServiceServiceChannel serviceChargeType(String serviceChargeType) {
     this.serviceChargeType = serviceChargeType;
     return this;
   }
@@ -107,12 +91,12 @@ public class V2VmOpenApiServiceAndChannel   {
     this.serviceChargeType = serviceChargeType;
   }
 
-  public V2VmOpenApiServiceAndChannel description(List<VmOpenApiLocalizedListItem> description) {
+  public V6VmOpenApiServiceServiceChannel description(List<VmOpenApiLocalizedListItem> description) {
     this.description = description;
     return this;
   }
 
-  public V2VmOpenApiServiceAndChannel addDescriptionItem(VmOpenApiLocalizedListItem descriptionItem) {
+  public V6VmOpenApiServiceServiceChannel addDescriptionItem(VmOpenApiLocalizedListItem descriptionItem) {
     this.description.add(descriptionItem);
     return this;
   }
@@ -130,6 +114,29 @@ public class V2VmOpenApiServiceAndChannel   {
     this.description = description;
   }
 
+  public V6VmOpenApiServiceServiceChannel digitalAuthorizations(List<V4VmOpenApiFintoItem> digitalAuthorizations) {
+    this.digitalAuthorizations = digitalAuthorizations;
+    return this;
+  }
+
+  public V6VmOpenApiServiceServiceChannel addDigitalAuthorizationsItem(V4VmOpenApiFintoItem digitalAuthorizationsItem) {
+    this.digitalAuthorizations.add(digitalAuthorizationsItem);
+    return this;
+  }
+
+   /**
+   * List of digital authorizations related to the service.
+   * @return digitalAuthorizations
+  **/
+  @ApiModelProperty(example = "null", value = "List of digital authorizations related to the service.")
+  public List<V4VmOpenApiFintoItem> getDigitalAuthorizations() {
+    return digitalAuthorizations;
+  }
+
+  public void setDigitalAuthorizations(List<V4VmOpenApiFintoItem> digitalAuthorizations) {
+    this.digitalAuthorizations = digitalAuthorizations;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -139,27 +146,27 @@ public class V2VmOpenApiServiceAndChannel   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V2VmOpenApiServiceAndChannel v2VmOpenApiServiceAndChannel = (V2VmOpenApiServiceAndChannel) o;
-    return Objects.equals(this.serviceId, v2VmOpenApiServiceAndChannel.serviceId) &&
-        Objects.equals(this.serviceChannelId, v2VmOpenApiServiceAndChannel.serviceChannelId) &&
-        Objects.equals(this.serviceChargeType, v2VmOpenApiServiceAndChannel.serviceChargeType) &&
-        Objects.equals(this.description, v2VmOpenApiServiceAndChannel.description);
+    V6VmOpenApiServiceServiceChannel v6VmOpenApiServiceServiceChannel = (V6VmOpenApiServiceServiceChannel) o;
+    return Objects.equals(this.serviceChannel, v6VmOpenApiServiceServiceChannel.serviceChannel) &&
+        Objects.equals(this.serviceChargeType, v6VmOpenApiServiceServiceChannel.serviceChargeType) &&
+        Objects.equals(this.description, v6VmOpenApiServiceServiceChannel.description) &&
+        Objects.equals(this.digitalAuthorizations, v6VmOpenApiServiceServiceChannel.digitalAuthorizations);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(serviceId, serviceChannelId, serviceChargeType, description);
+    return Objects.hash(serviceChannel, serviceChargeType, description, digitalAuthorizations);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V2VmOpenApiServiceAndChannel {\n");
+    sb.append("class V6VmOpenApiServiceServiceChannel {\n");
     
-    sb.append("    serviceId: ").append(toIndentedString(serviceId)).append("\n");
-    sb.append("    serviceChannelId: ").append(toIndentedString(serviceChannelId)).append("\n");
+    sb.append("    serviceChannel: ").append(toIndentedString(serviceChannel)).append("\n");
     sb.append("    serviceChargeType: ").append(toIndentedString(serviceChargeType)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    digitalAuthorizations: ").append(toIndentedString(digitalAuthorizations)).append("\n");
     sb.append("}");
     return sb.toString();
   }

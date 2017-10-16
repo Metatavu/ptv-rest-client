@@ -28,7 +28,7 @@ package fi.metatavu.ptv.client.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import fi.metatavu.ptv.client.model.V5VmOpenApiServiceServiceChannelInBase;
+import fi.metatavu.ptv.client.model.VmOpenApiServiceServiceChannelBySourceBase;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -36,18 +36,18 @@ import java.util.List;
 
 
 /**
- * OPEN API V5 - View Model of service and channel relation IN (PUT).
+ * OPEN API V6 - View Model of service and channel relation IN by source (PUT).
  */
-@ApiModel(description = "OPEN API V5 - View Model of service and channel relation IN (PUT).")
+@ApiModel(description = "OPEN API V6 - View Model of service and channel relation IN by source (PUT).")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-16T08:07:52.212+03:00")
-public class V5VmOpenApiServiceAndChannelRelationInBase   {
+public class V6VmOpenApiServiceAndChannelRelationBySourceInBase   {
   @JsonProperty("deleteAllChannelRelations")
   private Boolean deleteAllChannelRelations = null;
 
   @JsonProperty("channelRelations")
-  private List<V5VmOpenApiServiceServiceChannelInBase> channelRelations = new ArrayList<V5VmOpenApiServiceServiceChannelInBase>();
+  private List<VmOpenApiServiceServiceChannelBySourceBase> channelRelations = new ArrayList<VmOpenApiServiceServiceChannelBySourceBase>();
 
-  public V5VmOpenApiServiceAndChannelRelationInBase deleteAllChannelRelations(Boolean deleteAllChannelRelations) {
+  public V6VmOpenApiServiceAndChannelRelationBySourceInBase deleteAllChannelRelations(Boolean deleteAllChannelRelations) {
     this.deleteAllChannelRelations = deleteAllChannelRelations;
     return this;
   }
@@ -65,12 +65,12 @@ public class V5VmOpenApiServiceAndChannelRelationInBase   {
     this.deleteAllChannelRelations = deleteAllChannelRelations;
   }
 
-  public V5VmOpenApiServiceAndChannelRelationInBase channelRelations(List<V5VmOpenApiServiceServiceChannelInBase> channelRelations) {
+  public V6VmOpenApiServiceAndChannelRelationBySourceInBase channelRelations(List<VmOpenApiServiceServiceChannelBySourceBase> channelRelations) {
     this.channelRelations = channelRelations;
     return this;
   }
 
-  public V5VmOpenApiServiceAndChannelRelationInBase addChannelRelationsItem(V5VmOpenApiServiceServiceChannelInBase channelRelationsItem) {
+  public V6VmOpenApiServiceAndChannelRelationBySourceInBase addChannelRelationsItem(VmOpenApiServiceServiceChannelBySourceBase channelRelationsItem) {
     this.channelRelations.add(channelRelationsItem);
     return this;
   }
@@ -80,11 +80,11 @@ public class V5VmOpenApiServiceAndChannelRelationInBase   {
    * @return channelRelations
   **/
   @ApiModelProperty(example = "null", value = "Gets or sets the channel relations.")
-  public List<V5VmOpenApiServiceServiceChannelInBase> getChannelRelations() {
+  public List<VmOpenApiServiceServiceChannelBySourceBase> getChannelRelations() {
     return channelRelations;
   }
 
-  public void setChannelRelations(List<V5VmOpenApiServiceServiceChannelInBase> channelRelations) {
+  public void setChannelRelations(List<VmOpenApiServiceServiceChannelBySourceBase> channelRelations) {
     this.channelRelations = channelRelations;
   }
 
@@ -97,9 +97,9 @@ public class V5VmOpenApiServiceAndChannelRelationInBase   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V5VmOpenApiServiceAndChannelRelationInBase v5VmOpenApiServiceAndChannelRelationInBase = (V5VmOpenApiServiceAndChannelRelationInBase) o;
-    return Objects.equals(this.deleteAllChannelRelations, v5VmOpenApiServiceAndChannelRelationInBase.deleteAllChannelRelations) &&
-        Objects.equals(this.channelRelations, v5VmOpenApiServiceAndChannelRelationInBase.channelRelations);
+    V6VmOpenApiServiceAndChannelRelationBySourceInBase v6VmOpenApiServiceAndChannelRelationBySourceInBase = (V6VmOpenApiServiceAndChannelRelationBySourceInBase) o;
+    return Objects.equals(this.deleteAllChannelRelations, v6VmOpenApiServiceAndChannelRelationBySourceInBase.deleteAllChannelRelations) &&
+        Objects.equals(this.channelRelations, v6VmOpenApiServiceAndChannelRelationBySourceInBase.channelRelations);
   }
 
   @Override
@@ -110,7 +110,7 @@ public class V5VmOpenApiServiceAndChannelRelationInBase   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V5VmOpenApiServiceAndChannelRelationInBase {\n");
+    sb.append("class V6VmOpenApiServiceAndChannelRelationBySourceInBase {\n");
     
     sb.append("    deleteAllChannelRelations: ").append(toIndentedString(deleteAllChannelRelations)).append("\n");
     sb.append("    channelRelations: ").append(toIndentedString(channelRelations)).append("\n");

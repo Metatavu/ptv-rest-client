@@ -36,62 +36,44 @@ import java.util.List;
 
 
 /**
- * OPEN API V5 - View Model of service service channel IN.
+ * OPEN API - View Model of Service service channel - with external source
  */
-@ApiModel(description = "OPEN API V5 - View Model of service service channel IN.")
+@ApiModel(description = "OPEN API - View Model of Service service channel - with external source")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-16T08:07:52.212+03:00")
-public class V5VmOpenApiServiceServiceChannelInBase   {
-  @JsonProperty("serviceChannelId")
-  private String serviceChannelId = null;
-
-  @JsonProperty("serviceChargeType")
-  private String serviceChargeType = null;
+public class VmOpenApiServiceServiceChannelBySourceBase   {
+  @JsonProperty("serviceChannelSourceId")
+  private String serviceChannelSourceId = null;
 
   @JsonProperty("description")
   private List<VmOpenApiLocalizedListItem> description = new ArrayList<VmOpenApiLocalizedListItem>();
 
-  public V5VmOpenApiServiceServiceChannelInBase serviceChannelId(String serviceChannelId) {
-    this.serviceChannelId = serviceChannelId;
+  @JsonProperty("serviceChargeType")
+  private String serviceChargeType = null;
+
+  public VmOpenApiServiceServiceChannelBySourceBase serviceChannelSourceId(String serviceChannelSourceId) {
+    this.serviceChannelSourceId = serviceChannelSourceId;
     return this;
   }
 
    /**
-   * PTV service channel identifier.
-   * @return serviceChannelId
+   * The external source id for service channel.
+   * @return serviceChannelSourceId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "PTV service channel identifier.")
-  public String getServiceChannelId() {
-    return serviceChannelId;
+  @ApiModelProperty(example = "null", required = true, value = "The external source id for service channel.")
+  public String getServiceChannelSourceId() {
+    return serviceChannelSourceId;
   }
 
-  public void setServiceChannelId(String serviceChannelId) {
-    this.serviceChannelId = serviceChannelId;
+  public void setServiceChannelSourceId(String serviceChannelSourceId) {
+    this.serviceChannelSourceId = serviceChannelSourceId;
   }
 
-  public V5VmOpenApiServiceServiceChannelInBase serviceChargeType(String serviceChargeType) {
-    this.serviceChargeType = serviceChargeType;
-    return this;
-  }
-
-   /**
-   * Service charge type. Possible values are: Charged, Free or Other
-   * @return serviceChargeType
-  **/
-  @ApiModelProperty(example = "null", value = "Service charge type. Possible values are: Charged, Free or Other")
-  public String getServiceChargeType() {
-    return serviceChargeType;
-  }
-
-  public void setServiceChargeType(String serviceChargeType) {
-    this.serviceChargeType = serviceChargeType;
-  }
-
-  public V5VmOpenApiServiceServiceChannelInBase description(List<VmOpenApiLocalizedListItem> description) {
+  public VmOpenApiServiceServiceChannelBySourceBase description(List<VmOpenApiLocalizedListItem> description) {
     this.description = description;
     return this;
   }
 
-  public V5VmOpenApiServiceServiceChannelInBase addDescriptionItem(VmOpenApiLocalizedListItem descriptionItem) {
+  public VmOpenApiServiceServiceChannelBySourceBase addDescriptionItem(VmOpenApiLocalizedListItem descriptionItem) {
     this.description.add(descriptionItem);
     return this;
   }
@@ -109,6 +91,24 @@ public class V5VmOpenApiServiceServiceChannelInBase   {
     this.description = description;
   }
 
+  public VmOpenApiServiceServiceChannelBySourceBase serviceChargeType(String serviceChargeType) {
+    this.serviceChargeType = serviceChargeType;
+    return this;
+  }
+
+   /**
+   * Service charge type. Possible values are: Charged, Free or Other
+   * @return serviceChargeType
+  **/
+  @ApiModelProperty(example = "null", value = "Service charge type. Possible values are: Charged, Free or Other")
+  public String getServiceChargeType() {
+    return serviceChargeType;
+  }
+
+  public void setServiceChargeType(String serviceChargeType) {
+    this.serviceChargeType = serviceChargeType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -118,25 +118,25 @@ public class V5VmOpenApiServiceServiceChannelInBase   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V5VmOpenApiServiceServiceChannelInBase v5VmOpenApiServiceServiceChannelInBase = (V5VmOpenApiServiceServiceChannelInBase) o;
-    return Objects.equals(this.serviceChannelId, v5VmOpenApiServiceServiceChannelInBase.serviceChannelId) &&
-        Objects.equals(this.serviceChargeType, v5VmOpenApiServiceServiceChannelInBase.serviceChargeType) &&
-        Objects.equals(this.description, v5VmOpenApiServiceServiceChannelInBase.description);
+    VmOpenApiServiceServiceChannelBySourceBase vmOpenApiServiceServiceChannelBySourceBase = (VmOpenApiServiceServiceChannelBySourceBase) o;
+    return Objects.equals(this.serviceChannelSourceId, vmOpenApiServiceServiceChannelBySourceBase.serviceChannelSourceId) &&
+        Objects.equals(this.description, vmOpenApiServiceServiceChannelBySourceBase.description) &&
+        Objects.equals(this.serviceChargeType, vmOpenApiServiceServiceChannelBySourceBase.serviceChargeType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(serviceChannelId, serviceChargeType, description);
+    return Objects.hash(serviceChannelSourceId, description, serviceChargeType);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V5VmOpenApiServiceServiceChannelInBase {\n");
+    sb.append("class VmOpenApiServiceServiceChannelBySourceBase {\n");
     
-    sb.append("    serviceChannelId: ").append(toIndentedString(serviceChannelId)).append("\n");
-    sb.append("    serviceChargeType: ").append(toIndentedString(serviceChargeType)).append("\n");
+    sb.append("    serviceChannelSourceId: ").append(toIndentedString(serviceChannelSourceId)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    serviceChargeType: ").append(toIndentedString(serviceChargeType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

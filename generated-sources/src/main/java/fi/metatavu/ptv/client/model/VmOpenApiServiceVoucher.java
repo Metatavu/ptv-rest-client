@@ -33,51 +33,54 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * OPEN API - View Model of web page with order number
+ * OPEN API - View Model of service voucher
  */
-@ApiModel(description = "OPEN API - View Model of web page with order number")
+@ApiModel(description = "OPEN API - View Model of service voucher")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-16T08:07:52.212+03:00")
-public class VmOpenApiWebPageWithOrderNumber   {
+public class VmOpenApiServiceVoucher   {
   @JsonProperty("orderNumber")
-  private String orderNumber = null;
+  private Integer orderNumber = null;
 
   @JsonProperty("value")
   private String value = null;
 
-  @JsonProperty("url")
-  private String url = null;
-
   @JsonProperty("language")
   private String language = null;
 
-  public VmOpenApiWebPageWithOrderNumber orderNumber(String orderNumber) {
+  @JsonProperty("url")
+  private String url = null;
+
+  @JsonProperty("additionalInformation")
+  private String additionalInformation = null;
+
+  public VmOpenApiServiceVoucher orderNumber(Integer orderNumber) {
     this.orderNumber = orderNumber;
     return this;
   }
 
    /**
-   * The order of web pages.
+   * The order of service voucher.
    * @return orderNumber
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The order of web pages.")
-  public String getOrderNumber() {
+  @ApiModelProperty(example = "null", required = true, value = "The order of service voucher.")
+  public Integer getOrderNumber() {
     return orderNumber;
   }
 
-  public void setOrderNumber(String orderNumber) {
+  public void setOrderNumber(Integer orderNumber) {
     this.orderNumber = orderNumber;
   }
 
-  public VmOpenApiWebPageWithOrderNumber value(String value) {
+  public VmOpenApiServiceVoucher value(String value) {
     this.value = value;
     return this;
   }
 
    /**
-   * Name of the web page. (Max.Length: 110).
+   * Name of the service voucher.
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "Name of the web page. (Max.Length: 110).")
+  @ApiModelProperty(example = "null", value = "Name of the service voucher.")
   public String getValue() {
     return value;
   }
@@ -86,25 +89,7 @@ public class VmOpenApiWebPageWithOrderNumber   {
     this.value = value;
   }
 
-  public VmOpenApiWebPageWithOrderNumber url(String url) {
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * Web page url. (Max.Length: 500).
-   * @return url
-  **/
-  @ApiModelProperty(example = "null", required = true, value = "Web page url. (Max.Length: 500).")
-  public String getUrl() {
-    return url;
-  }
-
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-  public VmOpenApiWebPageWithOrderNumber language(String language) {
+  public VmOpenApiServiceVoucher language(String language) {
     this.language = language;
     return this;
   }
@@ -122,6 +107,42 @@ public class VmOpenApiWebPageWithOrderNumber   {
     this.language = language;
   }
 
+  public VmOpenApiServiceVoucher url(String url) {
+    this.url = url;
+    return this;
+  }
+
+   /**
+   * Web page url. (Max.Length: 500).
+   * @return url
+  **/
+  @ApiModelProperty(example = "null", value = "Web page url. (Max.Length: 500).")
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  public VmOpenApiServiceVoucher additionalInformation(String additionalInformation) {
+    this.additionalInformation = additionalInformation;
+    return this;
+  }
+
+   /**
+   * Service voucher additional information (Max.Length: 150).
+   * @return additionalInformation
+  **/
+  @ApiModelProperty(example = "null", value = "Service voucher additional information (Max.Length: 150).")
+  public String getAdditionalInformation() {
+    return additionalInformation;
+  }
+
+  public void setAdditionalInformation(String additionalInformation) {
+    this.additionalInformation = additionalInformation;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -131,27 +152,29 @@ public class VmOpenApiWebPageWithOrderNumber   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VmOpenApiWebPageWithOrderNumber vmOpenApiWebPageWithOrderNumber = (VmOpenApiWebPageWithOrderNumber) o;
-    return Objects.equals(this.orderNumber, vmOpenApiWebPageWithOrderNumber.orderNumber) &&
-        Objects.equals(this.value, vmOpenApiWebPageWithOrderNumber.value) &&
-        Objects.equals(this.url, vmOpenApiWebPageWithOrderNumber.url) &&
-        Objects.equals(this.language, vmOpenApiWebPageWithOrderNumber.language);
+    VmOpenApiServiceVoucher vmOpenApiServiceVoucher = (VmOpenApiServiceVoucher) o;
+    return Objects.equals(this.orderNumber, vmOpenApiServiceVoucher.orderNumber) &&
+        Objects.equals(this.value, vmOpenApiServiceVoucher.value) &&
+        Objects.equals(this.language, vmOpenApiServiceVoucher.language) &&
+        Objects.equals(this.url, vmOpenApiServiceVoucher.url) &&
+        Objects.equals(this.additionalInformation, vmOpenApiServiceVoucher.additionalInformation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderNumber, value, url, language);
+    return Objects.hash(orderNumber, value, language, url, additionalInformation);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VmOpenApiWebPageWithOrderNumber {\n");
+    sb.append("class VmOpenApiServiceVoucher {\n");
     
     sb.append("    orderNumber: ").append(toIndentedString(orderNumber)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    additionalInformation: ").append(toIndentedString(additionalInformation)).append("\n");
     sb.append("}");
     return sb.toString();
   }
