@@ -27,7 +27,7 @@ import java.util.List;
  * OPEN API - View Model of municipality
  */
 @ApiModel(description = "OPEN API - View Model of municipality")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:05:02.286+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:06:52.024+03:00")
 public class VmOpenApiMunicipality {
   @JsonProperty("code")
   private String code = null;

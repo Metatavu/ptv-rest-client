@@ -28,7 +28,7 @@ import java.util.List;
  * OPEN API V4 - View Model of law
  */
 @ApiModel(description = "OPEN API V4 - View Model of law")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:05:02.286+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:06:52.024+03:00")
 public class V4VmOpenApiLaw {
   @JsonProperty("names")
   private List<VmOpenApiLanguageItem> names = null;

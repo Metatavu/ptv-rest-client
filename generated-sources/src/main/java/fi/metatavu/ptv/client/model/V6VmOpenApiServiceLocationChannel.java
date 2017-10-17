@@ -34,7 +34,7 @@ import java.util.UUID;
  * OPEN API V6 - View Model of service location channel
  */
 @ApiModel(description = "OPEN API V6 - View Model of service location channel")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:05:02.286+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:06:52.024+03:00")
 public class V6VmOpenApiServiceLocationChannel {
   @JsonProperty("id")
   private UUID id = null;

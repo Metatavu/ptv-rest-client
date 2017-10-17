@@ -27,7 +27,7 @@ import java.util.List;
  * OPEN API V3 - View Model of guid page
  */
 @ApiModel(description = "OPEN API V3 - View Model of guid page")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:05:02.286+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:06:52.024+03:00")
 public class V3VmOpenApiGuidPage {
   @JsonProperty("pageNumber")
   private Integer pageNumber = null;
