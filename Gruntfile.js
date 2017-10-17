@@ -60,7 +60,7 @@ module.exports = function(grunt) {
           '--template-dir templates ' +
           '--library jersey2 ' +
           '--additional-properties dateLibrary=special ' +
-          '--type-mappings DateTime="@com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime" ' +          
+          '--type-mappings DateTime="@com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class) @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime" ' +
           '-o generated-sources/'
       },
       'install-ptv-java-client': {
