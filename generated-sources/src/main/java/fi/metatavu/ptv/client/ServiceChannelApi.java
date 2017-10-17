@@ -38,7 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:06:52.024+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
 public class ServiceChannelApi {
 
   public ServiceChannelApi(ApiClient client) {
@@ -117,7 +117,7 @@ public class ServiceChannelApi {
    * @param page The page to be fetched. (optional)
    * @param archived Get archived items by setting archived to true. (optional)
    */
-  public ApiResponse<V3VmOpenApiGuidPage> apiV6ServiceChannelGet(@com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime date, Integer page, Boolean archived) {
+  public ApiResponse<V3VmOpenApiGuidPage> apiV6ServiceChannelGet(@com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class) @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime date, Integer page, Boolean archived) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)
@@ -139,7 +139,7 @@ if (archived != null)
    * @param organizationId Guid (required)
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (UTC). (optional)
    */
-  public ApiResponse<List<V6VmOpenApiServiceChannels>> apiV6ServiceChannelOrganizationByOrganizationIdGet(String organizationId, @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime date) {
+  public ApiResponse<List<V6VmOpenApiServiceChannels>> apiV6ServiceChannelOrganizationByOrganizationIdGet(String organizationId, @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class) @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime date) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)
@@ -159,7 +159,7 @@ if (archived != null)
    * @param type Service channel type (required)
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (UTC). (optional)
    */
-  public ApiResponse<List<V6VmOpenApiServiceChannels>> apiV6ServiceChannelOrganizationByOrganizationIdTypeByTypeGet(String organizationId, String type, @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime date) {
+  public ApiResponse<List<V6VmOpenApiServiceChannels>> apiV6ServiceChannelOrganizationByOrganizationIdTypeByTypeGet(String organizationId, String type, @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class) @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime date) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)
@@ -326,7 +326,7 @@ if (archived != null)
    * @param type Service channel type (required)
    * @param date Supports only format \&quot;yyyy-MM-ddTHH:mm:ss\&quot; (UTC). (optional)
    */
-  public ApiResponse<List<V6VmOpenApiServiceChannels>> apiV6ServiceChannelTypeByTypeGet(String type, @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime date) {
+  public ApiResponse<List<V6VmOpenApiServiceChannels>> apiV6ServiceChannelTypeByTypeGet(String type, @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class) @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime date) {
     Map<String, Object> queryParams = new HashMap<>();
     Map<String, Object> formParams = new HashMap<>();
     if (date != null)

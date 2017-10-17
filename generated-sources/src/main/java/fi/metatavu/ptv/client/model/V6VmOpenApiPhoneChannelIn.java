@@ -31,7 +31,7 @@ import java.util.List;
  * OPEN API V6 - View Model of phone channel for IN api
  */
 @ApiModel(description = "OPEN API V6 - View Model of phone channel for IN api")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:06:52.024+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
 public class V6VmOpenApiPhoneChannelIn {
   @JsonProperty("sourceId")
   private String sourceId = null;

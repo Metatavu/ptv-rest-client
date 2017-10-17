@@ -35,7 +35,7 @@ import java.util.UUID;
  * OPEN API V6 - View Model of printable form channel
  */
 @ApiModel(description = "OPEN API V6 - View Model of printable form channel")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T09:06:52.024+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
 public class V6VmOpenApiPrintableFormChannel {
   @JsonProperty("id")
   private UUID id = null;
@@ -92,7 +92,7 @@ public class V6VmOpenApiPrintableFormChannel {
   private String publishingStatus = null;
 
   @JsonProperty("modified")
-  private @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime modified = null;
+  private @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class) @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime modified = null;
 
   public V6VmOpenApiPrintableFormChannel id(UUID id) {
     this.id = id;
@@ -514,7 +514,7 @@ public class V6VmOpenApiPrintableFormChannel {
     this.publishingStatus = publishingStatus;
   }
 
-  public V6VmOpenApiPrintableFormChannel modified(@com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime modified) {
+  public V6VmOpenApiPrintableFormChannel modified(@com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class) @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime modified) {
     this.modified = modified;
     return this;
   }
@@ -524,11 +524,11 @@ public class V6VmOpenApiPrintableFormChannel {
    * @return modified
   **/
   @ApiModelProperty(value = "Date when item was modified/created (UTC).")
-  public @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime getModified() {
+  public @com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class) @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime getModified() {
     return modified;
   }
 
-  public void setModified(@com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime modified) {
+  public void setModified(@com.fasterxml.jackson.databind.annotation.JsonSerialize(using = com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerializer.class) @com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime modified) {
     this.modified = modified;
   }
 
