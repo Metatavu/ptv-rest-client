@@ -3,6 +3,7 @@
 const fs = require('fs');
 const util = require('util');
 
+const SWAGGER_VERSION = "2.2.3";
 const PTV_VERSION = 'v6';
 const SWAGGER_URL = util.format('https://api.palvelutietovaranto.trn.suomi.fi/swagger/%s/swagger.json', PTV_VERSION);
 
@@ -41,7 +42,7 @@ module.exports = function(grunt) {
     },
     'curl': {
       'swagger-codegen':  {
-        src: 'http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.1/swagger-codegen-cli-2.2.1.jar',
+        src: `http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/${SWAGGER_VERSION}/swagger-codegen-cli-${SWAGGER_VERSION}.jar`,
         dest: 'swagger-codegen-cli.jar'
       }
     },
@@ -58,7 +59,8 @@ module.exports = function(grunt) {
           '--artifact-version `cat generated-sources/pom.xml.before|grep version -m 1|sed -e \'s/.*<version>//\'|sed -e \'s/<.*//\'` ' +
           '--template-dir templates ' +
           '--library jersey2 ' +
-          '--additional-properties dateLibrary=java8 ' +
+          '--additional-properties dateLibrary=special ' +
+          '--type-mappings DateTime="@com.fasterxml.jackson.databind.annotation.JsonDeserialize(using =  fi.metatavu.ptv.client.OffsetDateTimeDeserializer.class) java.time.OffsetDateTime" ' +          
           '-o generated-sources/'
       },
       'install-ptv-java-client': {
@@ -81,6 +83,6 @@ module.exports = function(grunt) {
   });
   
   grunt.registerTask('download-dependencies', 'if-missing:curl:swagger-codegen');
-  grunt.registerTask('default', ['download-dependencies', 'clean:sources', 'shell:generate-ptv-java-client', 'clean:clean-ptv-java-client-cruft', 'copy:copy-ptv-rest-client-extras', 'shell:install-ptv-java-client', 'shell:release-ptv-java-client' ]);
+    grunt.registerTask('default', ['download-dependencies', 'clean:sources', 'shell:generate-ptv-java-client', 'clean:clean-ptv-java-client-cruft', 'copy:copy-ptv-rest-client-extras', 'shell:install-ptv-java-client', 'shell:release-ptv-java-client' ]);
   
 };
