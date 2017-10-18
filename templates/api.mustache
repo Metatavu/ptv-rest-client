@@ -42,7 +42,7 @@ public class {{classname}} {
       .replaceAll("\\{" + "{{baseName}}" + "\\}", {{paramName}}){{/pathParams}};
       
     ResultType<{{{returnType}}}> resultType = new ResultType<{{{returnType}}}>() {};
-    return client.do{{httpMethod}}Request(path, resultType, queryParams, formParams);
+    return client.do{{httpMethod}}Request(path, resultType, queryParams, formParams{{#bodyParam}},{{paramName}}{{/bodyParam}});
   }
   {{/operation}}
   
