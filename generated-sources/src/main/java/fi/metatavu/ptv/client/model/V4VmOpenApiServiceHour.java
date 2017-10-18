@@ -28,7 +28,7 @@ import java.util.List;
  * OPEN API V4 - View Model of service hour
  */
 @ApiModel(description = "OPEN API V4 - View Model of service hour")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
 public class V4VmOpenApiServiceHour {
   @JsonProperty("serviceHourType")
   private String serviceHourType = null;

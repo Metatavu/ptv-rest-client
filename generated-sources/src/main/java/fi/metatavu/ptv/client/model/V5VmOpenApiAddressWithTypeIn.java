@@ -27,7 +27,7 @@ import java.util.List;
  * OPEN API V5 - View Model of address with type
  */
 @ApiModel(description = "OPEN API V5 - View Model of address with type")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
 public class V5VmOpenApiAddressWithTypeIn {
   @JsonProperty("type")
   private String type = null;

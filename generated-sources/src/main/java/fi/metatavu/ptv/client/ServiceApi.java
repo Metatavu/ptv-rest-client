@@ -29,7 +29,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
 public class ServiceApi {
 
   public ServiceApi(ApiClient client) {
@@ -67,7 +67,7 @@ public class ServiceApi {
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiService> resultType = new ResultType<V6VmOpenApiService>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Gets all the published services within PTV as a list of service ids and names.  Services created after certain date can be fetched by adding date as query string parameter.  Archived items can be fetched by setting parameter archived to true.
@@ -105,7 +105,7 @@ if (archived != null)
     String path = "/api/v6/Service";
       
     ResultType<V6VmOpenApiService> resultType = new ResultType<V6VmOpenApiService>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates relationships between a service and service channels with extra data.   Request includes service channels for one certain service so service channels missing from request are removed.  To delete all service channel relations for a service set &#39;deleteAllChannelRelations&#39; property to true.
@@ -122,7 +122,7 @@ if (archived != null)
       .replaceAll("\\{" + "serviceId" + "\\}", serviceId);
       
     ResultType<V6VmOpenApiService> resultType = new ResultType<V6VmOpenApiService>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates relationships between a service and service channels with extra data. External source ids are used.  Request includes service channels for one certain service so service channels missing from request are removed.  To delete all service channel relations for a service set &#39;deleteAllChannelRelations&#39; property to true.
@@ -139,7 +139,7 @@ if (archived != null)
       .replaceAll("\\{" + "serviceSourceId" + "\\}", serviceSourceId);
       
     ResultType<V6VmOpenApiService> resultType = new ResultType<V6VmOpenApiService>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Creates a relationships between services and service channels with extra data. External source ids are used.
@@ -154,7 +154,7 @@ if (archived != null)
     String path = "/api/v6/Service/ServiceAndChannelBySource";
       
     ResultType<List<String>> resultType = new ResultType<List<String>>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Creates a relationships between services and service channels with extra data.
@@ -169,7 +169,7 @@ if (archived != null)
     String path = "/api/v6/Service/ServiceAndChannel";
       
     ResultType<List<String>> resultType = new ResultType<List<String>>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Gets a list of published services for defined service channel.  Services joined to service channel after certain date can be fetched by adding date as query string parameter.
@@ -227,7 +227,7 @@ if (page != null)
       .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
       
     ResultType<V6VmOpenApiService> resultType = new ResultType<V6VmOpenApiService>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   
   private ApiClient client;

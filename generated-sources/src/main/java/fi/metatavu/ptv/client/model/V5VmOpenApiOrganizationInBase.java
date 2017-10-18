@@ -33,7 +33,7 @@ import java.util.List;
  * OPEN API V5 - View Model of organization for IN api - base
  */
 @ApiModel(description = "OPEN API V5 - View Model of organization for IN api - base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
 public class V5VmOpenApiOrganizationInBase {
   @JsonProperty("sourceId")
   private String sourceId = null;

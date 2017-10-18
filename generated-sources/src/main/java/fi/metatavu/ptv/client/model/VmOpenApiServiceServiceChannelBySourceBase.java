@@ -27,7 +27,7 @@ import java.util.List;
  * OPEN API - View Model of Service service channel - with external source
  */
 @ApiModel(description = "OPEN API - View Model of Service service channel - with external source")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
 public class VmOpenApiServiceServiceChannelBySourceBase {
   @JsonProperty("serviceChannelSourceId")
   private String serviceChannelSourceId = null;

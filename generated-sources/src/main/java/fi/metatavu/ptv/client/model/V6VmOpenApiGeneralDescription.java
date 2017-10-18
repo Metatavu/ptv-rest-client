@@ -31,7 +31,7 @@ import java.util.UUID;
  * OPEN API V6 - View Model of general description
  */
 @ApiModel(description = "OPEN API V6 - View Model of general description")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
 public class V6VmOpenApiGeneralDescription {
   @JsonProperty("id")
   private UUID id = null;

@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
 public class OrganizationApi {
 
   public OrganizationApi(ApiClient client) {
@@ -79,7 +79,7 @@ public class OrganizationApi {
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiOrganization> resultType = new ResultType<V6VmOpenApiOrganization>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Gets all the published organizations within PTV as a list of organization ids and names.  Organizations created/modified after certain date can be fetched by adding date as query string parameter.  Archived items can be fetched by setting parameter archived to true.
@@ -133,7 +133,7 @@ if (archived != null)
     String path = "/api/v6/Organization";
       
     ResultType<V6VmOpenApiOrganization> resultType = new ResultType<V6VmOpenApiOrganization>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates organization.
@@ -150,7 +150,7 @@ if (archived != null)
       .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
       
     ResultType<V6VmOpenApiOrganization> resultType = new ResultType<V6VmOpenApiOrganization>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   
   private ApiClient client;

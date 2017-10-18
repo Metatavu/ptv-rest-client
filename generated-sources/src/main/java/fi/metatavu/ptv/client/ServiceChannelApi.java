@@ -38,7 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-17T11:41:22.679+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
 public class ServiceChannelApi {
 
   public ServiceChannelApi(ApiClient client) {
@@ -76,7 +76,7 @@ public class ServiceChannelApi {
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiElectronicChannel> resultType = new ResultType<V6VmOpenApiElectronicChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Creates a new electronic channel with the data provided as input.
@@ -91,7 +91,7 @@ public class ServiceChannelApi {
     String path = "/api/v6/ServiceChannel/EChannel";
       
     ResultType<V6VmOpenApiElectronicChannel> resultType = new ResultType<V6VmOpenApiElectronicChannel>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates a new electronic channel with the data provided as input.
@@ -108,7 +108,7 @@ public class ServiceChannelApi {
       .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
       
     ResultType<V6VmOpenApiElectronicChannel> resultType = new ResultType<V6VmOpenApiElectronicChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Gets all published service channels within PTV as a list of service channel ids and names.  Service channels created/modified after certain date can be fetched by adding date as query string parameter.  Archived items can be fetched by setting parameter archived to true.
@@ -188,7 +188,7 @@ if (archived != null)
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiPhoneChannel> resultType = new ResultType<V6VmOpenApiPhoneChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Creates a new phone channel with the data provided as input.
@@ -203,7 +203,7 @@ if (archived != null)
     String path = "/api/v6/ServiceChannel/Phone";
       
     ResultType<V6VmOpenApiPhoneChannel> resultType = new ResultType<V6VmOpenApiPhoneChannel>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates phone channel with the data provided as input.
@@ -220,7 +220,7 @@ if (archived != null)
       .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
       
     ResultType<V6VmOpenApiPhoneChannel> resultType = new ResultType<V6VmOpenApiPhoneChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates printable form channel with the data provided as input.
@@ -237,7 +237,7 @@ if (archived != null)
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiPrintableFormChannel> resultType = new ResultType<V6VmOpenApiPrintableFormChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Creates a new printable form channel with the data provided as input.
@@ -252,7 +252,7 @@ if (archived != null)
     String path = "/api/v6/ServiceChannel/PrintableForm";
       
     ResultType<V6VmOpenApiPrintableFormChannel> resultType = new ResultType<V6VmOpenApiPrintableFormChannel>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates printable form channel with the data provided as input.
@@ -269,7 +269,7 @@ if (archived != null)
       .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
       
     ResultType<V6VmOpenApiPrintableFormChannel> resultType = new ResultType<V6VmOpenApiPrintableFormChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates a new service location channel with the data provided as input.
@@ -286,7 +286,7 @@ if (archived != null)
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiServiceLocationChannel> resultType = new ResultType<V6VmOpenApiServiceLocationChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Creates a new service location channel with the data provided as input.
@@ -301,7 +301,7 @@ if (archived != null)
     String path = "/api/v6/ServiceChannel/ServiceLocation";
       
     ResultType<V6VmOpenApiServiceLocationChannel> resultType = new ResultType<V6VmOpenApiServiceLocationChannel>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates a new service location channel with the data provided as input.
@@ -318,7 +318,7 @@ if (archived != null)
       .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
       
     ResultType<V6VmOpenApiServiceLocationChannel> resultType = new ResultType<V6VmOpenApiServiceLocationChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Gets a list of certain type of published service channels.  Service channels created/modified after certain date can be fetched by adding date as query string parameter.
@@ -354,7 +354,7 @@ if (archived != null)
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiWebPageChannel> resultType = new ResultType<V6VmOpenApiWebPageChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Creates a new web page channel with the data provided as input.
@@ -369,7 +369,7 @@ if (archived != null)
     String path = "/api/v6/ServiceChannel/WebPage";
       
     ResultType<V6VmOpenApiWebPageChannel> resultType = new ResultType<V6VmOpenApiWebPageChannel>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams);
+    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates webpage channel with the data provided as input.
@@ -386,7 +386,7 @@ if (archived != null)
       .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
       
     ResultType<V6VmOpenApiWebPageChannel> resultType = new ResultType<V6VmOpenApiWebPageChannel>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams);
+    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
   }
   
   private ApiClient client;
