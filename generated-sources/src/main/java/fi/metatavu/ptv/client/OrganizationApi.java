@@ -25,11 +25,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-19T16:10:06.613+03:00")
 public class OrganizationApi {
+  
+  private ApiClient client;
+  private String accessToken;
 
-  public OrganizationApi(ApiClient client) {
+  public OrganizationApi(ApiClient client, String accessToken) {
     this.client = client;
+    this.accessToken = accessToken;
   }
   
   /**
@@ -46,7 +50,7 @@ public class OrganizationApi {
       .replaceAll("\\{" + "code" + "\\}", code);
       
     ResultType<List<V6VmOpenApiOrganization>> resultType = new ResultType<List<V6VmOpenApiOrganization>>() {};
-    return client.doGETRequest(path, resultType, queryParams, formParams);
+    return client.doGETRequest(this.accessToken, path, resultType, queryParams, formParams);
   }
   /**
    * Fetches all the information related to a single organization.
@@ -62,7 +66,7 @@ public class OrganizationApi {
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiOrganization> resultType = new ResultType<V6VmOpenApiOrganization>() {};
-    return client.doGETRequest(path, resultType, queryParams, formParams);
+    return client.doGETRequest(this.accessToken, path, resultType, queryParams, formParams);
   }
   /**
    * Updates organization.
@@ -79,7 +83,7 @@ public class OrganizationApi {
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiOrganization> resultType = new ResultType<V6VmOpenApiOrganization>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
+    return client.doPUTRequest(this.accessToken, path, resultType, queryParams, formParams,request);
   }
   /**
    * Gets all the published organizations within PTV as a list of organization ids and names.  Organizations created/modified after certain date can be fetched by adding date as query string parameter.  Archived items can be fetched by setting parameter archived to true.
@@ -102,7 +106,7 @@ if (archived != null)
     String path = "/api/v6/Organization";
       
     ResultType<V3VmOpenApiGuidPage> resultType = new ResultType<V3VmOpenApiGuidPage>() {};
-    return client.doGETRequest(path, resultType, queryParams, formParams);
+    return client.doGETRequest(this.accessToken, path, resultType, queryParams, formParams);
   }
   /**
    * Fetches all the information related to a single organization with defined Oid.
@@ -118,7 +122,7 @@ if (archived != null)
       .replaceAll("\\{" + "oid" + "\\}", oid);
       
     ResultType<V6VmOpenApiOrganization> resultType = new ResultType<V6VmOpenApiOrganization>() {};
-    return client.doGETRequest(path, resultType, queryParams, formParams);
+    return client.doGETRequest(this.accessToken, path, resultType, queryParams, formParams);
   }
   /**
    * Creates a new organization with the data provided as input.
@@ -133,7 +137,7 @@ if (archived != null)
     String path = "/api/v6/Organization";
       
     ResultType<V6VmOpenApiOrganization> resultType = new ResultType<V6VmOpenApiOrganization>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
+    return client.doPOSTRequest(this.accessToken, path, resultType, queryParams, formParams,request);
   }
   /**
    * Updates organization.
@@ -150,8 +154,6 @@ if (archived != null)
       .replaceAll("\\{" + "sourceId" + "\\}", sourceId);
       
     ResultType<V6VmOpenApiOrganization> resultType = new ResultType<V6VmOpenApiOrganization>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
+    return client.doPUTRequest(this.accessToken, path, resultType, queryParams, formParams,request);
   }
-  
-  private ApiClient client;
 }

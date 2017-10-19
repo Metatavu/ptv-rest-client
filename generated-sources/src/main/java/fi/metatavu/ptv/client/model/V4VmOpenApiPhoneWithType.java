@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
  * OPEN API V4 - View Model of phone with type
  */
 @ApiModel(description = "OPEN API V4 - View Model of phone with type")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-19T16:10:06.613+03:00")
 public class V4VmOpenApiPhoneWithType {
   @JsonProperty("type")
   private String type = null;

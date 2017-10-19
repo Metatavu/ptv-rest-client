@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
  * OPEN API - View Model of phone. Version 4
  */
 @ApiModel(description = "OPEN API - View Model of phone. Version 4")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-19T16:10:06.613+03:00")
 public class V4VmOpenApiPhoneSimple {
   @JsonProperty("prefixNumber")
   private String prefixNumber = null;

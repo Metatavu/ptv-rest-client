@@ -29,7 +29,7 @@ import java.util.List;
  * OPEN API V6 - View Model of general description for IN api base (PUT)
  */
 @ApiModel(description = "OPEN API V6 - View Model of general description for IN api base (PUT)")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-19T16:10:06.613+03:00")
 public class V6VmOpenApiGeneralDescriptionInBase {
   @JsonProperty("names")
   private List<VmOpenApiLocalizedListItem> names = null;

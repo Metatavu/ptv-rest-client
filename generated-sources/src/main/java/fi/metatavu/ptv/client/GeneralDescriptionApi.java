@@ -25,11 +25,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-18T13:10:37.869+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-19T16:10:06.613+03:00")
 public class GeneralDescriptionApi {
+  
+  private ApiClient client;
+  private String accessToken;
 
-  public GeneralDescriptionApi(ApiClient client) {
+  public GeneralDescriptionApi(ApiClient client, String accessToken) {
     this.client = client;
+    this.accessToken = accessToken;
   }
   
   /**
@@ -46,7 +50,7 @@ public class GeneralDescriptionApi {
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiGeneralDescription> resultType = new ResultType<V6VmOpenApiGeneralDescription>() {};
-    return client.doGETRequest(path, resultType, queryParams, formParams);
+    return client.doGETRequest(this.accessToken, path, resultType, queryParams, formParams);
   }
   /**
    * Updates the defined general description with the data provided as input.
@@ -63,7 +67,7 @@ public class GeneralDescriptionApi {
       .replaceAll("\\{" + "id" + "\\}", id);
       
     ResultType<V6VmOpenApiGeneralDescription> resultType = new ResultType<V6VmOpenApiGeneralDescription>() {};
-    return client.doPUTRequest(path, resultType, queryParams, formParams,request);
+    return client.doPUTRequest(this.accessToken, path, resultType, queryParams, formParams,request);
   }
   /**
    * Gets all the statutory service general descriptions within PTV as a list of ids and names.  Descriptions created/modified after certain date can be fetched by adding date as query string parameter.
@@ -83,7 +87,7 @@ if (page != null)
     String path = "/api/v6/GeneralDescription";
       
     ResultType<V3VmOpenApiGuidPage> resultType = new ResultType<V3VmOpenApiGuidPage>() {};
-    return client.doGETRequest(path, resultType, queryParams, formParams);
+    return client.doGETRequest(this.accessToken, path, resultType, queryParams, formParams);
   }
   /**
    * Creates a new general description with the data provided as input.
@@ -98,8 +102,6 @@ if (page != null)
     String path = "/api/v6/GeneralDescription";
       
     ResultType<V6VmOpenApiGeneralDescription> resultType = new ResultType<V6VmOpenApiGeneralDescription>() {};
-    return client.doPOSTRequest(path, resultType, queryParams, formParams,request);
+    return client.doPOSTRequest(this.accessToken, path, resultType, queryParams, formParams,request);
   }
-  
-  private ApiClient client;
 }
