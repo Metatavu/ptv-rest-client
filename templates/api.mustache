@@ -16,9 +16,13 @@ import java.util.Map;
 {{>generatedAnnotation}}
 {{#operations}}
 public class {{classname}} {
+  
+  private ApiClient client;
+  private String accessToken;
 
-  public {{classname}}(ApiClient client) {
+  public {{classname}}(ApiClient client, String accessToken) {
     this.client = client;
+    this.accessToken = accessToken;
   }
   
   {{#operation}}
@@ -42,10 +46,8 @@ public class {{classname}} {
       .replaceAll("\\{" + "{{baseName}}" + "\\}", {{paramName}}){{/pathParams}};
       
     ResultType<{{{returnType}}}> resultType = new ResultType<{{{returnType}}}>() {};
-    return client.do{{httpMethod}}Request(path, resultType, queryParams, formParams{{#bodyParam}},{{paramName}}{{/bodyParam}});
+    return client.do{{httpMethod}}Request(this.accessToken, path, resultType, queryParams, formParams{{#bodyParam}},{{paramName}}{{/bodyParam}});
   }
   {{/operation}}
-  
-  private ApiClient client;
 }
 {{/operations}}
