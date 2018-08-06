@@ -4,7 +4,7 @@ const fs = require('fs');
 const util = require('util');
 
 const SWAGGER_VERSION = "2.2.3";
-const PTV_VERSION = 'v7';
+const PTV_VERSION = 'v8';
 const SWAGGER_URL = util.format('https://api.palvelutietovaranto.trn.suomi.fi/swagger/%s/swagger.json', PTV_VERSION);
 
 module.exports = function(grunt) {
