@@ -37,7 +37,7 @@ import java.util.UUID;
  * OPEN API V9 - View Model of service
  */
 @ApiModel(description = "OPEN API V9 - View Model of service")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:15:03.681+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:38:50.296+03:00")
 public class V9VmOpenApiService {
   @JsonProperty("id")
   private UUID id = null;

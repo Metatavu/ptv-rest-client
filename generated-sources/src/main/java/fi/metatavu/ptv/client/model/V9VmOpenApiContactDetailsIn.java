@@ -31,7 +31,7 @@ import java.util.List;
  * OPEN API V9 - View Model of contact details (POST).
  */
 @ApiModel(description = "OPEN API V9 - View Model of contact details (POST).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:15:03.681+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:38:50.296+03:00")
 public class V9VmOpenApiContactDetailsIn {
   @JsonProperty("emails")
   private List<VmOpenApiLanguageItem> emails = null;

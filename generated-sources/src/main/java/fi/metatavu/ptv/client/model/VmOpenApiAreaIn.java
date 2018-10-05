@@ -26,7 +26,7 @@ import java.util.List;
  * OPEN API - View Model interface of area IN (POST and PUT).
  */
 @ApiModel(description = "OPEN API - View Model interface of area IN (POST and PUT).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:15:03.681+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:38:50.296+03:00")
 public class VmOpenApiAreaIn {
   @JsonProperty("type")
   private String type = null;

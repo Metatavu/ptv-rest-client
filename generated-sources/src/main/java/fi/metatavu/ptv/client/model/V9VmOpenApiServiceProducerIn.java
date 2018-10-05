@@ -28,7 +28,7 @@ import java.util.UUID;
  * OPEN API - View Model of service producer
  */
 @ApiModel(description = "OPEN API - View Model of service producer")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:15:03.681+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:38:50.296+03:00")
 public class V9VmOpenApiServiceProducerIn {
   @JsonProperty("provisionType")
   private String provisionType = null;

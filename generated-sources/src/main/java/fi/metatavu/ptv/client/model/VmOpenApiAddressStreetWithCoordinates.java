@@ -28,7 +28,7 @@ import java.util.List;
  * OPEN API V7 - View Model of address with type
  */
 @ApiModel(description = "OPEN API V7 - View Model of address with type")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:15:03.681+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:38:50.296+03:00")
 public class VmOpenApiAddressStreetWithCoordinates {
   @JsonProperty("street")
   private List<VmOpenApiLanguageItem> street = null;

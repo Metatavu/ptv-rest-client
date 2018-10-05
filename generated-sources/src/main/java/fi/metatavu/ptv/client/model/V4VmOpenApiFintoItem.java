@@ -28,7 +28,7 @@ import java.util.UUID;
  * OPEN API V4 - View Model of finto item
  */
 @ApiModel(description = "OPEN API V4 - View Model of finto item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:15:03.681+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:38:50.296+03:00")
 public class V4VmOpenApiFintoItem {
   @JsonProperty("name")
   private List<VmOpenApiLanguageItem> name = null;

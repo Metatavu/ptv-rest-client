@@ -32,7 +32,7 @@ import java.util.List;
  * OPEN API V9 - View Model of service channel
  */
 @ApiModel(description = "OPEN API V9 - View Model of service channel")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:15:03.681+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:38:50.296+03:00")
 public class V9VmOpenApiServiceServiceChannel {
   @JsonProperty("serviceChannel")
   private VmOpenApiItem serviceChannel = null;

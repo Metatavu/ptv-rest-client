@@ -29,7 +29,7 @@ import java.util.List;
  * OPEN API V8 - View Model of delivery address
  */
 @ApiModel(description = "OPEN API V8 - View Model of delivery address")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:15:03.681+03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-05T18:38:50.296+03:00")
 public class V8VmOpenApiAddressDeliveryIn {
   @JsonProperty("subType")
   private String subType = null;
