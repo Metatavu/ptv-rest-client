@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   
   <modelVersion>4.0.0</modelVersion>
   <groupId>fi.metatavu.ptv.rest-client</groupId>
@@ -6,7 +7,7 @@
   <packaging>jar</packaging>
   <name>ptv-rest-client</name>
   <description>REST client library for Palvelutietoväylä (PTV)</description>
-  <version>0.9.1-SNAPSHOT</version>
+  <version>0.10.0-SNAPSHOT</version>
   <url>https://github.com/Metatavu/ptv-rest-client</url>
   
   <licenses>
